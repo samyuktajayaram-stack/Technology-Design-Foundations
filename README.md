@@ -5,7 +5,7 @@ A repository of my explorations as part of the 'Technology Design Foundations' c
 [Week 1 - Electronics](#week-1---electronics)
 
 # Week 1 - Electronics 
-Tuesday, 02/09/2025 - Tuesday, 09/09/2025
+_Tuesday, 02/09/2025 - Tuesday, 09/09/2025_
 
 I spent week one brushing up on my basics again. I have worked with an Arduino before, but I felt like I lacked some of the foundational understanding of **HOW** it worked and what to do if it didn't.
 
