@@ -83,7 +83,9 @@ delay(500);
 
 and the a video of the working model:
 
-<img width="690" height="915" alt="Screenshot 2025-09-06 at 12 34 16 PM" src="https://github.com/user-attachments/assets/a3b70ca2-1951-4b25-971c-1c9146c1f529" />
+<a href="https://youtube.com/shorts/bj5K1jneAmc">
+  <img src="https://github.com/user-attachments/assets/a3b70ca2-1951-4b25-971c-1c9146c1f529" alt="Blinking LED + Hello World Demo" width="350"/>
+</a>
 
 [![Blinking LED + Hello World Demo](https://github.com/user-attachments/assets/a3b70ca2-1951-4b25-971c-1c9146c1f529)](https://youtube.com/shorts/bj5K1jneAmc)
 
