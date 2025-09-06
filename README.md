@@ -99,7 +99,7 @@ Seeing the program run (and actaully do it correctly after all that troubleshoot
 
 ### <ins>Blinking external LED<ins>
 
-I began by first figuring out which leg of the LED was the anode and which was the cathode. I didn't want to shortcirucit my LED on the first try. I learnt that the longer leg was the anode (+ve) and the cathode was the shorter leg (-ve). 
+I began by first figuring out which leg of the LED was the anode and which was the cathode. I didn't want to shortcirucit my LED on the first try. I found that the longer leg was the anode (+ve) and the cathode was the shorter leg (-ve). 
 
 After this, I needed to find the value of the resistors in my kit. I found a great tool online that helped me with this. I plugged in the band colours, and it gave me the ohm value of the resistor. I didn't end up needing to calculate the value myself. 
 
