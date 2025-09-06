@@ -88,7 +88,7 @@ Click on the image to watch the final video of the model:
 </a>
 
 
-Seeing the program run (and actaully do it correctly), was so cool. I felt like I had actually made something work. I decided to experiment with an external LED light next. 
+Seeing the program run (and actaully do it correctly after all that troubleshooting), was awesome. I decided to experiment with an external LED light next. 
 
 ## Blinking external LED
 
