@@ -49,7 +49,7 @@ After digging through Reddit, Geeks for Geeks and ChatGPT, I learnt that when th
 
 **After the code had been updated, the program displayed 'Hello World' and blinked at the same time!**
 
-But in true programming fashion, there was another problem to fix. Every so often, the serial monitor would display the incorrect word. So, instead of saying 'Hello World', it would sometimes just say 'Hell!'. Sharing the image below:
+But in true programming fashion, there was another problem to fix. Every so often, the serial monitor would display the incorrect word. So, instead of saying 'Hello World', it would sometimes just say 'Hell!'.
 
 <img width="260" height="171" alt="Screenshot 2025-09-05 at 9 12 46 PM" src="https://github.com/user-attachments/assets/1de0880e-a174-42a2-bff8-bb0ddc5401c5" />
 
@@ -80,6 +80,11 @@ delay(500);
   delay(500);                       // wait for a second
 }
 ```
+
+and the a video of the working model:
+
+https://youtube.com/shorts/wN-FsVyI9xo?feature=share
+
 Seeing the program run (and actaully do it correctly), was so cool. I felt like I had actually made something work. I decided to experiment with an external LED light next. 
 
 ## Blinking external LED
