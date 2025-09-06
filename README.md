@@ -84,10 +84,9 @@ delay(500);
 and the a video of the working model:
 
 <a href="https://youtube.com/shorts/bj5K1jneAmc">
-  <img src="https://github.com/user-attachments/assets/a3b70ca2-1951-4b25-971c-1c9146c1f529" alt="Blinking LED + Hello World Demo" width="350"/>
+  <img src="https://github.com/user-attachments/assets/a3b70ca2-1951-4b25-971c-1c9146c1f529" alt="Blinking LED + Hello World Demo" width="500"/>
 </a>
 
-[![Blinking LED + Hello World Demo](https://github.com/user-attachments/assets/a3b70ca2-1951-4b25-971c-1c9146c1f529)](https://youtube.com/shorts/bj5K1jneAmc)
 
 Seeing the program run (and actaully do it correctly), was so cool. I felt like I had actually made something work. I decided to experiment with an external LED light next. 
 
