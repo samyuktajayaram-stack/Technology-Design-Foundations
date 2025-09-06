@@ -1,4 +1,4 @@
-# Technology-Design-Foundations :robot: :zap:
+# Technology-Design-Foundations :robot: :hammer_and_wrench:
 A repository of my explorations as part of the 'Technology Design Foundations' course
 
 ## Table of Contents 
