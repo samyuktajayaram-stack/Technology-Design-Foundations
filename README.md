@@ -9,7 +9,7 @@ A repository of my explorations as part of the 'Technology Design Foundations' c
 
 I spent week one brushing up on my basics again. I have worked with an Arduino before, but I felt like I lacked some of the foundational understanding of **HOW** it worked and what to do if it didn't.
 
-### 'Hello World' + Blinking LED 
+<ins>### 'Hello World' + Blinking LED <ins>
 
 Based on our experimentation with the Arduino 'Hello World' program on Tuesday, we were tasked with merging the program with the 'LED Blink' code. The objective was for the serial monitor to output 'Hello World' while simultaneously having the LED on the Arduino blink.
 
