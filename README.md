@@ -5,7 +5,7 @@ A repository of my explorations as part of the 'Technology Design Foundations' c
 [Week 1 - Electronics](#week-1---electronics)
 
 # Week 1 - Electronics 
-<ins>Tuesday, 02/09/2025 - Tuesday, 09/09/2025<ins> 
+Tuesday, 02/09/2025 - Tuesday, 09/09/2025
 
 I spent week one brushing up on my basics again. I have worked with an Arduino before, but I felt like I lacked some of the foundational understanding of **HOW** it worked and what to do if it didn't.
 
@@ -97,7 +97,7 @@ Click on the image to watch the final video of the model:
 
 Seeing the program run (and actaully do it correctly after all that troubleshooting), was awesome. I decided to experiment with an external LED light next. 
 
-### Blinking external LED
+### <ins>Blinking external LED<ins>
 
 I began by first figuring out which leg of the LED was the anode and which was the cathode. I didn't want to shortcirucit my LED on the first try. I learnt that the longer leg was the anode (+ve) and the cathode was the shorter leg (-ve). 
 
@@ -117,7 +117,7 @@ https://github.com/user-attachments/assets/3ef50555-c3d8-49e9-ba3a-f3de25550d79
 
 I then noticed that I had an **HC - SR04 Ultrasonic Sensor** in my kit. I decided to try to see if I could create a circuit where the LED would only flash when something came close to the Ultrasonic Sensor. The next section details my exploration with building that circuit. 
 
-### Flashing LED using the HC - SR04 Ultrasonic Sensor 
+### <ins>Flashing LED using the HC - SR04 Ultrasonic Sensor<ins> 
 
 I used these open source project files as reference:
 1. https://www.hackster.io/computeservicestechnology/diy-motion-activated-led-with-arduino-ultrasonic-sensor-cd0fee
