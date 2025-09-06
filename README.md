@@ -4,11 +4,12 @@ A repository of my explorations as part of the 'Technology Design Foundations' c
 ## Table of Contents 
 [Week 1 - Electronics](#week-1---electronics)
 
-# Week 1 - Electronics
+# Week 1 - Electronics 
+<ins>Tuesday, 02/09/2025 - Tuesday, 09/09/2025<ins> 
+
 I spent week one brushing up on my basics again. I have worked with an Arduino before, but I felt like I lacked some of the foundational understanding of **HOW** it worked and what to do if it didn't.
 
 ## 'Hello World' + Blinking LED 
-<ins>Tuesday, 02/09/2025 - Tuesday, 09/09/2025<ins>
 
 Based on our experimentation with the Arduino 'Hello World' program on Tuesday, we were tasked with merging the program with the 'LED Blink' code. The objective was for the serial monitor to output 'Hello World' while simultaneously having the LED on the Arduino blink.
 
