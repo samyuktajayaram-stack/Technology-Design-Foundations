@@ -28,6 +28,8 @@ void loop() {
   delay(1000);                       
 }
 ```
+And this was the error message that popped up on my IDE:
 
+<img width="838" height="242" alt="Screenshot 2025-09-06 at 11 12 02 AM" src="https://github.com/user-attachments/assets/92db25a7-68b5-4054-8071-76c41442366c" />
 
 
