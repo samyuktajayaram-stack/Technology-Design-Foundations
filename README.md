@@ -119,7 +119,7 @@ I then noticed that I had an **HC - SR04 Ultrasonic Sensor** in my kit. I decide
 
 ### <ins>Flashing LED using the HC - SR04 Ultrasonic Sensor<ins> 
 
-I used these open source project files as reference:
+I used these project files as reference:
 1. https://www.hackster.io/computeservicestechnology/diy-motion-activated-led-with-arduino-ultrasonic-sensor-cd0fee
 2. https://www.youtube.com/watch?v=9oTX20deOJs
 
