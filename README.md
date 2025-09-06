@@ -103,6 +103,8 @@ I then created the actual circuit using the Arduino Uno, 2 jumper cables (male t
 
 Here's a video of the program running: 
 
+https://github.com/user-attachments/assets/e0416635-b9e6-41fb-a8b3-ba09347d820a
+
 
 
 
