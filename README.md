@@ -9,6 +9,7 @@ Based on our experimentation with the Arduino 'Hello World' program on Tuesday, 
 I came into this thinking it would be an easy task to complete (considering we had both of the source code files available), but to my surprise, I ran into a couple of issues along the way.
 
 At first. this is how I merged the code:
+
 ```C++
 int led = 13;
 void setup() {
@@ -28,17 +29,26 @@ void loop() {
   delay(1000);                       
 }
 ```
+
 And this was the error message that popped up on my IDE:
+
 
 <img width="838" height="242" alt="Screenshot 2025-09-06 at 11 12 02 AM" src="https://github.com/user-attachments/assets/92db25a7-68b5-4054-8071-76c41442366c" />
 
+
 Now looking back at this code, the error is pretty obvious. There were two loop functions, when there should have only been one. When I was merging the code, I figured that since they were separate functions (displaying 'Hello World' and blinking on the LED) that they needed separate loops to run.
+
 
 I troubleshooted on Chatgpt and got this resposne. I then changed the code and merged the two loop functions. 
 
+
 <img width="764" height="125" alt="Screenshot 2025-09-06 at 11 14 34 AM" src="https://github.com/user-attachments/assets/6fc3197f-21f9-49dc-a29d-997269ffa38d" />
 
-After digging through Reddit, Geeks for Geeks and ChatGPT, I learnt that when there are 2 loop() functions, the compiler doesn't know which one to run which results in an error being thrown.<img width="147" height="167" alt="Screenshot 2025-09-05 at 9 17 14 PM" src="https://github.com/user-attachments/assets/5099f36d-22d2-4475-bf49-db7b401d49bc" />
+
+After digging through Reddit, Geeks for Geeks and ChatGPT, I learnt that when there are 2 loop() functions, the compiler doesn't know which one to run which results in an error being thrown.
+
+
+<img width="147" height="167" alt="Screenshot 2025-09-05 at 9 17 14 PM" src="https://github.com/user-attachments/assets/5099f36d-22d2-4475-bf49-db7b401d49bc" />
 
 
 After the code had been updated, the program displayed 'Hello World' and blinked at the same time!
