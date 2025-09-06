@@ -201,8 +201,7 @@ Click on the image to view the video:
 
 It was SO cool to see this come to life. I feel like I could keep iterating on this (maybe adding a microphone and programming it such that the led only lights up when it picks up on a sound. or even having a row of LED's that light up based on proximity to the Ultrasonic Sensor. The possibilities are endless!)
 
-Now that I've learnt how to get around an arduino, connect it to an LED or a sensor and output a particular response, I want to try to mess around with code from different sources and see how it responds in the program and also try variations of the above projects. I also want to try to troubleshoot my code based on the error message the Arduino IDE outputs. Basically learn the kinds of error messages that are possible and how to locate the specific problem in my code. 
-
+Now that I have learned how to work with an Arduino, connect it to an LED or a sensor and generate specific outputs, I want to mishmash code from different sources to see how it behaves. I also want to explore variations of the projects I have already done. I also want to practice troubleshooting my code based on the error messages produced by the Arduino IDE, learning the types of errors that can occur and how to pinpoint the exact issue in my code. 
 
 
 
