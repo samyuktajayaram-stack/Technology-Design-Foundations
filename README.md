@@ -83,7 +83,9 @@ delay(500);
 
 and the a video of the working model:
 
-https://youtube.com/shorts/wN-FsVyI9xo?feature=share
+<img width="690" height="915" alt="Screenshot 2025-09-06 at 12 34 16 PM" src="https://github.com/user-attachments/assets/a3b70ca2-1951-4b25-971c-1c9146c1f529" />
+
+[![Blinking LED + Hello World Demo](https://github.com/user-attachments/assets/a3b70ca2-1951-4b25-971c-1c9146c1f529)](https://youtube.com/shorts/bj5K1jneAmc)
 
 Seeing the program run (and actaully do it correctly), was so cool. I felt like I had actually made something work. I decided to experiment with an external LED light next. 
 
