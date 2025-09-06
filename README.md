@@ -1,4 +1,4 @@
-# Technology-Design-Foundations
+# Technology-Design-Foundations :robot: :zap:
 A repository of my explorations as part of the 'Technology Design Foundations' course
 
 ## Table of Contents 
