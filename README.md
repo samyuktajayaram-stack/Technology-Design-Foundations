@@ -81,7 +81,7 @@ delay(500);
 }
 ```
 
-and the a video of the working model:
+Click on the image to watch the final video of the model:
 
 <a href="https://youtube.com/shorts/bj5K1jneAmc">
   <img src="https://github.com/user-attachments/assets/a3b70ca2-1951-4b25-971c-1c9146c1f529" alt="Blinking LED + Hello World Demo" width="500"/>
@@ -92,7 +92,17 @@ Seeing the program run (and actaully do it correctly), was so cool. I felt like 
 
 ## Blinking external LED
 
-I began by first figuring our which leg of the LED was the anode and which was the cathode. I didn't want to shortcirucit my LED on the first try. 
+I began by first figuring out which leg of the LED was the anode and which was the cathode. I didn't want to shortcirucit my LED on the first try. I learnt that the longer led was the anode (+ve) and the cathode was the shorter led (-ve). 
+
+After this, I needed to find the value of the resistors in my kit. I found a great tool online that helped me with this. I plugged in the band colours, and it gave me the ohm value of the resistor. I didn't end up needing to calculate the value myself. 
+
+<img width="443" height="642" alt="Screenshot 2025-09-06 at 12 54 57 PM" src="https://github.com/user-attachments/assets/d5ca37da-9f9d-4390-b74e-467540020893" />
+Link to the site: https://www.calculator.net/resistor-calculator.html?bandnum=4&band1=brown&band2=black&band3=blue&multiplier=orange&tolerance=gold&temperatureCoefficient=brown&type=c&x=Calculate
+
+I then created the actual circuit using the Arduino Uno, 2 jumper cables (male to male), the resistor (330 ohm) and a green LED. I followed the circuit diagram provided in Sudhu's repository, and plugged in the source code. I then hit upload and watched the magic happen!
+
+Here's a video of the program running: 
+
 
 
 
