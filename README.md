@@ -108,7 +108,7 @@ https://github.com/user-attachments/assets/3ef50555-c3d8-49e9-ba3a-f3de25550d79
 
 ![IMG_3663](https://github.com/user-attachments/assets/43089fd2-3dfb-4339-9e5c-422d47a0eb96)
 
-I then noticed that I had an HC - SR04 Ultrasonic Sensor in my kit. I decided to try to see if I could create a circuit where the LED would only flash when something came close to the Ultrasonic Sensor. The next section details my exploration with building that circuit. 
+I then noticed that I had an **HC - SR04 Ultrasonic Sensor** in my kit. I decided to try to see if I could create a circuit where the LED would only flash when something came close to the Ultrasonic Sensor. The next section details my exploration with building that circuit. 
 
 ## Flashing LED using the HC - SR04 Ultrasonic Sensor 
 
