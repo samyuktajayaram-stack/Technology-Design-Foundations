@@ -97,13 +97,111 @@ I began by first figuring out which leg of the LED was the anode and which was t
 After this, I needed to find the value of the resistors in my kit. I found a great tool online that helped me with this. I plugged in the band colours, and it gave me the ohm value of the resistor. I didn't end up needing to calculate the value myself. 
 
 <img width="443" height="642" alt="Screenshot 2025-09-06 at 12 54 57 PM" src="https://github.com/user-attachments/assets/d5ca37da-9f9d-4390-b74e-467540020893" />
+
 Link to the site: https://www.calculator.net/resistor-calculator.html?bandnum=4&band1=brown&band2=black&band3=blue&multiplier=orange&tolerance=gold&temperatureCoefficient=brown&type=c&x=Calculate
 
 I then created the actual circuit using the Arduino Uno, 2 jumper cables (male to male), the resistor (330 ohm) and a green LED. I followed the circuit diagram provided in Sudhu's repository, and plugged in the source code. I then hit upload and watched the magic happen!
 
-Here's a video of the program running: 
+Here's a video of the program running and an image of the circuit: 
 
-https://github.com/user-attachments/assets/e0416635-b9e6-41fb-a8b3-ba09347d820a
+https://github.com/user-attachments/assets/3ef50555-c3d8-49e9-ba3a-f3de25550d79
+
+![IMG_3663](https://github.com/user-attachments/assets/43089fd2-3dfb-4339-9e5c-422d47a0eb96)
+
+I then noticed that I had an HC - SR04 Ultrasonic Sensor in my kit. I decided to try to see if I could create a circuit where the LED would only flash when something came close to the Ultrasonic Sensor. The next section details my exploration with building that circuit. 
+
+## Flashing LED using the HC - SR04 Ultrasonic Sensor 
+
+I used these open source project files as reference:
+1. https://www.hackster.io/computeservicestechnology/diy-motion-activated-led-with-arduino-ultrasonic-sensor-cd0fee
+2. https://www.youtube.com/watch?v=9oTX20deOJs
+
+I began by first trying to understand what the various pins on the HC - SR04 sensor meant. There were 4 pins - GND, Echo, Trig, VCC. GND was ground, Echo was the output pin, Trig was the input pin and VCC was for power supply. 
+
+I then began connecting the sensor, the LED and the resistor on a breadboard. This was then connected to the Arduino using jumper cables.
+1. GND -> Ground
+2. VCC -> 5V
+3. Trig -> Digital Pin 9
+4. Echo -> Digital Pin 10
+5. Anode of the LED -> Digital Pin 8
+6. Cathode of the LED -> GND
+
+Below is a circuit diagram I made on TinkerCAD to simulate the model before:
+
+<img width="700" height="618" alt="Screenshot 2025-09-06 at 2 29 39 PM" src="https://github.com/user-attachments/assets/b288a7e2-8da3-4a62-b6db-d3c4f6ed588b" />
+
+Here is the TinkerCAD file:
+
+https://www.tinkercad.com/things/1dZ03uLVOUf-hc-sr04-led?sharecode=3l7n070TypRqj6ZrWTR8lr-tbEiIGrffgCdBVhNSTYA
+
+I then plugged in the code (), and uploaded the sketch. I was a litte worried that I may casue the LED to short (or even worse, fry the Arduino itself), but the outcome worked just as it was supposed to!
+
+Here is the code:
+
+```C++
+// Define pin connections
+const int trigPin = 9;
+const int echoPin = 10;
+const int ledPin = 8;
+
+// Set a distance threshold for detecting movement (in cm)
+const int movementThreshold = 20; // Adjust this to your desired distance
+
+void setup() {
+  // Initialize pin modes
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(ledPin, OUTPUT);
+
+  // Start Serial Monitor for debugging
+  Serial.begin(9600);
+  Serial.println("Starting distance sensor...");
+}
+
+void loop() {
+  // Trigger the sensor to send out a pulse
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  // Measure the duration of the pulse
+  long duration = pulseIn(echoPin, HIGH);
+
+  // Calculate distance (in cm)
+  int distance = duration * 0.034 / 2;
+
+  // Print distance to Serial Monitor for debugging
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+
+  // Check if an object is within the threshold distance
+  if (distance > 0 && distance <= movementThreshold) {
+    Serial.println("Object detected within range. Turning LED on.");
+    digitalWrite(ledPin, HIGH); // Turn on the LED
+  } else {
+    Serial.println("No object detected or out of range. Turning LED off.");
+    digitalWrite(ledPin, LOW); // Turn off the LED
+  }
+
+  // Delay to avoid overwhelming the sensor
+  delay(200);
+}
+```
+
+Click on the image to view the video:
+
+<a href="https://youtu.be/7V5QqX-i0go">
+  <img src="https://github.com/user-attachments/assets/99a428ec-ee5d-444b-9c4c-42f77326d82f" 
+       alt="Blinking LED + Hello World Demo" 
+       width="500"/>
+</a>
+
+It was SO cool to see this come to life. I feel like I could keep iterating on this (maybe adding a microphone and programming it such that the led only lights up when it picks up on a sound. or even having a row of LED's that light up based on proximity to the Ultrasonic Sensor. The possibilities seem endless!)
+
+Now that I've learnt how to get around an arduino, connect it to an LED or a sensor and output a particular response, I want to try to mess around with code from different sources and see how it responds in the program and also try variations of the above projects. I also want to try to troubleshoot my code based on the error message the Arduino IDE outputs. Basically learn the kinds of error messages that are possible and how to locate the specific problem in my code. 
 
 
 
