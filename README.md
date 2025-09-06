@@ -47,20 +47,15 @@ I troubleshooted on Chatgpt and got this resposne. I then changed the code and m
 
 After digging through Reddit, Geeks for Geeks and ChatGPT, I learnt that when there are 2 loop() functions, the compiler doesn't know which one to run which results in an error being thrown.
 
-
-<img width="147" height="167" alt="Screenshot 2025-09-05 at 9 17 14 PM" src="https://github.com/user-attachments/assets/5099f36d-22d2-4475-bf49-db7b401d49bc" />
-
-
 After the code had been updated, the program displayed 'Hello World' and blinked at the same time!
 
 But in true programming fashion, there was another problem to fix. Every so often, the serial monitor would display the iccorect word. So, instead of saying 'Hello World', it would sometimes just say 'Hell!'. Sharing the image below:
 
-<img width="260" height="171" alt="Screenshot 2025-09-05 at 9 12 46 PM" src="https://github.com/user-attachments/assets/7c75ca0c-538b-4f90-86a0-d4f7b2abf79c" />
-
+<img width="260" height="171" alt="Screenshot 2025-09-05 at 9 12 46 PM" src="https://github.com/user-attachments/assets/1de0880e-a174-42a2-bff8-bb0ddc5401c5" />
 
 At first I thought that maybe the baud rate in the code wasn't matching the one on the serial monitor. But the two were the set to the same rate. After a quick search, I found that the issue could be that it was printing the word too frequently which was overflowing the serial monitor. I changed the delay to 500, and this seemed to do the trick. 
 
-![Uploading Screenshot 2025-09-05 at 9.12.46 PM.png…]()
+<img width="260" height="171" alt="Screenshot 2025-09-05 at 9 12 46 PM" src="https://github.com/user-attachments/assets/7c75ca0c-538b-4f90-86a0-d4f7b2abf79c" />
 
 This was my final code:
 ```C++
