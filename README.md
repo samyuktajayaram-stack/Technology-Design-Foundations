@@ -12,7 +12,7 @@ At first. this is how I merged the code:
 ```C++
 int led = 13;
 void setup() {
-Serial.begin(9600)
+Serial.begin(9600);
 pinMode(led, OUTPUT);
 }
 
@@ -31,5 +31,55 @@ void loop() {
 And this was the error message that popped up on my IDE:
 
 <img width="838" height="242" alt="Screenshot 2025-09-06 at 11 12 02 AM" src="https://github.com/user-attachments/assets/92db25a7-68b5-4054-8071-76c41442366c" />
+
+Now looking back at this code, the error is pretty obvious. There were two loop functions, when there should have only been one. When I was merging the code, I figured that since they were separate functions (displaying 'Hello World' and blinking on the LED) that they needed separate loops to run.
+
+I troubleshooted on Chatgpt and got this resposne. I then changed the code and merged the two loop functions. 
+
+<img width="764" height="125" alt="Screenshot 2025-09-06 at 11 14 34 AM" src="https://github.com/user-attachments/assets/6fc3197f-21f9-49dc-a29d-997269ffa38d" />
+
+After digging through Reddit, Geeks for Geeks and ChatGPT, I learnt that when there are 2 loop() functions, the compiler doesn't know which one to run which results in an error being thrown.<img width="147" height="167" alt="Screenshot 2025-09-05 at 9 17 14 PM" src="https://github.com/user-attachments/assets/5099f36d-22d2-4475-bf49-db7b401d49bc" />
+
+
+After the code had been updated, the program displayed 'Hello World' and blinked at the same time!
+
+But in true programming fashion, there was another problem to fix. Every so often, the serial monitor would display the iccorect word. So, instead of saying 'Hello World', it would sometimes just say 'Hell!'. Sharing the image below:
+
+<img width="260" height="171" alt="Screenshot 2025-09-05 at 9 12 46 PM" src="https://github.com/user-attachments/assets/7c75ca0c-538b-4f90-86a0-d4f7b2abf79c" />
+
+
+At first I thought that maybe the baud rate in the code wasn't matching the one on the serial monitor. But the two were the set to the same rate. After a quick search, I found that the issue could be that it was printing the word too frequently which was overflowing the serial monitor. I changed the delay to 500, and this seemed to do the trick. 
+
+![Uploading Screenshot 2025-09-05 at 9.12.46 PM.png…]()
+
+This was my final code:
+```C++
+/*
+  Hello World
+*/
+int led = 13;
+void setup() {
+//initialize serial communications at 9600 baud rate
+Serial.begin(9600);
+pinMode(led, OUTPUT);
+}
+
+void loop(){
+//send 'Hello, world!' over the serial port
+Serial.println("Hello, world!");
+//wait 100 milliseconds so we don't drive ourselves crazy
+delay(500);
+ digitalWrite(led, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(500);                       // wait for a second
+  digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW
+  delay(500);                       // wait for a second
+}
+```
+Seeing the program run (and actaully do it correctly), was so cool. I felt like I had actually made something work. I decided to experiment with an external LED light next. 
+
+## Blinking external LED
+
+I began by first figuring our which leg of the LED was the anode and which was the cathode. I didn't want to shortcirucit my LED on the first try. 
+
 
 
