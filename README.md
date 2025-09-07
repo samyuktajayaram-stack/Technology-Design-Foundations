@@ -15,7 +15,7 @@ Based on our experimentation with the Arduino 'Hello World' program on Tuesday, 
 
 I came into this thinking it would be an easy task to complete (considering we had both of the source code files available), but to my surprise, I ran into a couple of issues along the way.
 
-At first. this is how I merged the code:
+At first, this is how I merged the code:
 
 ```C++
 int led = 13;
