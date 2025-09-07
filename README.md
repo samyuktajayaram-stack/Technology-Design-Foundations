@@ -56,7 +56,7 @@ After digging through Reddit, Geeks for Geeks and ChatGPT, I learnt that when th
 
 **After the code had been updated, the program displayed 'Hello World' and blinked at the same time!**
 
-But in true programming fashion, there was another problem to fix. Every so often, the serial monitor would display the incorrect word. So, instead of saying 'Hello World', it would sometimes just say 'Hell!'.
+But in true programming fashion, there was another problem to fix. Every so often, the serial monitor would display the incorrect word. So, instead of saying 'Hello World', it would sometimes just say 'Hell!'. Albeit pretty hilarious, it still needed to be rectified. 
 
 <img width="260" height="171" alt="Screenshot 2025-09-05 at 9 12 46 PM" src="https://github.com/user-attachments/assets/1de0880e-a174-42a2-bff8-bb0ddc5401c5" />
 
