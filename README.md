@@ -121,8 +121,8 @@ I then noticed that I had an **HC - SR04 Ultrasonic Sensor** in my kit. I decide
 ### <ins>Flashing LED using the HC - SR04 Ultrasonic Sensor<ins> 
 
 I used these project files as reference:
-1. https://www.hackster.io/computeservicestechnology/diy-motion-activated-led-with-arduino-ultrasonic-sensor-cd0fee
-2. https://www.youtube.com/watch?v=9oTX20deOJs
+1. [DIY Motion-Activated LED with Arduino & Ultrasonic Sensor](https://www.hackster.io/computeservicestechnology/diy-motion-activated-led-with-arduino-ultrasonic-sensor-cd0fee)
+2. [Arduino Ultrasonic Sensor & LED](https://www.youtube.com/watch?v=9oTX20deOJs)
 
 I began by first trying to understand what the various pins on the HC - SR04 sensor meant. There were 4 pins - GND, Echo, Trig, VCC. GND was ground, Echo was the output pin, Trig was the input pin and VCC was for power supply. 
 
