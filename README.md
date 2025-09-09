@@ -219,7 +219,7 @@ I began by first simulating my code on TinkerCAD. I'm still slightly nervous to 
 
 [LDR + LED'S Tinkercad Project](https://www.tinkercad.com/things/apzIUwVpRB8/editel?returnTo=%2Fdashboard%2Fdesigns%2Fcircuits)
 
-The program displayed an error and wasn't able to compile. The error message stated 'In function 'void loop()':25:23: error: 'ldrLevel2' was not declared in this scope 25:23: note: suggested alternative: 'ldrlevel2'. I spent the next 15 minutes trying to figure out why it said ldrlevel2 was not declared when I had explicitly declared it in the beginning. Then after skimming through Reddit, I realized my mistake. Instead of 'ldrlevel2', I had written 'ldrLevel2' with a capital L. It was the tiniest yet most frustrating error I've had to troubleshoot. 
+The program displayed an error and wasn't able to compile. The error message stated **'In function 'void loop()':25:23: error: 'ldrLevel2' was not declared in this scope 25:23: note: suggested alternative: 'ldrlevel2'**. I spent the next 10 minutes trying to figure out why it said ldrlevel2 was not declared when I had explicitly declared it in the beginning. Then after rereading the error message, I realized my mistake. Instead of 'ldrlevel2', I had written 'ldrLevel2' with a capital L. It was the tiniest yet most frustrating error I've had to troubleshoot. 
 
 <img width="602" height="826" alt="Screenshot 2025-09-09 at 8 27 35 AM" src="https://github.com/user-attachments/assets/fbd54bba-5eac-46a6-8bbe-f9788d004167" />
 
