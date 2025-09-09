@@ -207,6 +207,68 @@ Click on the image to view the video:
 
 It was SO cool to see this come to life. I feel like I could keep iterating on this forever (maybe adding a microphone and programming it such that the led only lights up when it picks up on a sound. or even having a row of LED's that light up based on proximity to the Ultrasonic Sensor. The possibilities are endless!)
 
+### <ins>LDR + 2 LED'S<ins>
+
+The next task for week 1 was to experiment with an LDR and multiple LED's. While they didn’t have to be combined, I decided to merge the two prompts and see what I could come up with. I built a circuit where one LED turns on when there’s light, and the other turns on when it’s dark.
+
+I found a great refernece tutortial online - [Arduino Tutorial: Controlling LEDs with LDR Sensor – Hackster.io](https://www.hackster.io/Rabadaba/arduino-tutorial-controlling-leds-with-ldr-sensor-8813c2). I modified this code, for 2 LED's rather than 4. 
+
+I began by first simulating my code on TinkerCAD. I'm still slightly nervous to test out my program directly on the Arduino, so I always test if things work here first. I connected the circuit on TinkerCAD, and plugged in the code. 
+
+<img width="1223" height="835" alt="Screenshot 2025-09-09 at 8 17 24 AM" src="https://github.com/user-attachments/assets/4cfa0e3d-adfd-462c-8eef-ec8801dae20f" />
+[Tinkercad Circuit Design – Tinkercad](https://www.tinkercad.com/things/apzIUwVpRB8/editel?returnTo=%2Fdashboard%2Fdesigns%2Fcircuits)
+
+
+The program displayed an error and wasn't able to compile. The error message stated 'In function 'void loop()':25:23: error: 'ldrLevel2' was not declared in this scope 25:23: note: suggested alternative: 'ldrlevel2'. I spent the next 15 minutes trying to figure out why it said ldrlevel2 was not declared when I had explicitly declared it in the beginning. Then after skimming through Reddit, I realized my mistake. Instead of 'ldrlevel2', I had written 'ldrLevel2' with a capital L. It was the tiniest yet most frustrating error I've had to troubleshoot. 
+
+<img width="602" height="826" alt="Screenshot 2025-09-09 at 8 27 35 AM" src="https://github.com/user-attachments/assets/fbd54bba-5eac-46a6-8bbe-f9788d004167" />
+
+Once the code was running smoothly, I transferred it to the Arduino IDE, and built the actual circuit. I uploaded the sketch and it worked without any errors.
+
+Here is my modified code:
+
+```C++
+// variables ( You can change the pins as you wish)
+const int ldrPin = A0;    
+const int ledPin1 = 12; 
+const int ledPin2 = 11; 
+
+int ldrValue = 0;
+int ldrlevel1=600; 
+int ldrlevel2=750; 
+
+
+void setup() {
+  Serial.begin(9600);    
+  pinMode(ledPin1, OUTPUT);
+  pinMode(ledPin2, OUTPUT);
+}
+
+void loop() {
+  ldrValue = analogRead(ldrPin); 
+  Serial.println(ldrValue);
+
+  if (ldrValue < ldrlevel1) {
+    digitalWrite(ledPin2, HIGH);    //LED on pin 11 is on
+     digitalWrite(ledPin1, LOW);   // LED on pin 12 OFF
+  }
+  else if (ldrValue < ldrlevel2) {
+    digitalWrite(ledPin2, LOW);   // LED on pin 11 OFF
+    digitalWrite(ledPin1, HIGH);  // LED on pin 12 ON
+  }
+  else {
+    digitalWrite(ledPin1, LOW);   // both led's OFF
+    digitalWrite(ledPin2, LOW);
+  }
+}
+
+```
+Click on the image below to watch the video:
+
+[![LDR + LED's circuit using Arduino](https://github.com/user-attachments/assets/fc7f93d6-402d-4b90-b6dd-1e3748cf020b)](https://youtu.be/nao-wBUOpL8)
+
+I really enjoyed this process (even the troubleshooting). It's always quite fufilling to see your end product come to life, even if it took a bit to get to it. 
+
 **Reflection**: Now that I have gotten the chance to refamiliarize myself with the basics of the Arduino and have learned how to connect it to an LED or a sensor to generate specific outputs, I want to experiment with mishmashing code from different sources to see how it behaves. I also want to practice troubleshooting based on the error messages produced by the Arduino IDE, learning the types of errors that can occur and how to pinpoint the exact issues in my code.
 
 Towards my last exploration, I felt like I was starting to get a hang of what certain parts of the code meant and how it changed the overall output. There were also some great online resources that I used to help figure things out along the way. I still have a way to go, but I'm starting to feel much more confident than I was before with physical computing.
