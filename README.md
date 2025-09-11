@@ -293,9 +293,9 @@ Illustrator was pretty intuitive for the most part, but I really struggled with 
 
 I finished sizing and drawing out both ring files (and made sure to measure my ring size so it would fit), and went in to the studio to cut my rings. I came into this process thinking that my rings would be perfect after my first cut, but that was far from what happened (Ironically, this seems to be a recurring theme throghout my journal entries so far. I'm beginning to think I need to downplay some of my abilities).
 
-Setting up the first print took a bit of work. I followed all the steps I remembered from Chris's hands-on training last week, but for some reason the laser wouldn't move. Turns out, after trying for a few minutes, I was told I would have to turn on the machine first. I seemed to have skipped the most crucial first step. After the laser cutter was running, I set the nozzle to the start position, added the material type and thickness and checked if the print would fit on my plywood piece. I then pressed start and watched the cut begin! 
+Setting up the first print took a bit of work. I followed all the steps I remembered from Chris's hands-on training last week, but for some reason the laser wouldn't move. After trying for a few minutes, I was told I would have to turn on the machine first. I seemed to have skipped the most crucial first step. After the laser cutter was running, I set the nozzle to the start position, added the material type and thickness and checked if the print would fit on my plywood piece. I then pressed start and watched the cut begin! 
 
-As is started cutting my rings, I began noticing all the dimension errors. The square slots I had made for the nature inspired ring were too small and feel through the corrugated laser cutter base. The main frame was also too thin. As for the pegboard ring, the holes were far too tiny to thread a needly through. For both rings, the ring size was also slkightly too large. I then went back and reworked on this file to correct the errors. 
+As I started cutting my rings, I began noticing several dimension errors. The square slots I had designed for the nature-inspired ring were too small and slipped through the corrugated laser cutter base, and the main frame of the ring turned out thinner than I intended. In the pegboard ring, the holes were far too tiny to thread a needle through. For both rings, the ring size was also slightly too large. On Illustrator, the rings appeared to have the correct measurements, but once I actually cut them, I realized the dimensions were different in reality. I went back and revised my files to correct these issues.
 
 Here are some pictures of the first cut:
 
@@ -305,10 +305,21 @@ Here are some pictures of the first cut:
 
 <img width="692" height="676" alt="Screenshot 2025-09-10 at 11 06 35 PM" src="https://github.com/user-attachments/assets/f9494784-b900-4daf-a721-b73e77521986" />
 
-For my second print, I reduced the ring size,
+For my second cut, I reduced the ring size on both rings. For the nature ring, I increased the thickness of the frame, and upon Chris's suggestion, made the supports like a finger joint. This way, I would be able to print it as one piece and it would also give me ample space to put plants into the slots. For the pegboard ring, I increased the size of the holes. 
 
+I then set up my second file on the laser cutter, and began cutting. This times, there were a few more dimension errors. The supports for the nature ring and the holes on the pegboard were both too large. I went back and reworked on the file. 
 
+Here's a picture and video from the second cut:
 
+https://github.com/user-attachments/assets/7f39e6b4-2f52-4764-9272-fe50a07fcba4
+
+![PHOTO-2025-09-10-23-40-44](https://github.com/user-attachments/assets/c4eedd2e-dcf9-4a31-b066-6c1c2aaefd8c)
+
+On my third attempt, everything was in order. The dimensions, spacing and thickness were all redone and they matched my original vision for the rings. I was hoping third time was the charm, but unfortunately I left the power on high which increased the kerf and changed the dimensions of my cut. I went back to laser cut a fourth time, and changed the power setting before I started. 
+
+Here's a picture and video from the third cut:
+
+https://github.com/user-attachments/assets/a15a16e9-8c37-4231-9136-6c40f4e633de![PHOTO-2025-09-10-23-50-14](https://github.com/user-attachments/assets/154ff70c-dbc8-4a33-8fee-9daca327a74e)
 
 
 
