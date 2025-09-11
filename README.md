@@ -3,6 +3,7 @@ A repository of my explorations as part of the 'Technology Design Foundations' c
 
 ## Table of Contents 
 [Week 1 - Electronics](#week-1---electronics)
+[Week 1 - Fabrication](#week-1---fabrication)
 
 # Week 1 - Electronics 
 _Tuesday, 02/09/2025 - Tuesday, 09/09/2025_
@@ -272,5 +273,7 @@ I really enjoyed this process (even the troubleshooting). It's always quite fufi
 **Reflection**: Now that I have gotten the chance to refamiliarize myself with the basics of the Arduino and have learned how to connect it to an LED or a sensor to generate specific outputs, I want to experiment with mishmashing code from different sources to see how it behaves. I also want to practice troubleshooting based on the error messages produced by the Arduino IDE, learning the types of errors that can occur and how to pinpoint the exact issues in my code.
 
 Towards my last exploration, I felt like I was starting to get a hang of what certain parts of the code meant and how it changed the overall output. There were also some great online resources that I used to help figure things out along the way. I still have a way to go, but I'm starting to feel much more confident than I was before with physical computing.
+
+# Week 1 - Fabrication 
 
 
