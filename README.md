@@ -287,6 +287,10 @@ I began by first sketching out all my desigs on a rough sheet of paper. Once I h
 
 <img width="662" height="795" alt="Screenshot 2025-09-10 at 10 09 38 PM" src="https://github.com/user-attachments/assets/221e40c5-17c8-4750-b6d9-1cf788376567" />
 
+This was my inspiration for the second ring:
+
+<img width="499" height="604" alt="Screenshot 2025-09-09 at 9 13 29 PM" src="https://github.com/user-attachments/assets/108c0b1b-93b5-4948-99ee-3974a3c5b89f" />
+
 Illustrator was pretty intuitive for the most part, but I really struggled with drawing arcs for the top and botton of my ring. I couldn't get the arc to be perfectly circular, and it wouldn't curve out all the way to meet the other end of the ring. I then tried to just draw a circle and subtract half of the path to make an arc, and that too was not working. I troubleshooted on chatGPT and also searched up references and tutorials online to try to pinpoint the issue, but nothing seemed to work. I finally resigned to just making the botton of the ring square shaped. 
 
 <img width="473" height="669" alt="Screenshot 2025-09-08 at 7 50 19 PM" src="https://github.com/user-attachments/assets/d82bcacf-5914-440a-9a16-3d05706526cf" />
@@ -305,6 +309,8 @@ Here are some pictures of the first cut:
 
 <img width="692" height="676" alt="Screenshot 2025-09-10 at 11 06 35 PM" src="https://github.com/user-attachments/assets/f9494784-b900-4daf-a721-b73e77521986" />
 
+![PHOTO-2025-09-10-23-54-44](https://github.com/user-attachments/assets/42bc0a63-ae41-45ff-a0e0-18e41dcc7839)
+
 For my second cut, I reduced the ring size on both rings. For the nature ring, I increased the thickness of the frame, and upon Chris's suggestion, made the supports like a finger joint. This way, I would be able to print it as one piece and it would also give me ample space to put plants into the slots. For the pegboard ring, I increased the size of the holes. 
 
 I then set up my second file on the laser cutter, and began cutting. This times, there were a few more dimension errors. The supports for the nature ring and the holes on the pegboard were both too large. I went back and reworked on the file. 
@@ -319,31 +325,36 @@ On my third attempt, everything was in order. The dimensions, spacing and thickn
 
 Here's a picture and video from the third cut:
 
-https://github.com/user-attachments/assets/a15a16e9-8c37-4231-9136-6c40f4e633de![PHOTO-2025-09-10-23-50-14](https://github.com/user-attachments/assets/154ff70c-dbc8-4a33-8fee-9daca327a74e)
+https://github.com/user-attachments/assets/a15a16e9-8c37-4231-9136-6c40f4e633de
 
+![PHOTO-2025-09-10-23-50-14](https://github.com/user-attachments/assets/154ff70c-dbc8-4a33-8fee-9daca327a74e)
 
+The fourth time I laser cut my rings, the settings on the machine were correct and all my dimensions came out as intented! It was so cool to see the rings finally come to form. 
 
+Here's video from the fourth cut:
 
+https://github.com/user-attachments/assets/052bc3af-d68d-4b77-8838-f0d1aa82bf07
 
+And a picture of all my interations from 1 through 4:
 
+![PHOTO-2025-09-10-23-55-13](https://github.com/user-attachments/assets/98727cd6-ca79-46fc-ae27-444c1e3ecc21)
 
+Next, I sanded all my pieces down. After that, Chris showed me how to properly glue pieces of wood together using wood glue. I attached the pieces and left it to dry. 
 
+![PHOTO-2025-09-10-23-58-10](https://github.com/user-attachments/assets/f10f7e45-5178-4e97-8be8-a5ec457236e4)
 
+Finally, my rings were complete! I walked outside and picked up some leaves and flowers that had fallen on the ground and placed them in my ring. For my pegboard ring, I wove the words MDes into it. For further iterations of these rings, I pan on adding a support shaft on the side of the nature ring to better hold the plants I place in it. For the pegboard, I would like to place the holes slightly wider apart and have an odd number of holes in each column. 
 
+Here are a few images of my rings:
 
+![PHOTO-2025-09-11-00-02-35](https://github.com/user-attachments/assets/243daa2b-7530-429b-a62f-35d827dbcc6c)
 
+![PHOTO-2025-09-11-00-02-52](https://github.com/user-attachments/assets/16ea0054-0931-4fad-a5a8-93319ae14934)
 
+![PHOTO-2025-09-11-00-03-05](https://github.com/user-attachments/assets/128b0378-b9da-4555-a99c-dea0601e1a88)
 
+![PHOTO-2025-09-11-00-03-21](https://github.com/user-attachments/assets/ea890336-6cb1-46fb-bb35-093b448c011f)
 
+![PHOTO-2025-09-11-00-04-17](https://github.com/user-attachments/assets/92b8ecaa-1ef8-45db-912c-50278a841425)
 
-
-
-
-
-
-
-
-
-
-
-
+![PHOTO-2025-09-11-00-04-28](https://github.com/user-attachments/assets/4de54e2d-03e1-4c78-84d2-399809539abb)
