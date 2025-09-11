@@ -3,6 +3,7 @@ A repository of my explorations as part of the 'Technology Design Foundations' c
 
 ## Table of Contents 
 [Week 1 - Electronics](#week-1---electronics)
+
 [Week 1 - Fabrication](#week-1---fabrication)
 
 # Week 1 - Electronics 
