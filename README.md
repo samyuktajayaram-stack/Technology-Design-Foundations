@@ -277,4 +277,62 @@ Towards my last exploration, I felt like I was starting to get a hang of what ce
 
 # Week 1 - Fabrication 
 
+This week was all about learning to use the laser cutter. During my undergraduate program, I had the chance to use the laser cutter a few times but the the machine was always operated by a design specialist. We were only allowed to watch how the file got set up for a cut, as opposed to cutting it ourselves. This was the first time I was going to be operating the machine myself. 
+
+Our task for week 1 was to design a ring that represented a part of our personality or a cause we believed in. I love hiking and being in nature, and I have a habit of picking up flowers and leaves I find on the ground along my trail. I wanted to design a ring that could come with me on my hikes and give me a small place to keep those flowers and leaves.
+
+For my second ring experiment, I wanted to represent my love for all things stitching, sewing, and embroidery. I was curious whether it would even be possible to embroider onto laser-cut wood, and that question became the starting point for this design.
+
+I began by first sketching out all my desigs on a rough sheet of paper. Once I had finalized my general form, I took these sketches to Illustrator to create the final print file. 
+
+<img width="662" height="795" alt="Screenshot 2025-09-10 at 10 09 38 PM" src="https://github.com/user-attachments/assets/221e40c5-17c8-4750-b6d9-1cf788376567" />
+
+Illustrator was pretty intuitive for the most part, but I really struggled with drawing arcs for the top and botton of my ring. I couldn't get the arc to be perfectly circular, and it wouldn't curve out all the way to meet the other end of the ring. I then tried to just draw a circle and subtract half of the path to make an arc, and that too was not working. I troubleshooted on chatGPT and also searched up references and tutorials online to try to pinpoint the issue, but nothing seemed to work. I finally resigned to just making the botton of the ring square shaped. 
+
+<img width="473" height="669" alt="Screenshot 2025-09-08 at 7 50 19 PM" src="https://github.com/user-attachments/assets/d82bcacf-5914-440a-9a16-3d05706526cf" />
+
+I finished sizing and drawing out both ring files (and made sure to measure my ring size so it would fit), and went in to the studio to cut my rings. I came into this process thinking that my rings would be perfect after my first cut, but that was far from what happened (Ironically, this seems to be a recurring theme throghout my journal entries so far. I'm beginning to think I need to downplay some of my abilities).
+
+Setting up the first print took a bit of work. I followed all the steps I remembered from Chris's hands-on training last week, but for some reason the laser wouldn't move. Turns out, after trying for a few minutes, I was told I would have to turn on the machine first. I seemed to have skipped the most crucial first step. After the laser cutter was running, I set the nozzle to the start position, added the material type and thickness and checked if the print would fit on my plywood piece. I then pressed start and watched the cut begin! 
+
+As is started cutting my rings, I began noticing all the dimension errors. The square slots I had made for the nature inspired ring were too small and feel through the corrugated laser cutter base. The main frame was also too thin. As for the pegboard ring, the holes were far too tiny to thread a needly through. For both rings, the ring size was also slkightly too large. I then went back and reworked on this file to correct the errors. 
+
+Here are some pictures of the first cut:
+
+<img width="673" height="627" alt="Screenshot 2025-09-10 at 11 05 32 PM" src="https://github.com/user-attachments/assets/1a35fc26-bb31-4175-801b-54b8a971e7df" />
+
+<img width="680" height="896" alt="Screenshot 2025-09-10 at 11 06 14 PM" src="https://github.com/user-attachments/assets/d0b72711-fb54-4970-8d82-f5e52d9a62b6" />
+
+<img width="692" height="676" alt="Screenshot 2025-09-10 at 11 06 35 PM" src="https://github.com/user-attachments/assets/f9494784-b900-4daf-a721-b73e77521986" />
+
+For my second print, I reduced the ring size,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
