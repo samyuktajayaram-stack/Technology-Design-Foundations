@@ -359,5 +359,8 @@ Here are a few images of my rings:
 
 ![PHOTO-2025-09-11-00-04-28](https://github.com/user-attachments/assets/4de54e2d-03e1-4c78-84d2-399809539abb)
 
+Final Ai file:
+
+
 
 **Reflection**: I had so much fun making these rings. Right from getting to know how to use the laser cutting, to revising errors with each iteration and finally seeing the ring take shape was really rewarding. I want to be able to further experiment with this machine by etching and engracing as well as making movable mechanical objects using just parts i cut from the laser cutter. 
