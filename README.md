@@ -6,8 +6,10 @@ A repository of my explorations as part of the 'Technology Design Foundations' c
 
 [Week 1 - Fabrication](#week-1---fabrication)
 
+[Week 2 - Electronics](#week-2---electronics)
+
 # Week 1 - Electronics 
-_Tuesday, 02/09/2025 - Tuesday, 09/09/2025_
+_Tuesday, 09/02/2025 - Tuesday, 09/09/2025_
 
 I spent week one brushing up on my basics again. I have worked with an Arduino before, but I felt like I lacked some of the foundational understanding of **HOW** it worked and what to do if it didn't.
 
@@ -276,6 +278,7 @@ I really enjoyed this process (even the troubleshooting). It's always quite fufi
 Towards my last exploration, I felt like I was starting to get a hang of what certain parts of the code meant and how it changed the overall output. There were also some great online resources that I used to help figure things out along the way. I still have a way to go, but I'm starting to feel much more confident than I was before with physical computing.
 
 # Week 1 - Fabrication 
+_Thursday, 09/04/2025 - Thursday, 09/11/2025_
 
 This week was all about learning to use the laser cutter. During my undergraduate program, I had the chance to use the laser cutter a few times but the the machine was always operated by a design specialist. We were only allowed to watch how the file got set up for a cut, as opposed to cutting it ourselves. This was the first time I was going to be operating the machine myself. 
 
@@ -343,7 +346,7 @@ Next, I sanded all my pieces down. After that, Chris showed me how to properly g
 
 ![PHOTO-2025-09-10-23-58-10](https://github.com/user-attachments/assets/f10f7e45-5178-4e97-8be8-a5ec457236e4)
 
-Finally, my rings were complete! I walked outside and picked up some leaves and flowers that had fallen on the ground and placed them in my ring. For my pegboard ring, I wove the words MDes into it. For further iterations of these rings, I pan on adding a support shaft on the side of the nature ring to better hold the plants I place in it. For the pegboard, I would like to place the holes slightly wider apart and have an odd number of holes in each column. 
+Finally, my rings were complete! I walked outside and picked up some leaves and flowers that had fallen on the ground and placed them in my ring. For my pegboard ring, I wove the words MDes into it. For further iterations of these rings, I plan on adding a support shaft on the side of the nature ring to better hold the plants I place in it. For the pegboard, I would like to place the holes slightly wider apart and have an odd number of holes in each column. 
 
 Here are a few images of my rings:
 
@@ -360,3 +363,8 @@ Here are a few images of my rings:
 ![PHOTO-2025-09-11-00-04-28](https://github.com/user-attachments/assets/4de54e2d-03e1-4c78-84d2-399809539abb)
 
 **Reflection**: I had so much fun making these rings. Right from getting to know how to use the laser cutting, to revising errors with each iteration and finally seeing the ring take shape was really rewarding. I want to be able to further experiment with this machine by etching and engracing as well as making movable mechanical objects using just parts i cut from the laser cutter. 
+
+# Week 2 - Electronics 
+_Tuesday, 09/09/2025 - Tuesday, 09/16/2025_
+
+
