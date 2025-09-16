@@ -497,6 +497,44 @@ When I ran the simulation here, at first nothing happened. The RGB light did not
 
 I then trasferred this to the actual board, and ran the code on the IDE. The resulting experiment on the Arduino was SO COOL to see!!!! It reminded of the remote controlled strip LED lights that are controlled by a remote and can glow in a varity of different shades. 
 
+Here is the code I referenced:
+
+```C++
+#define RGB_RED_PIN 11
+#define RGB_BLUE_PIN 10
+#define RGB_GREEN_PIN 9
+#define POTENTIOMETER_PIN A0
+
+void setup()
+{
+  pinMode(RGB_RED_PIN, OUTPUT);
+  pinMode(RGB_BLUE_PIN, OUTPUT);
+  pinMode(RGB_GREEN_PIN, OUTPUT);
+}
+
+void loop()
+{ 
+  int potentiometerValue = analogRead(POTENTIOMETER_PIN);
+  int rgbValue = map(potentiometerValue, 0, 1023, 0, 1535);
+
+  int red;
+  int blue;
+  int green;
+  
+  if (rgbValue < 256) {
+    red = 255;
+    blue = rgbValue;
+    green = 0;
+  }
+  else if (rgbValue < 512) {
+    red = 511 - rgbValue;
+    blue = 255;
+    green = 0;
+  }
+  else if (rgbValue < 768) {
+    red = 0;
+```
+
 Here are some images and a video of the cicuit working:
 
 https://github.com/user-attachments/assets/273f10a4-cdcd-4c9e-812d-2bd11113ff49
