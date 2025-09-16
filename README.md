@@ -367,4 +367,47 @@ Here are a few images of my rings:
 # Week 2 - Electronics 
 _Tuesday, 09/09/2025 - Tuesday, 09/16/2025_
 
+For week 2, we began by trying to get 2 LED bulbs to glow at the same time or alternatively on after the other. I connected the circuit using two 330 ohm resistors, two LED lights (red and green) and the Arduino Uno. I then modified the 'Blink' code from Sudhu's Git repository to be used for 2 LED's and then also changed the delay on each bulb so that they would glow at an interval apart from each other. 
 
+This was how I modified the code:
+
+```C++
+/*
+  Blink
+
+  Turns an LED on for one second, then off for one second, repeatedly.
+
+  Most Arduinos have an on-board LED you can control. 
+  On the UNO it is attached to digital pin 13
+
+  This example code is modified from.
+  https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink
+*/
+
+int led1 = 13;  // define a variable to hold the pin number of the internal LED
+int led2 = 9;
+
+// the setup function runs once when you press reset or power the board
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  pinMode(led1, OUTPUT);
+  pinMode(led2, OUTPUT);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(led1, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);                       // wait for a second
+  digitalWrite(led1, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);                       // wait for a second
+ digitalWrite(led2, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(500);                       // wait for a second
+  digitalWrite(led2, LOW);    // turn the LED off by making the voltage LOW
+  delay(500);                       // wait for a second
+}
+```
+There 
+
+
+
+I 
