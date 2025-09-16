@@ -367,7 +367,8 @@ Here are a few images of my rings:
 # Week 2 - Electronics 
 _Tuesday, 09/09/2025 - Tuesday, 09/16/2025_
 
-For week 2, we began by trying to get 2 LED bulbs to glow at the same time or alternatively on after the other. I connected the circuit using two 330 ohm resistors, two LED lights (red and green) and the Arduino Uno. I then modified the 'Blink' code from Sudhu's Git repository to be used for 2 LED's and then also changed the delay on each bulb so that they would glow at an interval apart from each other. 
+### <ins>2 LED'S + RGB LED <ins>
+For week 2, we began by trying to get 2 LED bulbs to glow at the same time or alternatively on after the other. I connected the circuit using two 330 ohm resistors, two LED lights (red and green) and the Arduino Uno. I then modified the 'Blink' code from Sudhu's Git repository to be used for 2 LED's and then also changed the delay on each bulb so that they would glow at a short interval from each other. 
 
 This was how I modified the code:
 
@@ -406,8 +407,124 @@ void loop() {
   delay(500);                       // wait for a second
 }
 ```
-There 
+I defined the two LED's as separate variables ('led1' and 'led2'). I then added two functions within the loop for both led's separately. This was a great exercise for me to understand at the most basic level, how I can modify code based on my circuit components.
 
+Here is a video of the circuit in action:
 
+https://github.com/user-attachments/assets/e171ac6e-f109-475d-bbfe-c8e6edc2b227
 
-I 
+Next, we used the same 'Blink' code on an RGB LED. As I learnt, an RGB LED is different from a regular LED in 2 distinct ways. (1) A regular LED emits light of a single, fixed color, while an RGB LED contains three separate Red, Green, and Blue LEDs within a single unit that can be mixed to produce a wide range of colors (2) a regular LED has 2 legs, while an RGB LED has 4. The 4 legs of the RGB LED are for Red, -ve, Green and Blue. 
+
+We attached the circuit together. Here, the RGB LED needed 3 resistors to limit the current flowing through each internal R, G, and B LED chip independently.  
+
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/cd6db362-b06f-4f8a-adfb-f4a2b2362ec8" />
+
+We plugged it into the IDE and this was the outcome:
+
+https://github.com/user-attachments/assets/7d8e3886-b785-4fb1-bfd5-8b238127784f
+
+### <ins> 2 Buttons to Control a Servo Motor <ins>
+
+Out next task was to create a circuit with a button. I used a servo motor which could be controlled with two buttons. The idea was to have the servo move a certain degree based on which button I press. 
+
+I referenced this tutorial to create this circuit: [Controling servo motors with buttons and arduino](https://projecthub.arduino.cc/bruno_opaiva/controling-servo-motors-with-buttons-and-arduino-bcb3b6)
+
+I first started by creating a model on TinkerCAD to simulate my circuit. 
+
+<img width="1086" height="812" alt="Screenshot 2025-09-15 at 9 02 19 PM" src="https://github.com/user-attachments/assets/45ff8de6-cab8-456b-9903-b608206ffac4" />
+
+The code and the circuit worked as intended, so I began replicating it on the breadboard and connected the arduino to the main circuit. Here is the link to the simulation: [Servo motor + buttons ]([https://projecthub.arduino.cc/bruno_opaiva/controling-servo-motors-with-buttons-and-arduino-bcb3b6](https://www.tinkercad.com/things/1CzQAv0Txur/editel?returnTo=%2Fdashboard))
+
+I then plugged in the code into the IDE and voila! Below is a video and pictures of my experimentation. 
+
+https://github.com/user-attachments/assets/c5badf06-2ce0-4e66-96bf-1efe39159c6e
+
+![PHOTO-2025-09-15-21-06-29](https://github.com/user-attachments/assets/83f0ce92-eecc-4359-9c52-d1b65a568465)
+
+![PHOTO-2025-09-15-21-06-29](https://github.com/user-attachments/assets/df60b582-79a3-4de9-ae82-73be3909da46)
+
+Below is the code I used:
+
+```C++
+
+int button = 2;   //pin of the first button
+int button1 = 3;  //pin  of the second button
+#include<Servo.h> //include the servo library
+Servo servo;  //create a servo object
+int pos = 0;  //initial position of the servo
+void  setup() {
+  // put your setup code here, to run once:
+  servo.attach(9);  //pin  used by the servo
+  pinMode(button, INPUT_PULLUP);  //define first button as  input pullup
+  pinMode(button1, INPUT_PULLUP); //define second button as input  pullup
+  /*
+  INPUT_PULLUP send to arduino LOW signal, so, when you press  the button, you send a LOW signal to arduino
+  */
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  if (digitalRead(button) ==  LOW) { //if Value read of the button ==LOW:
+    pos++;  //increases the value  of the "pos" variable each time the push button of the left is pressed
+    delay(5);  //5 milliseconds of delay
+    servo.write(pos); //servo goes to variable pos
+  }
+  if (digitalRead(button1) == LOW) { //if Value read of the button ==LOW:
+    pos--;  //decreases the value of the "pos" variable each time the push button  of the right is pressed
+    delay(5); //5 milliseconds of delay
+    servo.write(pos);  //servo goes to variable pos
+  }
+}
+```
+
+This exploration was fun! I do have one unanswered question. I did observe that when the circuit was connected to the power source, i.e my laptop, even before I had put the code into the IDE, the servo would spin from side to side for about 10 seconds and then stop. Why does that happen? There was a button in place which I assumed would prevent that from happening unless otherwise pressed?
+
+### <ins> Potentiometer + RGB LED <ins>
+
+Our final task for this week was to create a circuit where an RGB LED light is controlled by a Potentiometer. I had never seen, heard or used a Potentiometer before, so the first step was to understand what it was before I could add it to my circuit. I learnt that a potentiometer is a three-terminal variable resistor that allows for the adjustment of resistance or voltage by moving a wiper along a resistive element. Essentially it could control/adjust the amount of volatage that flows through a circuit. I decided to challenge myself and see if I could use the Potentiometer to essentially adjust the RGB light across a variety of colours. 
+
+I referenced this tutorial for this experiment: [Arduino – Control RGB LED with Potentiometer]([https://projecthub.arduino.cc/bruno_opaiva/controling-servo-motors-with-buttons-and-arduino-bcb3b6](https://roboticsbackend.com/arduino-control-rgb-led-with-potentiometer/))
+
+I began by first creating my simulation on TinkerCAD. I haven't fully built the confidence to build my circuit directly without testing first, but I assume once I get a hang of the basics I will get more comfortable in trying directly with the arduino itself. 
+
+Here is the model on TinkerCAD:
+
+<img width="1042" height="834" alt="Screenshot 2025-09-15 at 9 17 44 PM" src="https://github.com/user-attachments/assets/1c230b77-e807-40d8-af2e-bd6e431748a5" />\
+
+link to the simulation: [Potentiometer](https://www.tinkercad.com/things/2NDs9T8sERg/editel?returnTo=%2Fdashboard)
+
+When I ran the simulation here, at first nothing happened. The RGB light did not glow even though there were no errors popping up from the code. At first, I thought it may have been because I used a higher resistance value. But after taking a quick look at my circuit again, I realized I had forgotted to connect a wire to ground. Even though it was a small error, it was nice that I was able to recognize where I went wrong myself. I added the wire to GND and the circuit worked as I'd wanted it to. 
+
+I then trasferred this to the actual board, and ran the code on the IDE. The resulting experiment on the Arduino was SO COOL to see!!!! It reminded of the remote controlled strip LED lights that are controlled by a remote and can glow in a varity of different shades. 
+
+Here are some images and a video of the cicuit working:
+
+https://github.com/user-attachments/assets/273f10a4-cdcd-4c9e-812d-2bd11113ff49
+
+![PHOTO-2025-09-15-21-26-08](https://github.com/user-attachments/assets/dc1e01eb-3746-4931-9c49-94eed0fc3667)
+
+![PHOTO-2025-09-15-21-26-08](https://github.com/user-attachments/assets/5aae944f-bcf1-4d10-9f47-fb4df0a1d5bc)
+
+![PHOTO-2025-09-15-21-26-06](https://github.com/user-attachments/assets/dfa3d1d2-5f52-4c28-a007-f31c1614f61a)
+
+![PHOTO-2025-09-15-21-26-07](https://github.com/user-attachments/assets/1f75be81-181e-4e12-ae65-e4b6a9aca520)
+
+![PHOTO-2025-09-15-21-26-07](https://github.com/user-attachments/assets/3ba8a026-7b1a-4c53-a51e-36140758c6ee)
+
+![PHOTO-2025-09-15-21-26-07](https://github.com/user-attachments/assets/8a780698-a09f-4833-99b2-01aedbf8a88a)
+
+![PHOTO-2025-09-15-21-26-07](https://github.com/user-attachments/assets/023d234f-3a53-461e-8d5b-8192c96f94e6)
+
+![PHOTO-2025-09-15-21-26-07](https://github.com/user-attachments/assets/9aaafaec-ab6a-47d3-826b-733e6d169c46)
+
+![PHOTO-2025-09-15-21-26-08](https://github.com/user-attachments/assets/613ae1e8-0898-4945-91ad-6d20f645c574)
+
+![PHOTO-2025-09-15-21-26-08](https://github.com/user-attachments/assets/5ad85ba0-856b-42d3-95af-4ec6503ea239)
+
+![PHOTO-2025-09-15-21-26-08](https://github.com/user-attachments/assets/f35a0c75-7a00-4c38-84ed-b7991006cb4a)
+
+![PHOTO-2025-09-15-21-26-08](https://github.com/user-attachments/assets/5fa9d3e7-4105-4fae-9fa9-41c8ab1fd7c6)
+
+![PHOTO-2025-09-15-21-26-08](https://github.com/user-attachments/assets/f6a4a71e-089f-4e8f-b265-3876b6208b79)
+
+**Reflection**: Overall, these exercises have been really fun to experiment with. I have started to understand how to not only create a circuit where an LED can be controlled by a certain sensor or even a simple on/off conductor like a button, but even how other actuators can be manipulated as well. This has been a week of constant experimentation and learning, and I've thoroughly enjoyed it!
