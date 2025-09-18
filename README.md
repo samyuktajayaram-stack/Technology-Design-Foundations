@@ -8,6 +8,8 @@ A repository of my explorations as part of the 'Technology Design Foundations' c
 
 [Week 2 - Electronics](#week-2---electronics)
 
+[Week 2 - Fabrication](#week-2---fabrication)
+
 # Week 1 - Electronics 
 _Tuesday, 09/02/2025 - Tuesday, 09/09/2025_
 
@@ -567,7 +569,7 @@ https://github.com/user-attachments/assets/273f10a4-cdcd-4c9e-812d-2bd11113ff49
 
 **Reflection**: Overall, these exercises have been really fun to experiment with. I have started to understand how to not only create a circuit where an LED can be controlled by a certain sensor or even a simple on/off conductor like a button, but even how other actuators can be manipulated as well. This has been a week of constant experimentation and learning, and I've thoroughly enjoyed it!
 
-# Week 1 - Fabrication 
+# Week 2 - Fabrication 
 _Thursday, 09/11/2025 - Thursday, 09/18/2025_
 
 After week 1 of laser cutting, week two was all about 3D printing. This was the week I was really looking forward to.
