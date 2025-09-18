@@ -566,3 +566,47 @@ https://github.com/user-attachments/assets/273f10a4-cdcd-4c9e-812d-2bd11113ff49
 ![PHOTO-2025-09-15-21-26-08](https://github.com/user-attachments/assets/f6a4a71e-089f-4e8f-b265-3876b6208b79)
 
 **Reflection**: Overall, these exercises have been really fun to experiment with. I have started to understand how to not only create a circuit where an LED can be controlled by a certain sensor or even a simple on/off conductor like a button, but even how other actuators can be manipulated as well. This has been a week of constant experimentation and learning, and I've thoroughly enjoyed it!
+
+# Week 1 - Fabrication 
+_Thursday, 09/11/2025 - Thursday, 09/18/2025_
+
+After week 1 of laser cutting, week two was all about 3D printing. This was the week I was really looking forward to.
+
+Going in, I had the image that this process was going to be really difficult and something that I would'nt be able to pick up easily. I definitely hit some bumps along the way, but I feel much more confident with CAD modelling and 3D printing as a whole. I'm excited to keep testing with different prints. 
+
+We began this process by getting familliarized with Fusion. I had never used fusion before, so this was defintely the biggest learning curve for me (I'm still learning a lot of it). We got a brief overview, and then got right back into making and playing around with rings!
+
+Task 1 for the next set of our rings was a to replicate the same ring we laser cut, but in 3D print form. I imported the SVG file of my ring from illustrator to Fusion, and extruded each individual part. I then combined them all together as one unified body. This was relatively simpler as I did not need to make a whole new ring with new dimensions again. 
+
+I then began on task 2, which was to 3D model and print a whole new ring (without any constraints, so I coul go as big as I wanted!). I decided I wanted to make a knuckle ring that have a small pon flute on the top. I spoke with Cody, the design specialist, and he suggested that I take a look at a pan flute that he had printed using the Prusa. The flute was AWESOME and played the coolest sounds. I wanted to replicate that on ring form. My first model did not work as the holes were too small and the ring was also too tiny to house such large tubes without the print collapsing in on itself. So I tried another approach, and made the base wider. I added larger tubes for the flue, and added holes at the bottom for the sound to be generated out of. I did have some troubles with this model on Fusion like joining without cutting, combining bodies and separating the tube that was inserted as a support through the flutes, but I was able to work it all out with the help of my peers. I then exported that model to the Prusa slicer and sliced it with my previous ring. 
+
+After both models had been sliced (which was super cool because I got to see how it would print each layer and also how the whole model was structured from ther inside out), I copied the G-code on to the SD card of the 3D printer and uploaded that on to the machine. I selected my file on the machine and hit start and that was it! I watched the first 2 layers print, and then left it to print by itself. 
+
+When I came back (about 3.5 hours later :0), my model had fully printed! I had added organic supports, which were pretty simple to remove with a pair of pliers. My flute ting actually played a tune (which I was half expecting I would have to print again just because of the internal cavities of the object, but it workerd great). My other ring, though it came out looking fine, the sizing was incorrect. The ring was fine on my laser cut file, but slightly too small on my 3D printed outcome. I'm still yet to understand what could have triggered that happening since all the measurements were exact on the SVG. 
+
+Here are some pictures and also an audio of me playing the flute!
+
+
+**Reflection**: I had so much fun working with the 3D printer. It was definitely quite intimidating going into it, but the process was much simpler once I started. I do need a LOT of practice on Fusion before i can start making larger, more complex models. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
