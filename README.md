@@ -731,6 +731,51 @@ In my final iteration, I returned to exploring the twist motion of the origami f
 
 For the ciruit in the final prototype, I connected the servo (Power → Power, GND → GND, Signal → ~5) and the ultrasonic sensor (Power → Power, GND → GND, Trig → 12, Echo → ~11) to the Arduino and then adjusted the code to set the desired speed, position, and range of motion for the servo. This was the final prototype. I preferred the faster speed on the servo as the motion felt lively and resembled a running object or person. 
 
+Here was the code I modified and used:
+
+```C++
+//(This code was a combination of the 'sweep' code, ChatGPT for troubleshooting and my peers/makerspace specialists guidance on issues)
+#include <Servo.h>
+#include <Ultrasonic.h>
+
+Servo myservo;
+Ultrasonic ultrasonic(12, 11);  // Trig=12, Echo=11
+
+float pos = 0; // variable to store the servo position (Cody Glen from the makerspace suggested I change position from 'int' to 'float' so the servo would move more smooth)
+int stepDir = 1; // +1 for forward, -1 for backward
+
+void setup() {
+  Serial.begin(9600);
+  myservo.attach(5); // attaches the servo on pin ~5 to the Servo object
+}
+
+void loop() {
+  int distance = ultrasonic.read();   // distance in cm
+  Serial.println(distance); 
+
+  // Only sweep if no hand (distance >=10 cm);
+  if (distance >= 10) {
+    // move faster: jump 3° per update 
+    pos += stepDir * 3;
+    if (pos >= 180) {
+      pos = 180;
+      stepDir = -1;
+    }
+    if (pos <= 0) {
+      pos = 0;
+      stepDir = 1;
+    }
+    myservo.write(pos);  // tell servo to go to position in variable 'pos'
+    delay(20); // waits 20 ms for the servo to reach the position
+
+  } else {
+    // Hand detected: stop servo at current position
+    myservo.write(pos);
+    delay(4);
+  }
+}
+```
+
 <img width="971" height="715" alt="Circuit Diagram_Kinetic Origami" src="https://github.com/user-attachments/assets/1f341112-592e-40bc-8fe3-0afcb481c442" />
 
 <img width="577" height="783" alt="Screenshot 2025-09-26 at 2 55 47 PM" src="https://github.com/user-attachments/assets/5682775c-483c-4c03-8e98-45050fa72deb" />
@@ -754,7 +799,12 @@ For the ciruit in the final prototype, I connected the servo (Power → Power, G
 
 [Link to Project Folder](https://drive.google.com/drive/folders/1yFFv-a1pZ86ZencWEstLLtQNcUA3YIR-?usp=sharing)
 
+On thursday, I presented my model and received feedback from my peers! I loved getting to see how everyone interpreted this project and learning from other peoples ideas.
+
+![PHOTO-2025-09-26-15-21-47](https://github.com/user-attachments/assets/9fc0cfcf-8091-451b-b3fc-d428c811e144)
+
 **Reflection**: This project was so much fun! I feel like with each iteration, I learnt something new. I tested differnt codes, sensors, movements, materials etc., and with each one, I was able to make improvements to the next one.
+
 
 
 
