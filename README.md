@@ -780,7 +780,6 @@ void loop() {
 
 <img width="577" height="783" alt="Screenshot 2025-09-26 at 2 55 47 PM" src="https://github.com/user-attachments/assets/5682775c-483c-4c03-8e98-45050fa72deb" />
 
-<img width="750" height="751" alt="Screenshot 2025-09-26 at 2 57 12 PM" src="https://github.com/user-attachments/assets/fc064eb3-7f8f-49b7-bcc9-91f4ac52419c" />
 
 ![PHOTO-2025-09-26-14-59-11](https://github.com/user-attachments/assets/40d3005d-9c31-40e3-af24-367c59614b29)
 
