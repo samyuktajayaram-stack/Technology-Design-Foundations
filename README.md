@@ -14,6 +14,8 @@ A repository of my explorations as part of the 'Technology Design Foundations' c
 
 [Week 3 - Fabrication](#week-3---fabrication)
 
+[Week 4 - Electronics](#week-4---electronics)
+
 
 # Week 1 - Electronics 
 _Tuesday, 09/02/2025 - Tuesday, 09/09/2025_
