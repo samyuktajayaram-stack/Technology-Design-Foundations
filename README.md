@@ -682,39 +682,77 @@ https://github.com/user-attachments/assets/95b1b4d9-7925-40c3-af10-837155f640f5
 
 ![PHOTO-2025-09-26-14-26-28](https://github.com/user-attachments/assets/735b888d-e18b-43ad-8383-18dd4d68f9e8)
 
+**Refelction**: If there is one thing that I will take away from this project, it is how much form can affect function. Even though I had figured out how the circuit and movemnt would work, the form determined whether it would be doable or not. 
+
 # Week 4 - Electronics 
 _Tuesday, 09/23/2025 - Tuesday, 09/30/2025_
 
 Week 4 was focused on getting the origami structure up and running. In my first prototype, I wanted to control the hyperbolic origami structure that I had chosen with two servos, rotating it around a central axis in opposite directions. Although I successfully integrated the ultrasonic sensor with the circuit, the fold itself moved only in one direction rather than alternating. This was an iteration that needed further work and refinement of code so the servos could operate in true opposite directions.
 
 <img width="477" height="356" alt="Screenshot 2025-09-26 at 2 32 42 PM" src="https://github.com/user-attachments/assets/56e1def3-1ad6-408f-85d2-0e8ddf0c130b" />
+
 For the circuit, I experimented with an ultrasonic sensor, an LDR, and a PIR sensor. The PIR and LDR proved unreliable and didn’t deliver the results I needed, so I ultimately chose to proceed with the ultrasonic sensor.
 
 <img width="411" height="548" alt="Screenshot 2025-09-26 at 2 33 13 PM" src="https://github.com/user-attachments/assets/93c32601-caf3-4866-b618-f0b27654fa76" />
+
 [Link](https://youtube.com/shorts/Bu6_5G8F2Oc?feature=share)
 
 <img width="418" height="424" alt="Screenshot 2025-09-26 at 2 33 57 PM" src="https://github.com/user-attachments/assets/9cf0c5d4-2f93-4aaa-94c2-b2bbb8ea0fc7" />
+
 Trying to understand why my code was not moving the servos in opposite direction and how exactly I can go about troubleshooting. This was Sudhus explanation on how I could get it to work. 
 
 In my second attempt, I got the servos to run in opposite directions. I tested this by attaching pieces of tape to each servo horn to observe their movement and then tweaking the code accordingly. Finally, after a few different versions, I was able to mounted the servos onto two bamboo skewers and connected the servo horns to the center of the hyperbolic origami structure. In this iteration, the sides of the origami did not move as I intended. I then went back and changed the code to allow the servos to rotate in the same direction, and this helped me achieve the intended effect. I also experimented with using just one servo while keeping the other side of the structure fixed; this setup worked well too, allowing the origami to move side to side from one point.
 
 <img width="694" height="678" alt="Screenshot 2025-09-26 at 2 35 59 PM" src="https://github.com/user-attachments/assets/401b0d54-0bd1-4246-b5f5-c584825ace52" />
+
 Here, I tested the movement of the servo motors in opposite directions. Since this mechanism did not yield the results I wanted, I pivoted to another solution. This troubleshooting of the problem really helped me understand how the internal mechanics needed to function.
 
 <img width="459" height="643" alt="Screenshot 2025-09-26 at 2 36 31 PM" src="https://github.com/user-attachments/assets/a89bd509-edc6-40ec-a8cc-c41e8b774c19" />
+
 In this iteration, I made one side of the hyperbolic origami stationary, and used a servo to move the other side. This setup worked well, and origami twisted from side to side. [Link](https://youtube.com/shorts/Q4I5t0AZt0Y?feature=share)
 
+<img width="569" height="668" alt="Screenshot 2025-09-26 at 2 39 03 PM" src="https://github.com/user-attachments/assets/28c7fcff-df5a-4c0c-8861-4df2b48cff39" />
+
+In this final prototype, I attached two servos to the origami structure using 2 bamboo skewers. This was a great setup, because the bamboo skewers allowed the origami a full range of motion when it moved. [Link](https://youtube.com/shorts/BwvIaUCZsvU?feature=share)
+
+When creating the final prototype, I faced several issues with the form. Hence, I decided this project from a different angle and experimented with moving the origami piece in another orinettaion. In this iteration, the motion was driven by two pieces of thread, a central servo, and a makeshift spindle structure that curled the thread to pull the origami inward. Although the setup worked in principle, it required constant attention when the circuit was running. The curling motion of the thread was unpredictable; sometimes it wouldn’t curl enough, the servo horn would detach, or the servo would pull the thread incorrectly making the system unreliable. Despite these challenges, the movement itself, when it worked, resembled a gentle heartbeat, which I found very satisfying to watch.
+
+<img width="377" height="441" alt="Screenshot 2025-09-26 at 2 49 05 PM" src="https://github.com/user-attachments/assets/d477f6e2-1d21-4312-a3cd-dfa622cfd038" />
+
+![PHOTO-2025-09-26-14-49-37](https://github.com/user-attachments/assets/906ae3cb-451c-4e09-8d69-a26c1840fe1a)
+
+<img width="552" height="909" alt="Screenshot 2025-09-26 at 2 50 40 PM" src="https://github.com/user-attachments/assets/cf290510-7a69-43b8-bce0-b1b6b89ed685" />
+
+This was the final working prototype. [Link](https://youtube.com/shorts/h_3fSLcp2IU?feature=share)
+
+In my final iteration, I returned to exploring the twist motion of the origami fold. This time, I mounted one side of the origami to a stationary base and let the other side move with the help of a servo. I designed and laser-cut a mounting base to hold one side of the piece in place and cut a notch in the bottom cardboard base for the servo. After placing the circuit inside the box and fixing the origami, I modified the Arduino “sweep” servo code to increase its speed so the motion resembled a “running” effect. Once assembled, the piece achieved a full back-and-forth range of motion. I did have some issues with the sensor detection, but with some help from online resources, ChatGPT and my peers, I was able to get it back up and running again.
+
+For the ciruit in the final prototype, I connected the servo (Power → Power, GND → GND, Signal → ~5) and the ultrasonic sensor (Power → Power, GND → GND, Trig → 12, Echo → ~11) to the Arduino and then adjusted the code to set the desired speed, position, and range of motion for the servo. This was the final prototype. I preferred the faster speed on the servo as the motion felt lively and resembled a running object or person. 
+
+<img width="971" height="715" alt="Circuit Diagram_Kinetic Origami" src="https://github.com/user-attachments/assets/1f341112-592e-40bc-8fe3-0afcb481c442" />
+
+<img width="577" height="783" alt="Screenshot 2025-09-26 at 2 55 47 PM" src="https://github.com/user-attachments/assets/5682775c-483c-4c03-8e98-45050fa72deb" />
+
+<img width="750" height="751" alt="Screenshot 2025-09-26 at 2 57 12 PM" src="https://github.com/user-attachments/assets/fc064eb3-7f8f-49b7-bcc9-91f4ac52419c" />
+
+![PHOTO-2025-09-26-14-59-11](https://github.com/user-attachments/assets/40d3005d-9c31-40e3-af24-367c59614b29)
 
 
+![PHOTO-2025-09-26-14-59-11](https://github.com/user-attachments/assets/50708b8c-f198-409e-b675-68a588e7bade)
 
 
+![PHOTO-2025-09-26-14-59-12](https://github.com/user-attachments/assets/077ff07b-885b-4dfe-90e9-51e508d2bee8)
 
 
+![PHOTO-2025-09-26-14-59-12](https://github.com/user-attachments/assets/2015ea15-3e8d-423d-90af-fef6f455232d)
 
+[Link to working Ultrasonic Sensor](https://youtube.com/shorts/HxV3xgsXDB4?feature=share)
 
+[Final Prototype Link](https://drive.google.com/file/d/1IEtP90--ExHfsvl0UQZxa2HVzvmjkZft/view?usp=sharing)
 
+[Link to Project Folder](https://drive.google.com/drive/folders/1yFFv-a1pZ86ZencWEstLLtQNcUA3YIR-?usp=sharing)
 
-
+**Reflection**: This project was so much fun! I feel like with each iteration, I learnt something new. I tested differnt codes, sensors, movements, materials etc., and with each one, I was able to make improvements to the next one.
 
 
 
