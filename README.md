@@ -10,6 +10,11 @@ A repository of my explorations as part of the 'Technology Design Foundations' c
 
 [Week 2 - Fabrication](#week-2---fabrication)
 
+[Week 3 - Electronics](#week-3---electronics)
+
+[Week 3 - Fabrication](#week-3---fabrication)
+
+
 # Week 1 - Electronics 
 _Tuesday, 09/02/2025 - Tuesday, 09/09/2025_
 
@@ -580,16 +585,147 @@ We began this process by getting familliarized with Fusion. I had never used fus
 
 Task 1 for the next set of our rings was a to replicate the same ring we laser cut, but in 3D print form. I imported the SVG file of my ring from illustrator to Fusion, and extruded each individual part. I then combined them all together as one unified body. This was relatively simpler as I did not need to make a whole new ring with new dimensions again. 
 
-I then began on task 2, which was to 3D model and print a whole new ring (without any constraints, so I coul go as big as I wanted!). I decided I wanted to make a knuckle ring that have a small pon flute on the top. I spoke with Cody, the design specialist, and he suggested that I take a look at a pan flute that he had printed using the Prusa. The flute was AWESOME and played the coolest sounds. I wanted to replicate that on ring form. My first model did not work as the holes were too small and the ring was also too tiny to house such large tubes without the print collapsing in on itself. So I tried another approach, and made the base wider. I added larger tubes for the flue, and added holes at the bottom for the sound to be generated out of. I did have some troubles with this model on Fusion like joining without cutting, combining bodies and separating the tube that was inserted as a support through the flutes, but I was able to work it all out with the help of my peers. I then exported that model to the Prusa slicer and sliced it with my previous ring. 
+<img width="563" height="789" alt="Screenshot 2025-09-26 at 1 05 52 PM" src="https://github.com/user-attachments/assets/fb98bf28-3882-4a5c-aefe-ecc3ea637160" />
+
+I then began on task 2, which was to 3D model and print a whole new ring (without any constraints, so I coul go as big as I wanted!). I decided I wanted to make a knuckle ring that have a small pan flute on the top. I spoke with Cody, the design specialist, and he suggested that I take a look at a pan flute that he had printed using the Prusa. The flute was AWESOME and played the coolest sounds. I wanted to replicate that on ring form. My first model did not work as the holes were too small and the ring was also too tiny to house such large tubes without the print collapsing in on itself. So I tried another approach, and made the base wider. I added larger tubes for the flue, and added holes at the bottom for the sound to be generated out of. I did have some troubles with this model on Fusion like joining without cutting, combining bodies and separating the tube that was inserted as a support through the flutes, but I was able to work it all out with the help of my peers. I then exported that model to the Prusa slicer and sliced it with my previous ring. 
+
+<img width="593" height="809" alt="Screenshot 2025-09-26 at 1 04 10 PM" src="https://github.com/user-attachments/assets/3517bb74-7fee-463d-8787-d2b8389b9852" />
+My first ring CAD model
+
+<img width="684" height="750" alt="Screenshot 2025-09-26 at 1 05 06 PM" src="https://github.com/user-attachments/assets/9f6b7366-3312-4db0-89dc-d7db7c71461d" />
+the updated ring model. 
 
 After both models had been sliced (which was super cool because I got to see how it would print each layer and also how the whole model was structured from ther inside out), I copied the G-code on to the SD card of the 3D printer and uploaded that on to the machine. I selected my file on the machine and hit start and that was it! I watched the first 2 layers print, and then left it to print by itself. 
 
+<img width="420" height="445" alt="Screenshot 2025-09-26 at 1 08 48 PM" src="https://github.com/user-attachments/assets/e74fc93c-0019-403b-b0cb-b4e5a900efc3" />
+
+https://github.com/user-attachments/assets/4b5c8b1d-6810-4157-8b0e-c1ef7aed4739
+
+https://github.com/user-attachments/assets/5dcd44b7-8921-444e-a76a-a4c7fc16c97c
+
 When I came back (about 3.5 hours later :0), my model had fully printed! I had added organic supports, which were pretty simple to remove with a pair of pliers. My flute ting actually played a tune (which I was half expecting I would have to print again just because of the internal cavities of the object, but it workerd great). My other ring, though it came out looking fine, the sizing was incorrect. The ring was fine on my laser cut file, but slightly too small on my 3D printed outcome. I'm still yet to understand what could have triggered that happening since all the measurements were exact on the SVG. 
 
-Here are some pictures and also an audio of me playing the flute!
+![PHOTO-2025-09-26-13-13-11](https://github.com/user-attachments/assets/64c7ee18-cbdb-48d6-ba95-adaf3cd7eee3)
+
+![PHOTO-2025-09-26-13-13-23](https://github.com/user-attachments/assets/45da1fa2-e62c-4a40-ad11-b32ce003bf8e)
+
+Here are some pictures, videos and also an audio of me playing the flute!
+
+
+
+![PHOTO-2025-09-26-13-13-50](https://github.com/user-attachments/assets/fc8af247-74f8-44f2-abe2-0e61a6c00474)
+
+![PHOTO-2025-09-26-13-13-52](https://github.com/user-attachments/assets/49aa4eb2-be19-41f5-92ea-41a99ed0e8b7)
+
+![PHOTO-2025-09-26-13-13-55](https://github.com/user-attachments/assets/c96b332a-c595-4769-8c00-96a0b1a5999a)
+
+[Project Media (Google Drive)](https://drive.google.com/file/d/1J1Q-N7qW-AwadvjluC-lGez13lBQBu99/view?usp=sharing)
 
 
 **Reflection**: I had so much fun working with the 3D printer. It was definitely quite intimidating going into it, but the process was much simpler once I started. I do need a LOT of practice on Fusion before i can start making larger, more complex models. 
+
+# Week 3 - Electronics 
+_Tuesday, 09/16/2025 - Tuesday, 09/23/2025_
+
+In week 3, we began class by building a circuit that used an ultrasonic sensor to control a servo motor. This was a relatively simple setup, adapted from the Arduino “Sweep” example code for servo motors and modified to integrate the ultrasonic sensor.
+
+https://github.com/user-attachments/assets/145038d5-875a-4a7d-9a81-4cf9fcb0a791
+
+![PHOTO-2025-09-26-13-27-07](https://github.com/user-attachments/assets/63d8ded4-3eb1-4300-afa1-f8c498ccb7f7)
+
+The rest of the week, we began working on our first big project submission for a kinetic origami sculpture that was made using a sensor of choice and a servo motor. I tested out an ultrasonic sensor, a PIR and a an LDR to see what worked best when intergrated with the servo. I found that the PIR and the LDR were pretty glitchy when used in parallel with the servo. They were not as realiable with sensing either movement or light and subsequrntly outputting the servo movement. I decided that the ultrasonic sensor was the most sensitive in this particular setup, and decided to use that for my project. 
+
+Apart from this project exploration, for my studio foundations class I worked on a project that interegrated an Arduino circuit. The project was to create a digital heirloom that could be passed on to the next generation and have meaning to a persons culture/family. My product was a audi-scnet memorybox that played a audo memory while emitting an associated scnet. After consulting wtih Chris and Sudhu, I built a circuit using an Arduino UNO, a mini SD card reader, a 5v fan and a speaker. The setup took a while as I had to trasnfer the audio to an SD card in a particular way and have it connected to the SD card reader. Once that was done, I modified some existing code and had some help from Sudhu to troubleshoot. I connected the Fan to the 5V power bank from our kit (which was placed near a small sponge that was dipped in essential oils) and then laser cut and 3D printed to enclose all the parts. I plugged it in and it played my recorded audio and emit the smell of jasmine flower! This experimentation would not have been possible without the learnings from TDF, both in electronics and Fabrication. Here are some pictures:
+
+<img width="3024" height="4032" alt="Heirloom picture hero" src="https://github.com/user-attachments/assets/01ed0170-efdd-45aa-8450-937dd9525ce7" />
+
+![PHOTO-2025-09-26-13-46-56](https://github.com/user-attachments/assets/06ef52d7-30e6-4e24-8e47-6762f9da89bc)
+
+**Reflection**: It was an exciting week full of arduino circuits. I learnt so much about how to build parallel abd serial circuits, how to edit code to include differnt sensors and how to measure when a sensor is working and what values it outputs. 
+
+# Week 3 - Fabrication
+_Thursday, 09/18/2025 - Thursday, 09/25/2025_
+
+I continued working on my Kinetic origami project for week 3 of fabrication. I began by experimenting with a variety of origami folds and patter ns, testing how each could move when actuated. While some designs looked visually appealing, they didn’t translate well into motion, and others were too delicate to reliably integrate with a circuit. After iterating through several options, I identified a for m that both appealed to me and seemed structurally suitable. From there, I explored which types of movement would complement this fold and whether they could be achieved using a servo motor.
+
+![PHOTO-2025-09-26-13-53-02](https://github.com/user-attachments/assets/2cfdce79-f2f0-40bf-a1fd-f33aa45fdb6b)
+
+![PHOTO-2025-09-26-13-52-20](https://github.com/user-attachments/assets/60c2d80b-3727-4906-8841-e91998f16a57)
+
+I decided to go ahead with the hyperbolic structure since I felt it had the most range of motion and there were many ways in which it could be actuated. 
+
+When working on the form, there were a couple of iterations that I made. I started with just simlply sticking wooden skewers into a carboard box, taping the servos on either side and then attaching the origami in the middle. This form, though in unpolished form, gave the origami the most range of motion. The skewers moved with the the servo, which gave the origami a full twisting motion (which was the intented effect). 
+
+<img width="645" height="755" alt="Screenshot 2025-09-26 at 2 09 45 PM" src="https://github.com/user-attachments/assets/70cc9c3f-0232-435d-b1c2-45e73301b0b1" />
+
+Once I had finalized the circuit and movement mechanism for the protoype, I began building the final form. I chose to use two rigid walls on either side of the box to hold the servos with the origami centered between them. However, after assembling the form, connecting the circuit, and attaching the origami, I discovered that the walls severely limited the range of motion. The structure kept catching between the walls, which in turn caused the servos to malfunction. This led me to revert to using skewers, which better supported the back-and-forth movement of the origami piece. 
+
+![PHOTO-2025-09-26-14-10-23](https://github.com/user-attachments/assets/5f4db3eb-28ca-40d7-851c-ca0ffe1584bc)
+
+In my next attempt, I mounted the servos on bamboo skewers to give the origami piece the movement it needed. This setup worked much better. However, the build quality of this form was poor. It was finicky and lacked a polished outer appearance.
+
+<img width="784" height="704" alt="Screenshot 2025-09-26 at 2 10 51 PM" src="https://github.com/user-attachments/assets/d796078c-3510-43ae-b444-3339cf37222e" />
+
+At this stage, I decided to approach the form from a different angle and experimented with moving the origami piece while it was placed on its side. In this iteration, the motion was driven by two pieces of thread, a central servo, and a makeshift spindle structure that curled the thread to pull the origami inward. Although the setup worked in principle, it required constant attention when the circuit was running. If I were to redo this, I would 3D print the spindle and the box so everything fit perfectly and hence functioned well.
+
+![IMG_6014](https://github.com/user-attachments/assets/963793e0-0f34-4d2f-9397-5b77987f0034)
+
+<img width="464" height="476" alt="Screenshot 2025-09-26 at 2 15 37 PM" src="https://github.com/user-attachments/assets/eeceef78-7852-4704-8923-43d9a3387de2" />
+
+In my final iteration, I returned to exploring the twist motion of the origami fold. This time, I mounted one side of the origami to a stationary base and let the other side move with the help of a servo. I designed and laser-cut a mounting base to hold one side of the piece in place. This was my first time cutting and gluing acrylic together. The first time I printed it, the size of the joints and the height of the actual mounting base was too big. I returned back to my Illustrator file and made the edits I needed. I then recut it and this time the dimensons were correct. I then began gluing the parts together. The glue took a really long time to dry was also hard to apply. I could not get it to stick the first time I tried. I consulted with Claire at the makerspace and she suggested I use an blade to scrape off the first layer of glue and try again. This time it worked, and the parts had bonded together pretty well. I then attached this to the main cardboard box and stuck the origami to the top part of the stand.
+
+https://github.com/user-attachments/assets/95b1b4d9-7925-40c3-af10-837155f640f5
+
+<img width="413" height="573" alt="Screenshot 2025-09-26 at 2 24 40 PM" src="https://github.com/user-attachments/assets/87996616-f082-4f69-b944-f0d04b49f75c" />
+
+![PHOTO-2025-09-26-14-26-44](https://github.com/user-attachments/assets/f263a980-281a-4688-9f84-4c058cb8bd79)
+
+![PHOTO-2025-09-26-14-26-28](https://github.com/user-attachments/assets/735b888d-e18b-43ad-8383-18dd4d68f9e8)
+
+# Week 4 - Electronics 
+_Tuesday, 09/23/2025 - Tuesday, 09/30/2025_
+
+Week 4 was focused on getting the origami structure up and running. In my first prototype, I wanted to control the hyperbolic origami structure that I had chosen with two servos, rotating it around a central axis in opposite directions. Although I successfully integrated the ultrasonic sensor with the circuit, the fold itself moved only in one direction rather than alternating. This was an iteration that needed further work and refinement of code so the servos could operate in true opposite directions.
+
+<img width="477" height="356" alt="Screenshot 2025-09-26 at 2 32 42 PM" src="https://github.com/user-attachments/assets/56e1def3-1ad6-408f-85d2-0e8ddf0c130b" />
+For the circuit, I experimented with an ultrasonic sensor, an LDR, and a PIR sensor. The PIR and LDR proved unreliable and didn’t deliver the results I needed, so I ultimately chose to proceed with the ultrasonic sensor.
+
+<img width="411" height="548" alt="Screenshot 2025-09-26 at 2 33 13 PM" src="https://github.com/user-attachments/assets/93c32601-caf3-4866-b618-f0b27654fa76" />
+[Link](https://youtube.com/shorts/Bu6_5G8F2Oc?feature=share)
+
+<img width="418" height="424" alt="Screenshot 2025-09-26 at 2 33 57 PM" src="https://github.com/user-attachments/assets/9cf0c5d4-2f93-4aaa-94c2-b2bbb8ea0fc7" />
+Trying to understand why my code was not moving the servos in opposite direction and how exactly I can go about troubleshooting. This was Sudhus explanation on how I could get it to work. 
+
+In my second attempt, I got the servos to run in opposite directions. I tested this by attaching pieces of tape to each servo horn to observe their movement and then tweaking the code accordingly. Finally, after a few different versions, I was able to mounted the servos onto two bamboo skewers and connected the servo horns to the center of the hyperbolic origami structure. In this iteration, the sides of the origami did not move as I intended. I then went back and changed the code to allow the servos to rotate in the same direction, and this helped me achieve the intended effect. I also experimented with using just one servo while keeping the other side of the structure fixed; this setup worked well too, allowing the origami to move side to side from one point.
+
+<img width="694" height="678" alt="Screenshot 2025-09-26 at 2 35 59 PM" src="https://github.com/user-attachments/assets/401b0d54-0bd1-4246-b5f5-c584825ace52" />
+Here, I tested the movement of the servo motors in opposite directions. Since this mechanism did not yield the results I wanted, I pivoted to another solution. This troubleshooting of the problem really helped me understand how the internal mechanics needed to function.
+
+<img width="459" height="643" alt="Screenshot 2025-09-26 at 2 36 31 PM" src="https://github.com/user-attachments/assets/a89bd509-edc6-40ec-a8cc-c41e8b774c19" />
+In this iteration, I made one side of the hyperbolic origami stationary, and used a servo to move the other side. This setup worked well, and origami twisted from side to side. [Link](https://youtube.com/shorts/Q4I5t0AZt0Y?feature=share)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
