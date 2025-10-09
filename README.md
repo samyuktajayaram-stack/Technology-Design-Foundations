@@ -16,6 +16,7 @@ A repository of my explorations as part of the 'Technology Design Foundations' c
 
 [Week 4 - Electronics](#week-4---electronics)
 
+[Week 4 - Fabrication](#week-4---fabrication)
 
 # Week 1 - Electronics 
 _Tuesday, 09/02/2025 - Tuesday, 09/09/2025_
@@ -800,38 +801,81 @@ void loop() {
 
 On thursday, I presented my model and received feedback from my peers! I loved getting to see how everyone interpreted this project and learning from other peoples ideas.
 
-![PHOTO-2025-09-26-15-21-47](https://github.com/user-attachments/assets/9fc0cfcf-8091-451b-b3fc-d428c811e144)
-
 **Reflection**: This project was so much fun! I feel like with each iteration, I learnt something new. I tested differnt codes, sensors, movements, materials etc., and with each one, I was able to make improvements to the next one.
 
+# Week 4 - Fabrication
+_Thursday, 09/25/2025 - Thursday, 10/2/2025_
 
+The first critique of the semester was a success! My project finally came together at the end, and I learnt a alot along the way. I was really happy that after so many iterations (and thinking that it wasn't going to work), it worked really smoothly. It was also SO awesome to see the work done by my peers. I got so many new ideas, and felt like I could have so many more iterations based on what I had seen. I will take these learnings into my next prject. 
 
+A picture from my critique below!
 
+![PHOTO-2025-09-26-15-21-47](https://github.com/user-attachments/assets/9fc0cfcf-8091-451b-b3fc-d428c811e144)
 
+# Week 5 - Electronics 
+_Tuesday, 09/30/2025 - Tuesday, 10/7/2025_
 
+On tuesday, we got introduced to the new project for this week - 'Expressive Mechanics'. For this project, we needed to design and construct a kinetic mechanism that responds to live camera input using computer vision and machine learning. The goal was to to explore how "mechanical systems can interact with and react to their environment in surprising, engaging ways". 
 
+We started by playing around on open processing and using a simple code writte by Sudhu to modify and play around with. We learnt how to make a sky, a sun and a few clouds. We then saw how to make those clouds move. I played around with colours as well to see how that can be done. 
 
+Here is a video of the exploration. 
 
+https://github.com/user-attachments/assets/67b5d22c-ad27-4929-beb4-a1c904057e06
 
+We then moved to connecting the arduino to p5js code by connecting to the serial port. For this, is was important that the serial monitor on the arduino was closed, else this connection would not work. For this experimentation, we used the 
 
+For the project, we were given an H-Bridge module, an aduino Uno and a DC motor to work with. I began by first trying to figure out what kinetic movement I wanted to do. At first, I wanted to have a small stick figure that imitated a dance move that I did. But after sketching it out, I realized it may be a bit more complicated to accomplish in a week. I then pivoted to looking at something similar, where if I were to do a wave with my arms, that the sculpture would also replicate that movement by waving. I began by looking through how to replicate this movement on P5js. It took a couple of iterations to get right. 
 
+First, I sketched out the movement on a piece of paper so I could understand the logic better and what would be required to make it work. 
 
+![PHOTO-2025-10-09-14-40-08](https://github.com/user-attachments/assets/34d89dd9-1db6-4968-a1ac-6da1f5128cd6)
 
+I referred to tutorials by Jeff Thompson [Link](https://www.youtube.com/@jeffkthompson), The coding train [Link](https://www.youtube.com/channel/UCvjgXvBlbQiydffZU7m1_aw) and Sudhu's tutorials that he provided in class. For any troubleshooting and additional help, I used ChatGPT. 
 
+I then started a couple of iterations to get this movement working. I started by referring to code snippets from Jeff Thompson's channel for skeleton tracking. This was largely sucessful, but lacked the realiabilty I needed for a final prototype. It was not very accurate, and the logic for the wave in this scenario had many different components/points on the body to consider before it could complete the function and run the motor. In these iterations, there were a few problems I observed: 
 
+1. The wave movement was interepreted too early by the program. When picking up just one hand, the console would print 'Wave Detected'
+2. The movements were jittery and not reliable
+3. For a few, the wave just would not get picked up as a movement and no action would be outputted
 
+Here are some videos of my iterations and tests with skeleton tracking/tracking the whole arm:
 
+<img width="1672" height="958" alt="1" src="https://github.com/user-attachments/assets/7a21b173-7b11-4162-ae32-6890dde2d014" />
 
+<img width="1728" height="988" alt="2" src="https://github.com/user-attachments/assets/bca787d5-01a1-47ca-8f7f-6fb9b8a72370" />
 
+https://github.com/user-attachments/assets/62581362-59ed-4a05-a00e-68d786a60d2e
 
+https://github.com/user-attachments/assets/36c234a2-14f3-4ec3-8b58-bda70be42731
 
+This version was the best one of the lot. But it was unreliable when in use. If would pick up a 'Wave' even when the whol function was not complete. 
 
+https://github.com/user-attachments/assets/b706ec9e-d1a3-4974-b4a7-0332775bd460
 
+![PHOTO-2025-10-09-15-07-08](https://github.com/user-attachments/assets/611a19d1-1622-442a-b47f-fe8766c8c515)
 
+https://github.com/user-attachments/assets/133ccf1e-ccf7-49af-9614-624c73b446f4
 
+Next, I applied the same logic Sudhu used for detecting ear tilts. I mapped the two shoulder points and set up the logic: when the right shoulder is higher than the left, followed by the left being higher than the right, a wave is detected, and the console prints “Sam’s wave detected”
 
+This took a few tries. Intially there was a lot of lag, the shoulder points weren't getting mapped correctly and the wave was being detected with even a slight movement in the shoulders or after picking up just one shoulder higher than the other. Finally, after some troubleshooting I was able to get it to work. It was really smooth and printed 'Sam's wave detected' reliably after each wave was completed. 
 
+Here are a few videos of these iterations:
 
+https://github.com/user-attachments/assets/f9690594-747e-4d09-b04d-4f803f2fbb5f
+
+https://github.com/user-attachments/assets/92b0f5bd-c5ef-4117-a4ad-61dfa306d22b
+
+https://github.com/user-attachments/assets/1a94af94-3163-4402-9a43-9763bde629ef
+
+Final Version:
+
+https://github.com/user-attachments/assets/51d6f67d-807a-471e-92e8-b191c228d893
+
+https://github.com/user-attachments/assets/6004e8a1-65af-41e7-9d5a-056e5df6e66d
+
+**Reflection**: I was really happy with this outcome! It took a few tries, but it was fun to figure out what the problem was with each one and trying to find a fix. Also, online resources and ChatGPT really helped pinpoint issues. 
 
 
 
