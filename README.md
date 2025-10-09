@@ -804,7 +804,7 @@ On thursday, I presented my model and received feedback from my peers! I loved g
 **Reflection**: This project was so much fun! I feel like with each iteration, I learnt something new. I tested differnt codes, sensors, movements, materials etc., and with each one, I was able to make improvements to the next one.
 
 # Week 4 - Fabrication
-_Thursday, 09/25/2025 - Thursday, 10/2/2025_
+_Thursday, 09/25/2025_
 
 The first critique of the semester was a success! My project finally came together at the end, and I learnt a alot along the way. I was really happy that after so many iterations (and thinking that it wasn't going to work), it worked really smoothly. It was also SO awesome to see the work done by my peers. I got so many new ideas, and felt like I could have so many more iterations based on what I had seen. I will take these learnings into my next prject. 
 
@@ -877,7 +877,30 @@ https://github.com/user-attachments/assets/6004e8a1-65af-41e7-9d5a-056e5df6e66d
 
 **Reflection**: I was really happy with this outcome! It took a few tries, but it was fun to figure out what the problem was with each one and trying to find a fix. Also, online resources and ChatGPT really helped pinpoint issues. 
 
+# Week 5 - Fabrication
+_Thursday, 9/25/2025 - Thursday, 10/2/2025_
 
+For the hardware of this project, I had to make a cam shaft with planks of wood on top to make it move in a wave like motion. I consulted with Chris on my design, and he gave me a lot of helpful tips on how to make it work. He then suggested I try to do a mini prototype of it, and test the functionality. 
+
+The first thing Chris had me check was the tolerance limit for the wooden dowel. The dowel itself was 0.25", but when the hole for it is cut on a laser cutter, we need to take into consideration the kerf. So I cut holes of sizes ranging from 0.25" - 0.2". I then checked with the dowel which hole was the best fit. The goal was for it to be tight and not move the cam pieces around. For this purpose, 0.23" was the best fit.
+
+![PHOTO-2025-10-09-16-46-36](https://github.com/user-attachments/assets/1ecaf606-3794-4f31-9dfa-e04d47bed26a)
+
+In my first iteration, the wood planks were too thick to sit on a cam. Though they had the range of motion needed to move in a wave, they would have to be aligned perfectly at all times to work. The balance of it would also be difficult to achieve and pretty finicky. 
+
+Here is an image of the first iteration of the wood planks that would sit on top of the cam:
+
+![PHOTO-2025-10-09-16-46-04](https://github.com/user-attachments/assets/e0a598fb-2364-403c-8083-e7abb0ae540e)
+
+Chris then showed me a hinge mechanism made by another student and this inspired me to start thinking of hinges rather than freely suspending the wooden planks on a dowel. 
+
+![PHOTO-2025-10-09-16-48-57](https://github.com/user-attachments/assets/cc1f9512-2cee-4208-b714-fc0a57437a93)
+
+Student project
+
+I then remembered the living hinges that Chris had shown us during week 1 of TDF. This seemed like the best option considering that it provided the flexibility of a hinge without needed multiple parts (It was also a compliant mechanism, which is something Chris always talks about in class!).
+
+I then tested out the hinge with different interations. The first iteration was really flexible, but it also meant it moved from side to side 
 
 
 
