@@ -942,6 +942,213 @@ Here is a small diagram of the flow from my understanding:
 
 <img width="1026" height="732" alt="Screenshot 2025-10-10 at 1 18 06 PM" src="https://github.com/user-attachments/assets/e6e95508-744d-4157-a958-6e7bc4ca74fa" />
 
+Here is te P5js code:
+
+```javascript
+let serialOptions = { baudRate: 115200  };
+let serial;
+let portName, receivedData;
+
+let video;
+let poseNet;
+let poses = []; //import libraries
+
+let waveState = 0; // 0 = start, 1 = right shoudler up, 2 = left shoulder up
+let threshold = 20; // minimum difference in pixels to count as "higher" than other shoulder
+
+function setup() {
+  createCanvas(640, 480); //size of the video frame. 
+  video = createCapture(VIDEO);
+  video.size(width, height);
+  video.hide();
+  
+   // Setup Web Serial using serial.js
+  serial = new Serial();
+  serial.on(SerialEvents.CONNECTION_OPENED, onSerialConnectionOpened);
+  serial.on(SerialEvents.CONNECTION_CLOSED, onSerialConnectionClosed);
+  serial.on(SerialEvents.DATA_RECEIVED, onSerialDataReceived);
+  serial.on(SerialEvents.ERROR_OCCURRED, onSerialErrorOccurred);
+  
+  	// this creates the button. you could optionally use something else
+	// to call the connect() function and start the connection! 
+  button = createButton('Click me to connect to your Arduino!');
+  button.position(0, 0);
+  button.mousePressed(connect);
+
+  poseNet = ml5.poseNet(video, modelReady); //posNet learning model to detect where body parts are
+  poseNet.on('pose', gotPoses);
+}
+
+function modelReady() {
+  console.log("PoseNet ready");
+}
+
+function gotPoses(results) {
+  poses = results;
+}
+
+function draw() {
+  image(video, 0, 0, width, height);
+
+  if (poses.length > 0) {
+    let pose = poses[0].pose;
+
+    let rightShoulder = pose.rightShoulder; //position for right shoulder
+    let leftShoulder = pose.leftShoulder; //position for left shoulder
+
+    // Draw shoulders dots, one in red and one in blue
+    fill(255, 0, 0);
+    ellipse(rightShoulder.x, rightShoulder.y, 20);
+    fill(0, 0, 255);
+    ellipse(leftShoulder.x, leftShoulder.y, 20);
+
+    let diff = rightShoulder.y - leftShoulder.y; //to check the differnece between shoulder heights. If value is -ve, then right is higher, if positive then left is higher. 
+
+    // Wave detection logic
+    if (waveState === 0 && diff < -threshold) { 
+      // Right higher than left
+      waveState = 1;
+      console.log("Right shoulder higher than left");
+    } else if (waveState === 1 && diff > threshold) {
+      // Left higher than right
+      waveState = 2;
+      console.log("Left shoulder higher than right");
+    }
+
+    // Loop completed, left higher at the end. Which means that the wave is complete
+if (waveState === 2 && diff > threshold) {
+  console.log("Wave has been detected");
+  
+  // Send data to the Arduino
+  if (serial.isOpen()) {
+    serial.write("RUN\n"); // send command
+    console.log("Sent RUN command to Arduino");
+  } else {
+    console.log("Serial port not open — cannot send RUN command");
+  }
+
+  // Reset state to detect again
+  waveState = 0;
+}
+
+    }
+}
+
+/**
+ * Callback function by serial.js when there is an error on web serial
+ * 
+ * @param {} eventSender 
+ */
+ function onSerialErrorOccurred(eventSender, error) {
+  console.log("onSerialErrorOccurred", error);
+}
+
+/**
+ * Callback function by serial.js when web serial connection is opened
+ * 
+ * @param {} eventSender 
+ */
+function onSerialConnectionOpened(eventSender) {
+  console.log("onSerialConnectionOpened");
+}
+
+/**
+ * Callback function by serial.js when web serial connection is closed
+ * 
+ * @param {} eventSender 
+ */
+function onSerialConnectionClosed(eventSender) {
+  console.log("onSerialConnectionClosed");
+}
+
+/**
+ * Callback function serial.js when new web serial data is received
+ * 
+ * @param {*} eventSender 
+ * @param {String} newData new data received over serial
+ */
+function onSerialDataReceived(eventSender, newData) {
+  console.log("onSerialDataReceived", newData);
+	//console.log(serial.getPort());
+	receivedData = newData; //also save the data in our received data variable
+
+}
+
+
+
+function onSerialConnectionClosed(eventSender) {
+  console.log("onSerialConnectionClosed");
+  portName = "Not connected";
+}
+
+
+/**
+ * Called by the browser when our special button is clicked
+ */
+function connect() {
+  if (!serial.isOpen()) {
+    serial.connectAndOpen(null, serialOptions);
+  }
+}
+
+```
+
+Arduino code:
+
+```C++
+#include <L298N.h>
+
+const int IN1 = 9;
+const int IN2 = 8;
+const int EN = 10;
+
+L298N motor(EN, IN1, IN2);
+
+bool motorRunning = false;
+unsigned long motorStartTime = 0;
+
+void setup() {
+  Serial.begin(115200);
+  Serial.println("Motor Ready");
+
+  pinMode(IN1, OUTPUT);
+  pinMode(IN2, OUTPUT);
+  pinMode(EN, OUTPUT);
+
+  motor.stop(); // ensure stopped
+}
+
+void loop() {
+  // Check for serial data
+  if (Serial.available() > 0) {
+    String rcvdSerialData = Serial.readStringUntil('\n');
+    rcvdSerialData.trim();
+
+    if (rcvdSerialData == "RUN") {
+      Serial.println("Wave detected — running motor for 10s!");
+
+      // Run motor forward at speed 200
+      digitalWrite(IN1, HIGH);
+      digitalWrite(IN2, LOW);
+      analogWrite(EN, 200);
+
+      motorRunning = true;
+      motorStartTime = millis();
+    }
+  }
+
+  // Stop motor after 10 seconds
+  if (motorRunning && millis() - motorStartTime >= 10000) {
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, LOW);
+    analogWrite(EN, 0);
+
+    Serial.println("Motor stopped after 10s");
+    motorRunning = false;
+  }
+}
+```
+
 **Reflection**: This process was loads of fun. I had never used P5js before, let alone connected it to an arduino to perform a certain action. Having an smaller session with Sudhu through the week really helped me in understanding how the P5js code and the ardunio run spearateley and also together as a unit. As he explained it, the P5js code was the super brain and decided when the motor needed to run, while the arduino used that imput and ran the motor. Also, my peers were SOO helpful with any and all my questions, and I learnt so much from them too. 
 
 # Week 6 - Fabrication
