@@ -897,7 +897,7 @@ The first thing Chris had me check was the tolerance limit for the wooden dowel.
 
 ![PHOTO-2025-10-09-16-46-36](https://github.com/user-attachments/assets/1ecaf606-3794-4f31-9dfa-e04d47bed26a)
 
-In my first iteration, the wood planks were too thick to sit on a cam. Though they had the range of motion needed to move in a wave, they would have to be aligned perfectly at all times to work. The balance of it would also be difficult to achieve and pretty finicky. 
+In my first iteration, the wood planks were too thin to sit on a cam. Though they had the range of motion needed to move in a wave, they would have to be aligned perfectly at all times to work. The balance of it would also be difficult to achieve and pretty finicky. 
 
 Here is an image of the first iteration of the wood planks that would sit on top of the cam:
 
