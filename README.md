@@ -928,7 +928,7 @@ On Wednesday, I began by connecting the various components together. In this pro
 
 I spoke to some of my peers who had connected their circuits together, and followed their process. I began by first soldering my wires to the DC motor. I have soldered before, but this time around the process took a little longer than I expected. Even with the soldeing stand and the metal clamps, the wires kept shifting in place and made it had to solder. After a couple of tries, (and also accidentally melting some of the plastic casing on the motor) I got the wires connected. After this, I connected the three components together and screwed the wires conneted to the H-bridge in place so it wouldn't move/shift. 
 
-![PHOTO-2025-10-10-10-13-45](https://github.com/user-attachments/assets/336fb752-d6ec-4763-a4d8-9f4067ce07fc)
+<img width="390" height="545" alt="Screenshot 2025-10-10 at 11 34 54 AM" src="https://github.com/user-attachments/assets/a9c07045-2ac3-4c97-8cde-7a0ec0b6e473" />
 
 I tested out the connection using the arduino simple code through the L298N library. It worked as I'd hoped. 
 
@@ -936,9 +936,57 @@ https://github.com/user-attachments/assets/21980bb0-9f5d-4371-af34-c8c6b4390870
 
 I then moved to intergrating my P5js code from earlier with the arduino and serial connection code that Sudhu had provided for us. This process was pretty straightforward, since we were given the entire thing beforehand. After I connected it all together, I couldn't get the motor to run. Even though the command to run was sent to the arduino, (and printed in the P5js console), the motor would not move. I troubleshooted on ChatGPT, but still couldn't get it to work. Finally I realized, that it was because I had not put in the correct pin numbers in the code 💔. After I added that to the code based on my circuit, the motor started to turn!
 
+https://github.com/user-attachments/assets/78c256f7-61dd-4e6d-805e-520812aa90a7
 
+Here is a small diagram of the flow from my understanding:
 
+<img width="1026" height="732" alt="Screenshot 2025-10-10 at 1 18 06 PM" src="https://github.com/user-attachments/assets/e6e95508-744d-4157-a958-6e7bc4ca74fa" />
 
+**Reflection**: This process was loads of fun. I had never used P5js before, let alone connected it to an arduino to perform a certain action. Having an smaller session with Sudhu through the week really helped me in understanding how the P5js code and the ardunio run spearateley and also together as a unit. As he explained it, the P5js code was the super brain and decided when the motor needed to run, while the arduino used that imput and ran the motor. Also, my peers were SOO helpful with any and all my questions, and I learnt so much from them too. 
+
+# Week 6 - Fabrication
+_Thursday, 10/2/2025 - Thursday, 10/9/2025_
+
+This week involved A LOT of fabrication. After I had gotten my rapid prototype to work last week, I was confident on my next steps. 
+
+I began by drawing out everything on illustrator and getting my file ready for cutting. For the cam shaft, I wanted the spacing and tolerance to be exact with each turn, so the wave would look more natural. I wasn't very confident in my skills to do this manually, so instead I put 2 holes on each cam circle that were at a 30 degreen angle apart. This way, when I was adding the circles to the cam shaft, I could use a small drillbit or cut a jig that would help me angle them at exactly the same width apart. I also used the wood planks to space the cam circles at the exact distance from each other. This worked even better than I could had expected, and the circles were all very evenly spaced out. 
+
+![PHOTO-2025-10-10-13-36-02](https://github.com/user-attachments/assets/56fa76de-d50f-41b1-872a-eb7cbd9d55b3)
+
+This is how I spaced it out with the drill bit as a guide:
+![PHOTO-2025-10-10-13-36-17](https://github.com/user-attachments/assets/91c4e576-f978-489f-94b5-cf93266d9e62)
+
+![PHOTO-2025-10-10-13-36-40](https://github.com/user-attachments/assets/cdd2625f-3548-4eb8-bd11-b024837868f1)
+
+The next thing I did was cut out the 25 wooden planks that woud sit on top of the cam shaft. I added the living hinges at the same configuration as my prototype, just removed about 2 mm from the top to make it as rigid as possible. I then cut them all out. 
+
+![PHOTO-2025-10-10-13-37-40](https://github.com/user-attachments/assets/f3d80fed-dd7d-4d2d-9845-0ad5232facbe)
+
+https://github.com/user-attachments/assets/c0d92e61-61fc-4b9f-812b-91fe9ac70ffd
+
+I then cut the base and the stand with a longer finger joint. I wanted to stack three pieces together so the cam would have enough support. The first prototype did not work out because I did not account for the thickness of the wood when stacked together (beginner's mistake ahhh). I them made changes, cut it out and this time is worked perfect!
+
+![PHOTO-2025-10-10-13-42-14](https://github.com/user-attachments/assets/4b7e2609-281f-44c0-9c0f-26cc04f16fc9)
+
+I then placed the dowel into th stand. Here I realized that the dowel had been cut too short. I cut out some washers and fixed that on the side to give it some length. This fixed the problem. Lastly, I cut pieces to mount the motor and the circuit, drilled the motor in place, and stuck the wood planks on top exactly at the center of each cam so it would be balanced when it rotated. And just like that my prototype was ready! 
+
+Here are some pictures and videos of it working: 
+
+![PHOTO-2025-10-10-13-46-37](https://github.com/user-attachments/assets/c1da6857-7331-4d12-8a79-c35a49bbeaba)
+
+![PHOTO-2025-10-10-13-46-53](https://github.com/user-attachments/assets/c1971bb2-f3e4-4bd4-a3cb-9d8ad5f6b662)
+
+![PHOTO-2025-10-10-13-47-06](https://github.com/user-attachments/assets/2e121af3-8b6c-42c4-8d2c-b689dacf8c40)
+
+![PHOTO-2025-10-10-13-47-19](https://github.com/user-attachments/assets/9bd4cd9c-e176-4cb1-9100-9fdd3e3871e1)
+
+![PHOTO-2025-10-10-13-47-37](https://github.com/user-attachments/assets/c48108cf-554c-479f-ab84-9510c4c60e3d)
+
+https://github.com/user-attachments/assets/85c4945f-d76d-4383-85c0-323f7bad15ab
+
+During my critique, I got loads of feedback and also appreciation for my project!! The main feedback was to make the cam shaft an even number of circle (mine was 25), since there was a slight misalignment when it moved. Apart from this, I also got to see my peers work. Special shout out to Elisa, who used audio in her project (which I had no idea was even possible) and Vivian, who's project rotated around an axis and hit a bunch of glasses filled with water to make sounds!! Everyone's projects were fanastic and there was such a great range. 
+
+**Reflection**: This project was a whirlwind of leanring. I began this week not knowing what a camshaft was, and ended with a whole project with that as the focus. I also had never used P5js before and so that was also a new experience for me. All in all, it was a great experinece. There are so many insights I will take into my final project, and so many potential ideas I got from just getting to freely experiment. 
 
 
 
