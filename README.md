@@ -22,6 +22,11 @@ A repository of my explorations as part of the 'Technology Design Foundations' c
 
 [Week 5 - Fabrication](#week-5---fabrication)
 
+[Week 6 - Electronics](#week-6---electronics)
+
+[Week 6 - Fabrication](#week-6---fabrication)
+
+
 # Week 1 - Electronics 
 _Tuesday, 09/02/2025 - Tuesday, 09/09/2025_
 
