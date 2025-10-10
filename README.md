@@ -18,6 +18,10 @@ A repository of my explorations as part of the 'Technology Design Foundations' c
 
 [Week 4 - Fabrication](#week-4---fabrication)
 
+[Week 5 - Electronics](#week-5---electronics)
+
+[Week 5 - Fabrication](#week-5---fabrication)
+
 # Week 1 - Electronics 
 _Tuesday, 09/02/2025 - Tuesday, 09/09/2025_
 
@@ -823,9 +827,11 @@ Here is a video of the exploration.
 
 https://github.com/user-attachments/assets/67b5d22c-ad27-4929-beb4-a1c904057e06
 
-We then moved to connecting the arduino to p5js code by connecting to the serial port. For this, is was important that the serial monitor on the arduino was closed, else this connection would not work. For this experimentation, we used the 
+We then moved to connecting the arduino to p5js code by connecting to the serial port. For this, is was important that the serial monitor on the arduino was closed, else this connection would not work. For this experimentation, we used a potentiometer, and the arduino to receive data when the potentiometer was moved. We plugged in the code that Sudhu gave us, both into the arduino IDE and open processing and paired the serial port. This was the result:
 
-For the project, we were given an H-Bridge module, an aduino Uno and a DC motor to work with. I began by first trying to figure out what kinetic movement I wanted to do. At first, I wanted to have a small stick figure that imitated a dance move that I did. But after sketching it out, I realized it may be a bit more complicated to accomplish in a week. I then pivoted to looking at something similar, where if I were to do a wave with my arms, that the sculpture would also replicate that movement by waving. I began by looking through how to replicate this movement on P5js. It took a couple of iterations to get right. 
+https://github.com/user-attachments/assets/efca5a11-936e-45c1-adcc-3dd6a2046b0d
+
+After experimenting for a bit, we moved to deciding what we would do for our actual project. We were given an H-Bridge module, an aduino Uno and a DC motor to work with. I began by first trying to figure out what kinetic movement I wanted to do. At first, I wanted to have a small stick figure that imitated a dance move that I did. But after sketching it out, I realized it may be a bit more complicated to accomplish in a week. I then pivoted to looking at something similar, where if I were to do a wave with my arms, that the sculpture would also replicate that movement by waving. I began by looking through how to replicate this movement on P5js. It took a couple of iterations to get right. 
 
 First, I sketched out the movement on a piece of paper so I could understand the logic better and what would be required to make it work. 
 
@@ -895,12 +901,44 @@ Here is an image of the first iteration of the wood planks that would sit on top
 Chris then showed me a hinge mechanism made by another student and this inspired me to start thinking of hinges rather than freely suspending the wooden planks on a dowel. 
 
 ![PHOTO-2025-10-09-16-48-57](https://github.com/user-attachments/assets/cc1f9512-2cee-4208-b714-fc0a57437a93)
-
-Student project
+**Student project**
 
 I then remembered the living hinges that Chris had shown us during week 1 of TDF. This seemed like the best option considering that it provided the flexibility of a hinge without needed multiple parts (It was also a compliant mechanism, which is something Chris always talks about in class!).
 
-I then tested out the hinge with different interations. The first iteration was really flexible, but it also meant it moved from side to side 
+I then tested out the hinge with different interations. The first iteration was really flexible, but it also meant it moved from side to side and too far up and down. The motion would be unstable on a cam. It also broke almost immediately from the fragility of the hinges as they were spaced so close together. The next iteration was not as tightly packed. I spaced out the living hinge lines and made the width shorter to give the wood plank some rigidity. For the width and height of the plank, I intially thought to make it short and thin, but Chris suggested that if I made it longer and wider it would exagerate the look of the wave. So I went ahead with the suggestion. 
+
+![PHOTO-2025-10-10-09-06-46](https://github.com/user-attachments/assets/01f286fd-9d8d-40f0-a5fe-79d7a6f23e96)
+
+After I had figured out the wood planks that sat on top of the cam, it was time to make the cam itself and space them out. I had cut out the cam circles to test how balanced the wood planks on top would be, but the assembly of the whole shaft remained. I put all the cam circles on a wooden down, and spaced them out using the width of the wooden planks as tolerence. I then moved them around the same axis to create a wave like formation, and glued them in place for extra support. I then used some extra plywood pieces, and drilled a a hole on either side to hold the cam shalft. I glued a long piece of plywood at the back of the stand to hold the wood planks to rest on the cam shaft. Finally, I added the motor and connected it to the dowel using the connector piece that Chris printed for us. 
+
+![PHOTO-2025-10-10-09-06-57](https://github.com/user-attachments/assets/94ab205e-c7ef-4be3-bd93-0d3afc2699f7)
+
+Finally I asked Chris to help me connect the motor, and we tested to see if the prototype worked as expected. Here is the video of the prototype in action!
+
+https://github.com/user-attachments/assets/96126152-5934-47f9-a174-33a71541c0c4
+
+**Reflection**: It was really great to be able to build a rapid prototype and learning from my mistakes along the way. I felt like I had a better idea of what my final outcome needed to have, and what directions I should to avoid (or wouldn't work), just from this one prototype.
+
+# Week 6 - Electronics 
+_Tuesday, 10/7/2025 - Tuesday, 10/14/2025_
+
+On Wednesday, I began by connecting the various components together. In this project, we were working with an Arduino Uno, an H-bridge and DC motor.
+
+![PHOTO-2025-10-10-09-33-48](https://github.com/user-attachments/assets/01100bd1-12c4-41ee-9467-3f99c4114718)
+
+I spoke to some of my peers who had connected their circuits together, and followed their process. I began by first soldering my wires to the DC motor. I have soldered before, but this time around the process took a little longer than I expected. Even with the soldeing stand and the metal clamps, the wires kept shifting in place and made it had to solder. After a couple of tries, (and also accidentally melting some of the plastic casing on the motor) I got the wires connected. After this, I connected the three components together and screwed the wires conneted to the H-bridge in place so it wouldn't move/shift. 
+
+![PHOTO-2025-10-10-10-13-45](https://github.com/user-attachments/assets/336fb752-d6ec-4763-a4d8-9f4067ce07fc)
+
+I tested out the connection using the arduino simple code through the L298N library. It worked as I'd hoped. 
+
+https://github.com/user-attachments/assets/21980bb0-9f5d-4371-af34-c8c6b4390870
+
+I then moved to intergrating my P5js code from earlier with the arduino and serial connection code that Sudhu had provided for us. This process was pretty straightforward, since we were given the entire thing beforehand. After I connected it all together, I couldn't get the motor to run. Even though the command to run was sent to the arduino, (and printed in the P5js console), the motor would not move. I troubleshooted on ChatGPT, but still couldn't get it to work. Finally I realized, that it was because I had not put in the correct pin numbers in the code 💔. After I added that to the code based on my circuit, the motor started to turn!
+
+
+
+
 
 
 
