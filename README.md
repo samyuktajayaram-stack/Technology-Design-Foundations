@@ -945,7 +945,7 @@ https://github.com/user-attachments/assets/78c256f7-61dd-4e6d-805e-520812aa90a7
 
 Here is a small diagram of the flow from my understanding:
 
-<img width="961" height="657" alt="Screenshot 2025-10-10 at 4 22 20 PM" src="https://github.com/user-attachments/assets/176793a1-3a50-4c14-9e6e-9e0d085c8165" />
+<img width="818" height="578" alt="Screenshot 2025-10-10 at 5 35 16 PM" src="https://github.com/user-attachments/assets/4289da6e-c370-4e35-88eb-45e3de1b34f2" />
 
 Here is te P5js code:
 
