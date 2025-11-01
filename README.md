@@ -34,6 +34,10 @@ A repository of my explorations as part of the 'Technology Design Foundations' c
 
 [Week 8 - Fabrication](#week-8---fabrication)
 
+[Week 9 - Electronics](#week-9---electronics)
+
+[Week 9 - Fabrication](#week-9---fabrication)
+
 # Week 1 - Electronics 
 _Tuesday, 09/02/2025 - Tuesday, 09/09/2025_
 
@@ -1425,6 +1429,17 @@ Here is an image of the circuit:
 
 # Week 9 - Fabrication
 _Thursday, 10/30/2025 - Thursday, 11/6/2025_
+
+On Thursday, we had our critique. We displayed out project to the class, and received some great feedback and comments! Our Display worked as we wanted it to, and we were able to demonstrate how a user would se this device on a daily basis. It felt so rewarding, especically after all that prototypng, troubleshooting and iterations to see it come to life. I'm really proud of he work we hve put out.
+
+Here is our Demo Video of the working model:
+
+https://github.com/user-attachments/assets/69eb9847-ac53-41a3-af83-669bbd30987f
+
+Here is a systems map of how this system is to be used by a user and how it works:
+
+<img width="1678" height="617" alt="Screenshot 2025-11-01 at 2 41 06 PM" src="https://github.com/user-attachments/assets/46e27b83-c99e-4583-a169-93cbd1465e3d" />
+
 
 
 
