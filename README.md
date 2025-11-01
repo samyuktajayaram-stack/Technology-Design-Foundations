@@ -1226,6 +1226,8 @@ I also looked into how to connect the feather to a dc motor as we had decided th
 
 [Last Minute engineering](https://lastminuteengineers.com/esp32-l298n-dc-motor-control-tutorial/)
 
+**Reflection**: This week was all about experimenting and learning about the Oauth process (That I knew nothing about before this project started). I also learnt a lot about how API's work (and also what they are :x) and how to reliably intergrate real-time data/infomration into any project.
+
 # Week 7 - Fabrication
 _Tuesday, 10/16/2025 - Tuesday, 10/23/2025_
 
@@ -1269,7 +1271,48 @@ Here is a sketch of the final form:
 
 <img width="640" height="856" alt="Screenshot 2025-11-01 at 10 10 19 AM" src="https://github.com/user-attachments/assets/f2572dd6-df41-44c7-9e2c-77c1a1c0c95a" />
 
-The final form that we decided on was a 
+The final form that we decided on was a curved struture, with a pinball style mechansim in the back such that when the ball bearing falls (or, in other words the user completes their step goals for the day), they will receive an audio cue that their goal has been reached. 
+
+**Reflection**: week one of this project was BRUTAL. I feel like we had so many ideas, yet so many of them were not really ambient display. I was so used to creating projects that were fast paced and gave an output to a user really quickly as opposed to being slow. Since calm computing is all about slowing things down, this was a bit of a shift and I can to change my mindset to work with that brief. I really enjoyed it!
+
+# Week 8 - Electronics 
+_Tuesday, 10/21/2025 - Tuesday, 10/28/2025_
+
+After having gone through the documentation for the Fitbit API, I started following the steps they had to extract step count data. The first thing I did was to create a developers account with Fitbit. I then created a request for my project with the Fitbit API, and through that got a Client ID and a Client Secret that was unique to my project.
+
+<img width="456" height="863" alt="Screenshot 2025-10-23 at 6 35 36 PM" src="https://github.com/user-attachments/assets/5c3e521a-6c01-4964-bc30-b36186ef32a1" />
+
+<img width="523" height="339" alt="Screenshot 2025-10-23 at 6 35 26 PM" src="https://github.com/user-attachments/assets/de6d78bc-de64-44a4-981c-ae0d01d625f2" />
+
+With the help of Roopa, I competed the Oauth process and generated the URL ID from localhost. I then generated a curl request with the client ID, secret and the URL ID and put that into my terminal. This was the curl request:
+
+curl -X POST https://api.fitbit.com/oauth2/token -u 23TGS9:59c75fe8a09ad80d8d20d9a9bd796687 -d client_id=23TGS9 -d grant_type=authorization_code -d redirect_uri=https://localhost/ -d code=4f795f2bd6b24484d50e9c3aec440a21f98dac33
+
+<img width="1279" height="674" alt="Screenshot 2025-10-23 at 6 35 50 PM" src="https://github.com/user-attachments/assets/12a3d9f7-adea-4e5f-a0be-3b9933f89541" />
+
+This generated the access token and refresh token (that expires every 8 hours). This is how it looked on my terminal:
+
+<img width="1728" height="179" alt="Screenshot 2025-10-23 at 6 43 15 PM" src="https://github.com/user-attachments/assets/af98109e-17ec-4594-8d69-556776773f31" />
+
+Roopa then suggested that I see if I can actually extract the data I want from this. So we generated another curl request with the link to the exact data endpoint we wanted to extract from. Here was the curl request I used:
+
+curl -X GET "https://api.fitbit.com/1/user/-/activities/list.json?beforeDate=2025-10-23&sort=desc&limit=10&offset=0" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyM1RHUzkiLCJzdWIiOiI1UFhEUFIiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyaHIgcmFjdCBycHJvIiwiZXhwIjoxNzYxMzY3MDgyLCJpYXQiOjE3NjEzMzgyODJ9.39dpOetqhT7mj09_LEH5BgOxygmzblYfv73NfPDWjPk"
+
+This gave me a whole bunch of data in the terminal, and all of it was real-time data from the fitbit account directly. From this, I knew that I would be able to get the data we needed for the project. This is what it looked like:
+
+<img width="1728" height="1081" alt="Screenshot 2025-10-24 at 9 23 00 AM" src="https://github.com/user-attachments/assets/4fe97a7c-f0e4-4812-ade0-dc339c6a0c5e" />
+
+I then inputted the code into the IDE, attached the client sceret, ID, access and refresh tokens and ran the program. It gave me the step count accumulated for that day! Here is the image of that output:
+
+<img width="1728" height="1115" alt="Screenshot 2025-10-23 at 7 01 58 PM" src="https://github.com/user-attachments/assets/1369fdd8-59ff-434c-954f-09a384c01719" />
+
+
+
+
+
+
+
+
 
 
 
