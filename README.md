@@ -1237,7 +1237,7 @@ For the fabrication, Ishani and I began by thinking of forms that could best rep
 
 <img width="640" height="715" alt="Screenshot 2025-11-01 at 12 33 38 AM" src="https://github.com/user-attachments/assets/e6170097-40bf-44f4-8bf0-0ab71f620ac5" />
 
-After 
+Though we really liked this idea, after speaking with Chris, we realized it was not necessarily great ambient display due to it's fast and frequent pace. This devuce needed to embody calm and slow computing. So we pivoted to differnt idea. We began by first sketching our ideas. we wanted to ude a magenet to carry ball beaaring upwards 
 
 
 
