@@ -30,6 +30,8 @@ A repository of my explorations as part of the 'Technology Design Foundations' c
 
 [Week 7 - Fabrication](#week-7---fabrication)
 
+[Week 8 - Electronics](#week-8---electronics)
+
 # Week 1 - Electronics 
 _Tuesday, 09/02/2025 - Tuesday, 09/09/2025_
 
@@ -1229,7 +1231,7 @@ I also looked into how to connect the feather to a dc motor as we had decided th
 **Reflection**: This week was all about experimenting and learning about the Oauth process (That I knew nothing about before this project started). I also learnt a lot about how API's work (and also what they are :x) and how to reliably intergrate real-time data/infomration into any project.
 
 # Week 7 - Fabrication
-_Tuesday, 10/16/2025 - Tuesday, 10/23/2025_
+_Thursday, 10/16/2025 - Thursday, 10/23/2025_
 
 For the fabrication, Ishani and I began by thinking of forms that could best represent our step count. In one of those brainstorming sessions, we came up with the idea of creating a drawing machine that translates daily movement into visual form, generating increasingly complex drawings as the user takes more steps. We began by making a few prototypes using plywood that had been laser cut. These iterations worked great and we got a feel for how this drawing machine would work. Here are some images of these explorations and the drawings it created:
 
@@ -1273,7 +1275,7 @@ Here is a sketch of the final form:
 
 The final form that we decided on was a curved struture, with a pinball style mechansim in the back such that when the ball bearing falls (or, in other words the user completes their step goals for the day), they will receive an audio cue that their goal has been reached. 
 
-**Reflection**: week one of this project was BRUTAL. I feel like we had so many ideas, yet so many of them were not really ambient display. I was so used to creating projects that were fast paced and gave an output to a user really quickly as opposed to being slow. Since calm computing is all about slowing things down, this was a bit of a shift and I can to change my mindset to work with that brief. I really enjoyed it!
+**Reflection**: Week one of this project was BRUTAL. I feel like we had so many ideas, yet so many of them were not really ambient display. I was so used to creating projects that were fast paced and gave an output to a user really quickly as opposed to being slow. Since calm computing is all about slowing things down, this was a bit of a shift and I can to change my mindset to work with that brief. I really enjoyed it!
 
 # Week 8 - Electronics 
 _Tuesday, 10/21/2025 - Tuesday, 10/28/2025_
@@ -1306,10 +1308,24 @@ I then inputted the code into the IDE, attached the client sceret, ID, access an
 
 <img width="1728" height="1115" alt="Screenshot 2025-10-23 at 7 01 58 PM" src="https://github.com/user-attachments/assets/1369fdd8-59ff-434c-954f-09a384c01719" />
 
+**Reflection**: This week was SO much fun. Getting this to work, despite the pretty complicated process was really rewarding. It was also really cool seeing the data update anytime I walked around. I was so used to using static data, that when I saw it change in real-time, it was super exciting. 
 
+# Week 8 - Fabrication
+_Thursday, 10/23/2025 - Thursday, 10/30/2025_
 
+This week involved LOTS of prototyping and several rounds of trial, error and iteration. We made 4 prototypes this week just to get the tolerances for the magnet and the ball precise. With each one we learnt soemthing new. In the second iteration, we laser cut a form with a kerf cut at the top so we could curve it in place. The conveyor belt was made using a rubber tire, that was taped together in place. Unforntuanteluy this prototype was too close to the edge of the outer casing, which meant the magnets couldn't go over the curve of the form. Additionally, the rubber belt was too taut and there was not enough slack for the spindles to move freely.
 
+<img width="632" height="844" alt="Screenshot 2025-11-01 at 12 12 44 PM" src="https://github.com/user-attachments/assets/b39b4f07-6bce-461c-a4fc-078a42bdd274" />
 
+Using the same form, we replaced the rubber belt with a kerf cut belt since we felt that worked really well the first time we prototyped. It was taut enough but also flexible to move freely. This prototype worked really well. The only thing we had to change was the press fit of the dowels into the spindle. Since it was really loose, the conveyor belt was not moving as intended. But apart from this, the ball bearing was moving over the curve and to the other side which we were really happy to see! 
+
+Here is a video of it in action:
+
+https://github.com/user-attachments/assets/9aa4b28e-6881-46cf-9132-f5db5ef88b40
+
+<img width="627" height="843" alt="Screenshot 2025-11-01 at 12 20 00 PM" src="https://github.com/user-attachments/assets/11fcceef-72c1-404b-8264-72259d981789" />
+
+<img width="1134" height="846" alt="Screenshot 2025-11-01 at 12 20 32 PM" src="https://github.com/user-attachments/assets/f6b1a64f-ab5d-42d2-b769-45e6632a6ea9" />
 
 
 
