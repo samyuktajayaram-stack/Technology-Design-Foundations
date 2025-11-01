@@ -1251,6 +1251,8 @@ We then began fleshing the idea out and drawiung more detailed sketches. Here ar
 
 <img width="636" height="851" alt="Screenshot 2025-11-01 at 8 40 43 AM" src="https://github.com/user-attachments/assets/4afce35a-1bd3-4793-9561-2a6ef36421c7" />
 
+<img width="647" height="857" alt="Screenshot 2025-11-01 at 10 07 32 AM" src="https://github.com/user-attachments/assets/dc68c9dc-b48a-4823-8910-0e4ad549d16c" />
+
 After speaking with Chris and a few of the student helpers, We figured out how we would make the internal mechanism work. We then got to rapid prototyping our first iteration. We cut out 4 pieces of plywood and made a conveyor belt and spindle using a couple of pieces of kerf cut wood. We then inserted dowels into the sides and attahced a row of magnets on the coveryor belt. The ball bearing was attached on the outside, and actually moved pretty smoothly up and down the track. Here are a few photos of that:
 
 <img width="442" height="626" alt="Screenshot 2025-11-01 at 8 44 14 AM" src="https://github.com/user-attachments/assets/006bfd6f-9714-41b3-856a-c96801a96029" />
@@ -1261,12 +1263,13 @@ Having done this prototype, we were able to get an initial look into what it wou
 
 Here is a sketch of the final form:
 
+<img width="628" height="845" alt="Screenshot 2025-11-01 at 10 07 07 AM" src="https://github.com/user-attachments/assets/7505b3a7-759b-453e-a645-634b032642dc" />
 
+<img width="636" height="845" alt="Screenshot 2025-11-01 at 10 06 53 AM" src="https://github.com/user-attachments/assets/4c025411-8b48-4b52-a8f9-3e3ea08382bf" />
 
+<img width="640" height="856" alt="Screenshot 2025-11-01 at 10 10 19 AM" src="https://github.com/user-attachments/assets/f2572dd6-df41-44c7-9e2c-77c1a1c0c95a" />
 
-
-
-
+The final form that we decided on was a 
 
 
 
