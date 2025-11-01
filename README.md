@@ -1376,7 +1376,7 @@ After that was bent in place, we decided to test the side panels once again in w
 <img width="636" height="853" alt="Screenshot 2025-11-01 at 1 13 09 PM" src="https://github.com/user-attachments/assets/54bde355-2cdd-4590-9ca3-8063ce961e5f" />
 
 
-At this point, Chris gave us two flat rubber pieces to try to use for the belt. Since we were slightluy worried about the fragility of the kerf cut wood, we decided to try this out. We sewed the two ends of the belt together and left enough slack for it to turn. This iteration was good, but due to the friction of the belt ut kept coming off of the spindle and gettimg stuck. We decided that kerf cut was best for the belt, but started to look into ways to make it more sturdy. We tried gaffers tape, but this was sort of pointless cause it removed the ability of the kerf cut to bend, and cuased it to immediately snap. Finally we just decided that we would go with the kerf cut, no changes needed. 
+At this point, Chris gave us two flat rubber pieces to try to use for the belt. Since we were slightly worried about the fragility of the kerf cut wood, we decided to try this out. We sewed the two ends of the belt together and left enough slack for it to turn. This iteration was good, but due to the friction of the belt ut kept coming off of the spindle and gettimg stuck. We decided that kerf cut was best for the belt, but started to look into ways to make it more sturdy. We tried gaffers tape, but this was sort of pointless cause it removed the ability of the kerf cut to bend, and cuased it to immediately snap. Finally we just decided that we would go with the kerf cut, no changes needed. 
 
 <img width="637" height="855" alt="Screenshot 2025-11-01 at 1 17 30 PM" src="https://github.com/user-attachments/assets/20cb9ed9-9a0f-49f1-aec3-620d292dca88" />
 
@@ -1384,7 +1384,56 @@ At this point, Chris gave us two flat rubber pieces to try to use for the belt. 
 
 <img width="637" height="852" alt="Screenshot 2025-11-01 at 1 23 41 PM" src="https://github.com/user-attachments/assets/7e49fcb0-8cd7-4521-858a-e21e525e8042" />
 
-After sticking the magnets to the belt and getting it to a stage where it was able to move the ball bearing, we decided to cut the final acrylic pieces. We glued all the pieces together and went to test the mechanism. Just as we thought everything was working well, the ball bearing was too heavy to be moved over the curve. At this point, we decided to try another magnet. This worked fine, just that it was pulling on the belt too much and also was getting attacked after dropping off the curve (which we didn't want). We decided to try with a screw and this worked great. So we decided to just use a lighter metal object. 
+After sticking the magnets to the belt and getting it to a stage where it was able to move the ball bearing, we decided to cut the final acrylic pieces. We glued all the pieces together and went to test the mechanism. Just as we thought everything was working well, the ball bearing was too heavy to be moved over the curve. At this point, we decided to try another magnet. This worked fine, just that it was pulling on the belt too much and also was getting attached after dropping off the curve (which we didn't want). Next we tried covering a magnet with foil, this also worked finem though it just didn't look very polished. We decided to try with a screw and this worked great.
+
+https://github.com/user-attachments/assets/b00af8e6-0315-413f-a8be-4a7c6c6d37f2
+
+![PHOTO-2025-11-01-13-50-56](https://github.com/user-attachments/assets/95355d28-bd24-4f29-937c-0890b6efd4bc)
+
+https://github.com/user-attachments/assets/de39aff5-8e4b-431d-aef4-bdcabdb76876
+
+Next was to make the back of the outer casing, which would house the pin ball mechanism and would move the magnet back to the front of the structure after the day. Ishani cut all the pieces and glued them in the pattern. We then decided to add side panels to bring it to the front. This worked great! The last part was just to get make a stand and a box to house the electronics. And just like that, our prototype was ready!
+
+<img width="640" height="856" alt="Screenshot 2025-11-01 at 1 52 40 PM" src="https://github.com/user-attachments/assets/fad67f22-b178-4669-9d0c-e89544fff220" />
+
+<img width="639" height="857" alt="Screenshot 2025-11-01 at 1 51 41 PM" src="https://github.com/user-attachments/assets/785664ca-51dc-498f-811b-a0d036608538" />
+
+<img width="638" height="856" alt="Screenshot 2025-11-01 at 1 53 05 PM" src="https://github.com/user-attachments/assets/3d4a5a22-b3de-4479-8cc6-81c4df78f0a0" />
+
+Here are all the prototypes we made to reach the final:
+
+<img width="629" height="743" alt="Screenshot 2025-11-01 at 1 54 34 PM" src="https://github.com/user-attachments/assets/ae1e733f-6bf7-4347-a86c-f42e0914293e" />
+
+**Reflection**: This process truly showed me what it meant to prototype and learn from past iterations. We learnt so much with each iteration, and it ony made our final that much better. Every little thing in this display had to be carfully caliberated. It was a massive amount of work to get to our final, but I'm really proud of how we persisted through it. There were many times through this week where i was unsure this disaply woud even work (or if we would even have anything to show), but we made it work!! Shoutout to Ishani who was the best teammate to have on this project. She handled fabrication like a pro, and helped us get all our tolerances down to a T. She was always optimistic and positive, and I really needed that when I was doubting our work. Overall, I'm so happy with how our work turned out :)
+
+# Week 9 - Electronics 
+_Tuesday, 10/28/2025 - Tuesday, 11/4/2025_
+
+The next step in the project was to get the motor running so it could be conected to our final ambient display. I used a similar setup to what I had used last time for my expresive mechanics project, but just swapped the the arduino ourt for the feather. This process was slightly hard, since I couldn't get the motor to run. I asked Manny at the makerspace for help, who helped me with all my troubleshooting. We used Last Minute engineering to figure out how to make the circuit. We tested out each inddividual part separately and also checked to see if any connection was loose. Through this, we realized that both the H-bridges had been fried. Once this was changed, it worked as intended!
+
+We then merged the motor code we had used with the previous API call code. This made the motor move everytime someone took 10 steps with the Fitbit watch on. It was slightly jerky at first, but after changing the speed nd delay it worked as we wanted!
+
+Here is an image of the circuit:
+
+<img width="636" height="849" alt="Screenshot 2025-11-01 at 2 20 31 PM" src="https://github.com/user-attachments/assets/7e9bf062-64de-4c4e-a359-d0d9e25deb67" />
+
+<img width="1121" height="830" alt="Screenshot 2025-11-01 at 2 21 34 PM" src="https://github.com/user-attachments/assets/176dd1da-84af-432d-92f2-fa131dcb734e" />
+
+<img width="634" height="848" alt="Screenshot 2025-11-01 at 2 23 35 PM" src="https://github.com/user-attachments/assets/4dc4cdf1-d576-4b3e-b1a1-2ebac46dabce" />
+
+***Reflection***: This process was made a lot easier since we had already worked with a DC motor on the last project. Troubleshooting was also fun, though I wonder why all my H-bridges fried?
+
+# Week 9 - Fabrication
+_Thursday, 10/30/2025 - Thursday, 11/6/2025_
+
+
+
+
+
+
+
+
+
 
 
 
