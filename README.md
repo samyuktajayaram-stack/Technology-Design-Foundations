@@ -26,6 +26,8 @@ A repository of my explorations as part of the 'Technology Design Foundations' c
 
 [Week 6 - Fabrication](#week-6---fabrication)
 
+[Week 7 - Electronics](#week-7---electronics)
+
 
 # Week 1 - Electronics 
 _Tuesday, 09/02/2025 - Tuesday, 09/09/2025_
@@ -1203,6 +1205,19 @@ https://github.com/user-attachments/assets/85c4945f-d76d-4383-85c0-323f7bad15ab
 During my critique, I got loads of feedback and also appreciation for my project!! The main feedback was to make the cam shaft an even number of circle (mine was 25), since there was a slight misalignment when it moved. Apart from this, I also got to see my peers work. Special shout out to Elisa, who used audio in her project (which I had no idea was even possible) and Vivian, who's project rotated around an axis and hit a bunch of glasses filled with water to make sounds!! Everyone's projects were fanastic and there was such a great range. 
 
 **Reflection**: This project was a whirlwind of leanring. I began this week not knowing what a camshaft was, and ended with a whole project with that as the focus. I also had never used P5js before and so that was also a new experience for me. All in all, it was a great experinece. There are so many insights I will take into my final project, and so many potential ideas I got from just getting to freely experiment. 
+
+# Week 7 - Electronics 
+_Tuesday, 10/14/2025 - Tuesday, 10/21/2025_
+
+We began this week by getting familizarized with the ESP feather V2. I started by first soldeirng the header pins to the board. After I had my pins soldered in, I began to follow Roopa's tutorial to connect the feather to a weather API.
+
+The first step in the process was connecting my Feather to the Berkeley network. I registered on the Berkeley IoT portal and received a unique password, which I later used to connect the device to Wi-Fi by adding it to the code. After following the remaining steps in the tutorial, I successfully programmed the Feather’s onboard light to flash in different colors representing the weather conditions in Berkeley! 
+
+Here is a video of that exploration:
+
+https://github.com/user-attachments/assets/bec8ff36-b2ad-48c3-9dc5-f8b52bf9e3f8
+
+![PHOTO-2025-10-31-23-00-20](https://github.com/user-attachments/assets/a5311286-e624-49a7-8296-d37ad7a2e6f2)
 
 
 
