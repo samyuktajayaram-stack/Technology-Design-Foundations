@@ -1237,7 +1237,27 @@ For the fabrication, Ishani and I began by thinking of forms that could best rep
 
 <img width="640" height="715" alt="Screenshot 2025-11-01 at 12 33 38 AM" src="https://github.com/user-attachments/assets/e6170097-40bf-44f4-8bf0-0ab71f620ac5" />
 
-Though we really liked this idea, after speaking with Chris, we realized it was not necessarily great ambient display due to it's fast and frequent pace. This devuce needed to embody calm and slow computing. So we pivoted to differnt idea. We began by first sketching our ideas. we wanted to ude a magenet to carry ball beaaring upwards 
+Though we really liked this idea, after speaking with Chris, we realized it was not necessarily great ambient display due to it's fast and frequent pace. This device needed to embody calm and slow computing. So we decided to pivot to a differnt idea. We began by first sketching potential displays out. Through that process, we decided to use a magnet to carry a ball beaaring upwards within a track to symbolize a person moving 
+
+We then began fleshing the idea out and drawiung more detailed sketches. Here are a few below:
+
+<img width="608" height="643" alt="Screenshot 2025-11-01 at 8 39 28 AM" src="https://github.com/user-attachments/assets/af3f443a-dfc1-4360-b805-5b8c34bcf547" />
+
+<img width="520" height="416" alt="Screenshot 2025-11-01 at 8 39 43 AM" src="https://github.com/user-attachments/assets/89b123c3-d45c-457a-a2b6-84f9e75e501b" />
+
+<img width="628" height="787" alt="Screenshot 2025-11-01 at 8 40 03 AM" src="https://github.com/user-attachments/assets/0fa2ceee-70c2-4e4f-b5f8-bfb69fb8ab3f" />
+
+<img width="604" height="754" alt="Screenshot 2025-11-01 at 8 40 22 AM" src="https://github.com/user-attachments/assets/76a30f07-4acf-41e5-a981-e590f5b6ccc5" />
+
+<img width="636" height="851" alt="Screenshot 2025-11-01 at 8 40 43 AM" src="https://github.com/user-attachments/assets/4afce35a-1bd3-4793-9561-2a6ef36421c7" />
+
+After speaking with Chris and a few of the student helpers, We figured out how we would make the internal mechanism work. We then got to rapid prototyping our first iteration. We cut out 4 pieces of plywood with made a conveyor belt and spindle using a couple of pieces of kerf cut wood. We then inserted dowels into the sides and attahced a row of magnets on the coveryor belt. The ball bearing was attached on the outside, and actually moved pretty smoothly up and down the track. Here are a few photos of that:
+
+<img width="442" height="626" alt="Screenshot 2025-11-01 at 8 44 14 AM" src="https://github.com/user-attachments/assets/006bfd6f-9714-41b3-856a-c96801a96029" />
+
+<img width="446" height="691" alt="Screenshot 2025-11-01 at 8 44 44 AM" src="https://github.com/user-attachments/assets/4c09ac50-0024-490c-a393-bc73c8be63d3" />
+
+
 
 
 
