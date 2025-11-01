@@ -28,6 +28,7 @@ A repository of my explorations as part of the 'Technology Design Foundations' c
 
 [Week 7 - Electronics](#week-7---electronics)
 
+[Week 7 - Fabrication](#week-7---fabrication)
 
 # Week 1 - Electronics 
 _Tuesday, 09/02/2025 - Tuesday, 09/09/2025_
@@ -1227,6 +1228,19 @@ I also looked into how to connect the feather to a dc motor as we had decided th
 
 # Week 7 - Fabrication
 _Tuesday, 10/16/2025 - Tuesday, 10/23/2025_
+
+For the fabrication, Ishani and I began by thinking of forms that could best represent our step count. In one of those brainstorming sessions, we came up with the idea of creating a drawing machine that translates daily movement into visual form, generating increasingly complex drawings as the user takes more steps. We began by making a few prototypes using plywood that had been laser cut. These iterations worked great and we got a feel for how this drawing machine would work. Here are some images of these explorations and the drawings it created:
+
+<img width="642" height="771" alt="Screenshot 2025-11-01 at 12 33 01 AM" src="https://github.com/user-attachments/assets/2f3c56d4-c435-4ee2-923d-c9db413039f5" />
+
+<img width="621" height="757" alt="Screenshot 2025-11-01 at 12 32 35 AM" src="https://github.com/user-attachments/assets/6b475cf5-67bc-4f18-8013-3f034de4abf9" />
+
+<img width="640" height="715" alt="Screenshot 2025-11-01 at 12 33 38 AM" src="https://github.com/user-attachments/assets/e6170097-40bf-44f4-8bf0-0ab71f620ac5" />
+
+After 
+
+
+
 
 
 
