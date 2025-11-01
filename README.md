@@ -1251,11 +1251,20 @@ We then began fleshing the idea out and drawiung more detailed sketches. Here ar
 
 <img width="636" height="851" alt="Screenshot 2025-11-01 at 8 40 43 AM" src="https://github.com/user-attachments/assets/4afce35a-1bd3-4793-9561-2a6ef36421c7" />
 
-After speaking with Chris and a few of the student helpers, We figured out how we would make the internal mechanism work. We then got to rapid prototyping our first iteration. We cut out 4 pieces of plywood with made a conveyor belt and spindle using a couple of pieces of kerf cut wood. We then inserted dowels into the sides and attahced a row of magnets on the coveryor belt. The ball bearing was attached on the outside, and actually moved pretty smoothly up and down the track. Here are a few photos of that:
+After speaking with Chris and a few of the student helpers, We figured out how we would make the internal mechanism work. We then got to rapid prototyping our first iteration. We cut out 4 pieces of plywood and made a conveyor belt and spindle using a couple of pieces of kerf cut wood. We then inserted dowels into the sides and attahced a row of magnets on the coveryor belt. The ball bearing was attached on the outside, and actually moved pretty smoothly up and down the track. Here are a few photos of that:
 
 <img width="442" height="626" alt="Screenshot 2025-11-01 at 8 44 14 AM" src="https://github.com/user-attachments/assets/006bfd6f-9714-41b3-856a-c96801a96029" />
 
-<img width="446" height="691" alt="Screenshot 2025-11-01 at 8 44 44 AM" src="https://github.com/user-attachments/assets/4c09ac50-0024-490c-a393-bc73c8be63d3" />
+<img width="448" height="628" alt="Screenshot 2025-11-01 at 9 40 31 AM" src="https://github.com/user-attachments/assets/d5b249b6-d8eb-4e0c-834f-86070f3acff5" />
+
+Having done this prototype, we were able to get an initial look into what it would take to make this display on a larger scale. We also realized through this prototype, that the magnet had to be extremely close to the edge of the case (but not too close that it was unable to move) for it to continue holding the ball bearing while moving. Since we wanted to do our final display in a curved form, we had a lot to figure our in terms of tolerances to make sure that the magnet held on within the path and was released after the step goal was completed. We then starting sketching out the final forms and creating our illustrator files to continue testing this form. We wanted the final display to be made with acrylic, but before we did that we had to make sure every measurement was correct and working in wood. 
+
+Here is a sketch of the final form:
+
+
+
+
+
 
 
 
