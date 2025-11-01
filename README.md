@@ -1221,7 +1221,12 @@ We were then introduced to our next project; ambient display. The brief required
 
 So we decided to explore step count data using the fitbit API. This was a much more complex process than we had intially anticipated as you have to go throigh an Oauth process to get access to a users health data. From this, an access token needed to be generated every 8 horus to allow someont to have continue access to this data. We decided to take the rest of the week to learn more abot how we could extract this information in real time. The Fitbt API documention for this was really comprehensive, and helped us understad not only how we would be able to access this data, but what data we needed to call to get step count information. 
 
-I also looked into hwo to connect the feather to a dc motor as we had decided 
+I also looked into how to connect the feather to a dc motor as we had decided that we wanted the medium for our ambient display to be motion. I found a tutorial from Last Minute Engineering that was partciularly helpful. Below is the link:
+
+[Last Minute engineering](https://lastminuteengineers.com/esp32-l298n-dc-motor-control-tutorial/)
+
+# Week 7 - Fabrication
+_Tuesday, 10/16/2025 - Tuesday, 10/23/2025_
 
 
 
