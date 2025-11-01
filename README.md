@@ -1313,11 +1313,11 @@ I then inputted the code into the IDE, attached the client sceret, ID, access an
 # Week 8 - Fabrication
 _Thursday, 10/23/2025 - Thursday, 10/30/2025_
 
-This week involved LOTS of prototyping and several rounds of trial, error and iteration. We made 4 prototypes this week just to get the tolerances for the magnet and the ball precise. With each one we learnt soemthing new. In the second iteration, we laser cut a form with a kerf cut at the top so we could curve it in place. The conveyor belt was made using a rubber tire, that was taped together in place. Unforntuanteluy this prototype was too close to the edge of the outer casing, which meant the magnets couldn't go over the curve of the form. Additionally, the rubber belt was too taut and there was not enough slack for the spindles to move freely.
+This week involved LOTS of prototyping and several rounds of trial, error and iteration. We made 7 prototypes this week just to get the tolerances for the magnet and the ball precise. With each one we learnt soemthing new. In the second iteration, we laser cut a form with a kerf cut at the top so we could curve it in place. The conveyor belt was made using a rubber tire, that was taped together in place. Unforntuanteluy this prototype was too close to the edge of the outer casing, which meant the magnets couldn't go over the curve of the form. Additionally, the rubber belt was too taut and there was not enough slack for the spindles to move freely.
 
 <img width="632" height="844" alt="Screenshot 2025-11-01 at 12 12 44 PM" src="https://github.com/user-attachments/assets/b39b4f07-6bce-461c-a4fc-078a42bdd274" />
 
-Using the same form, we replaced the rubber belt with a kerf cut belt since we felt that worked really well the first time we prototyped. It was taut enough but also flexible to move freely. This prototype worked really well. The only thing we had to change was the press fit of the dowels into the spindle. Since it was really loose, the conveyor belt was not moving as intended. But apart from this, the ball bearing was moving over the curve and to the other side which we were really happy to see! 
+Using the same form, we replaced the rubber belt with a kerf cut belt since we felt that worked really well the first time we prototyped. It was taut enough but also flexible to move freely. This prototype worked really well. The only thing we had to change was the press fit of the dowels into the spindle. Since it was really loose, the conveyor belt was not moving as intended. For the rapid prototype, we also made it using toilet paper rolls which also didn't have the friction we needed to make it move smoothly. But apart from this, the ball bearing was moving over the curve and to the other side which we were really happy to see! 
 
 Here is a video of it in action:
 
@@ -1326,6 +1326,46 @@ https://github.com/user-attachments/assets/9aa4b28e-6881-46cf-9132-f5db5ef88b40
 <img width="627" height="843" alt="Screenshot 2025-11-01 at 12 20 00 PM" src="https://github.com/user-attachments/assets/11fcceef-72c1-404b-8264-72259d981789" />
 
 <img width="1134" height="846" alt="Screenshot 2025-11-01 at 12 20 32 PM" src="https://github.com/user-attachments/assets/f6b1a64f-ab5d-42d2-b769-45e6632a6ea9" />
+
+The next 2 iteration were to get the tolerances even more precise and making sure the ball moved over the curve every time. We kept playing around with different sizes, spindle placements, outer casing sizes and also the size of the spindles inside. This helped inform the dimensions of our final cut in acrylic. Since acrylic is expensive, we wanted to be sure of what to cut before we went in with it. Here are some images of the next iterations
+
+We also realized through this process that the spindles had to be printed with the outer circle being of the same outer height as the width of the magnet so it would be exact and wouldn't protrude out of the casing. In the iterations we had made so far, the magnet was larger than that tolerance, but still moved since the kerf cut at the top expanded as it moved. Here are some images of it:
+
+<img width="632" height="846" alt="Screenshot 2025-11-01 at 12 32 32 PM" src="https://github.com/user-attachments/assets/7583f043-4657-4fa4-a9c5-9deac5a4198d" />
+
+<img width="637" height="847" alt="Screenshot 2025-11-01 at 12 32 47 PM" src="https://github.com/user-attachments/assets/994d0286-eb91-479c-b8b8-99161c882af4" />
+
+We 3D modeled new spindles, but unfortiunately got the sizing slightly off the first time. We measured and reprinted, and it was perfect!
+
+Iteration 1 spindle:
+
+<img width="634" height="849" alt="Screenshot 2025-11-01 at 12 35 47 PM" src="https://github.com/user-attachments/assets/6904593e-a1d2-4024-a30d-f7ab1e315602" />
+
+Iteration 2 spindle:
+
+<img width="639" height="852" alt="Screenshot 2025-11-01 at 12 36 13 PM" src="https://github.com/user-attachments/assets/355e3b9c-7350-45cf-a6b0-cbacab52f72c" />
+
+Next, also tried a belt with paper. We were inspired after seeing Nengi's expressive mechanics project and decided to try it out. We used a thing piece of paper, and taped it together in belt form. We also used grease on the spindles to make it moved more smoothly. This unfortunately did not work either, and so we went back to kerf cut wood.
+
+<img width="629" height="848" alt="Screenshot 2025-11-01 at 12 39 21 PM" src="https://github.com/user-attachments/assets/a9f1e314-81fb-4701-b2c7-21acea99386a" />
+
+<img width="636" height="853" alt="Screenshot 2025-11-01 at 12 39 40 PM" src="https://github.com/user-attachments/assets/0f65b4dd-e081-4781-9362-5f08a38de150" />
+
+Finally, we felt ready (ish) to cut our acrylic piece. Chris suggested we cut only the front panel first (and thank god he did), and then work our way to the next. We cut out the first piece, and then he helped us use a blow torch and a metal cylider to curve it around that radius. This was my first time curving arcylic and it was so much fun!!! Here are some images of that process:
+
+<img width="639" height="855" alt="Screenshot 2025-11-01 at 1 01 35 PM" src="https://github.com/user-attachments/assets/9bdcac05-4b39-40cf-a8c2-e78eb4808577" />
+
+<img width="641" height="852" alt="Screenshot 2025-11-01 at 1 01 50 PM" src="https://github.com/user-attachments/assets/362313cc-0cfa-4d03-8b5e-ceb007f3970d" />
+
+<img width="640" height="859" alt="Screenshot 2025-11-01 at 1 02 28 PM" src="https://github.com/user-attachments/assets/cc9af2cc-b1aa-4dc1-a942-f135f08a1d4c" />
+
+
+
+
+
+
+
+
 
 
 
