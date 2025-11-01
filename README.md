@@ -1217,7 +1217,11 @@ Here is a video of that exploration:
 
 https://github.com/user-attachments/assets/bec8ff36-b2ad-48c3-9dc5-f8b52bf9e3f8
 
-![PHOTO-2025-10-31-23-00-20](https://github.com/user-attachments/assets/a5311286-e624-49a7-8296-d37ad7a2e6f2)
+We were then introduced to our next project; ambient display. The brief required creating an ambient device that conveys real-world information through subtle, aesthetic variations in form, movement, sound, color, or light using API data. We then got into teams of two. Ishani and I decided to team up together for this project. The first course of action was to brainstorm ideas and understand what we wanted to collectively achieve in this project. We both decided that we wanted to create an ambient display that would motivate a user to improve a certain aspect of their daily routine. We intially wanted to use screen time data, to track when a user is nearing their screen limit for the day, but we soon realized that it was really hard to access this data due to certain privacy standards that were built in place. 
+
+So we decided to explore step count data using the fitbit API. This was a much more complex process than we had intially anticipated as you have to go throigh an Oauth process to get access to a users health data. From this, an access token needed to be generated every 8 horus to allow someont to have continue access to this data. We decided to take the rest of the week to learn more abot how we could extract this information in real time. The Fitbt API documention for this was really comprehensive, and helped us understad not only how we would be able to access this data, but what data we needed to call to get step count information. 
+
+I also looked into hwo to connect the feather to a dc motor as we had decided 
 
 
 
