@@ -32,6 +32,8 @@ A repository of my explorations as part of the 'Technology Design Foundations' c
 
 [Week 8 - Electronics](#week-8---electronics)
 
+[Week 8 - Fabrication](#week-8---fabrication)
+
 # Week 1 - Electronics 
 _Tuesday, 09/02/2025 - Tuesday, 09/09/2025_
 
@@ -1288,7 +1290,9 @@ After having gone through the documentation for the Fitbit API, I started follow
 
 With the help of Roopa, I competed the Oauth process and generated the URL ID from localhost. I then generated a curl request with the client ID, secret and the URL ID and put that into my terminal. This was the curl request:
 
+```shell
 curl -X POST https://api.fitbit.com/oauth2/token -u 23TGS9:59c75fe8a09ad80d8d20d9a9bd796687 -d client_id=23TGS9 -d grant_type=authorization_code -d redirect_uri=https://localhost/ -d code=4f795f2bd6b24484d50e9c3aec440a21f98dac33
+```
 
 <img width="1279" height="674" alt="Screenshot 2025-10-23 at 6 35 50 PM" src="https://github.com/user-attachments/assets/12a3d9f7-adea-4e5f-a0be-3b9933f89541" />
 
@@ -1298,7 +1302,9 @@ This generated the access token and refresh token (that expires every 8 hours). 
 
 Roopa then suggested that I see if I can actually extract the data I want from this. So we generated another curl request with the link to the exact data endpoint we wanted to extract from. Here was the curl request I used:
 
+```shell
 curl -X GET "https://api.fitbit.com/1/user/-/activities/list.json?beforeDate=2025-10-23&sort=desc&limit=10&offset=0" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyM1RHUzkiLCJzdWIiOiI1UFhEUFIiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyaHIgcmFjdCBycHJvIiwiZXhwIjoxNzYxMzY3MDgyLCJpYXQiOjE3NjEzMzgyODJ9.39dpOetqhT7mj09_LEH5BgOxygmzblYfv73NfPDWjPk"
+```
 
 This gave me a whole bunch of data in the terminal, and all of it was real-time data from the fitbit account directly. From this, I knew that I would be able to get the data we needed for the project. This is what it looked like:
 
@@ -1313,7 +1319,7 @@ I then inputted the code into the IDE, attached the client sceret, ID, access an
 # Week 8 - Fabrication
 _Thursday, 10/23/2025 - Thursday, 10/30/2025_
 
-This week involved LOTS of prototyping and several rounds of trial, error and iteration. We made 7 prototypes this week just to get the tolerances for the magnet and the ball precise. With each one we learnt soemthing new. In the second iteration, we laser cut a form with a kerf cut at the top so we could curve it in place. The conveyor belt was made using a rubber tire, that was taped together in place. Unforntuanteluy this prototype was too close to the edge of the outer casing, which meant the magnets couldn't go over the curve of the form. Additionally, the rubber belt was too taut and there was not enough slack for the spindles to move freely.
+This week involved LOTS of prototyping and several rounds of trial, error and iteration. We made 7 prototypes this week just to get the tolerances for the magnet and the ball precise. With each one we learnt soemthing new. In the second iteration, we laser cut a form with a kerf cut at the top so we could curve it in place. The conveyor belt was made using a rubber tire, that was taped together in place. Unforntuanteluy this prototype was too close to the edge of the outer casing, which meant the magnets couldn't go over the curve of the form. Additionally, the rubber belt was curved and hence too taut and there was not enough slack for the spindles to move freely.
 
 <img width="632" height="844" alt="Screenshot 2025-11-01 at 12 12 44 PM" src="https://github.com/user-attachments/assets/b39b4f07-6bce-461c-a4fc-078a42bdd274" />
 
@@ -1345,6 +1351,8 @@ Iteration 2 spindle:
 
 <img width="639" height="852" alt="Screenshot 2025-11-01 at 12 36 13 PM" src="https://github.com/user-attachments/assets/355e3b9c-7350-45cf-a6b0-cbacab52f72c" />
 
+<img width="894" height="857" alt="Screenshot 2025-11-01 at 1 14 01 PM" src="https://github.com/user-attachments/assets/b64700d6-1a27-4cb4-9f66-d1db6c52fb53" />
+
 Next, also tried a belt with paper. We were inspired after seeing Nengi's expressive mechanics project and decided to try it out. We used a thing piece of paper, and taped it together in belt form. We also used grease on the spindles to make it moved more smoothly. This unfortunately did not work either, and so we went back to kerf cut wood.
 
 <img width="629" height="848" alt="Screenshot 2025-11-01 at 12 39 21 PM" src="https://github.com/user-attachments/assets/a9f1e314-81fb-4701-b2c7-21acea99386a" />
@@ -1358,6 +1366,27 @@ Finally, we felt ready (ish) to cut our acrylic piece. Chris suggested we cut on
 <img width="641" height="852" alt="Screenshot 2025-11-01 at 1 01 50 PM" src="https://github.com/user-attachments/assets/362313cc-0cfa-4d03-8b5e-ceb007f3970d" />
 
 <img width="640" height="859" alt="Screenshot 2025-11-01 at 1 02 28 PM" src="https://github.com/user-attachments/assets/cc9af2cc-b1aa-4dc1-a942-f135f08a1d4c" />
+
+After that was bent in place, we decided to test the side panels once again in wood to make sure it fit and worked properly. In hindsight, it was good we did this, because we soon realized that since the arcylic was bent manually, there was bound to be slight imperfections. So all the calcualtions we had done before for the tolerances of the magnet and the ball bearing were not going to work. We decided to keep prototyping in wood to get the frame tolerance right. We also realized that the 3d printed spindles were too smooth and did not have enough friction to hold the belt in place. Again, inspired by Nengi's previous project, we used tiny elastic rubberbands to add friction to the surface. This worked great (Shoutout Nengi!!!). 
+
+<img width="632" height="855" alt="Screenshot 2025-11-01 at 1 12 41 PM" src="https://github.com/user-attachments/assets/ed71cb66-8c81-431b-ad34-27eadbb1bace" />
+
+<img width="630" height="846" alt="Screenshot 2025-11-01 at 1 12 57 PM" src="https://github.com/user-attachments/assets/329603ad-468b-4030-9071-ed124cd23c09" />
+
+<img width="636" height="853" alt="Screenshot 2025-11-01 at 1 13 09 PM" src="https://github.com/user-attachments/assets/54bde355-2cdd-4590-9ca3-8063ce961e5f" />
+
+
+At this point, Chris gave us two flat rubber pieces to try to use for the belt. Since we were slightluy worried about the fragility of the kerf cut wood, we decided to try this out. We sewed the two ends of the belt together and left enough slack for it to turn. This iteration was good, but due to the friction of the belt ut kept coming off of the spindle and gettimg stuck. We decided that kerf cut was best for the belt, but started to look into ways to make it more sturdy. We tried gaffers tape, but this was sort of pointless cause it removed the ability of the kerf cut to bend, and cuased it to immediately snap. Finally we just decided that we would go with the kerf cut, no changes needed. 
+
+<img width="637" height="855" alt="Screenshot 2025-11-01 at 1 17 30 PM" src="https://github.com/user-attachments/assets/20cb9ed9-9a0f-49f1-aec3-620d292dca88" />
+
+<img width="637" height="855" alt="Screenshot 2025-11-01 at 1 18 20 PM" src="https://github.com/user-attachments/assets/9fcc958a-4078-4bf8-88c7-6ec2593863f5" />
+
+<img width="637" height="852" alt="Screenshot 2025-11-01 at 1 23 41 PM" src="https://github.com/user-attachments/assets/7e49fcb0-8cd7-4521-858a-e21e525e8042" />
+
+After sticking the magnets to the belt and getting it to a stage where it was able to move the ball bearing, we decided to cut the final acrylic pieces. We glued all the pieces together and went to test the mechanism. Just as we thought everything was working well, the ball bearing was too heavy to be moved over the curve. At this point, we decided to try another magnet. This worked fine, just that it was pulling on the belt too much and also was getting attacked after dropping off the curve (which we didn't want). We decided to try with a screw and this worked great. So we decided to just use a lighter metal object. 
+
+
 
 
 
