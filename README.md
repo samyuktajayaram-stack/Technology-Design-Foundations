@@ -1415,7 +1415,7 @@ _Tuesday, 10/28/2025 - Tuesday, 11/4/2025_
 
 The next step in the project was to get the motor running so it could be conected to our final ambient display. I used a similar setup to what I had used last time for my expresive mechanics project, but just swapped the the arduino ourt for the feather. This process was slightly hard, since I couldn't get the motor to run. I asked Manny at the makerspace for help, who helped me with all my troubleshooting. We used Last Minute engineering to figure out how to make the circuit. We tested out each inddividual part separately and also checked to see if any connection was loose. Through this, we realized that both the H-bridges had been fried. Once this was changed, it worked as intended!
 
-We then merged the motor code we had used with the previous API call code. This made the motor move everytime someone took 10 steps with the Fitbit watch on. It was slightly jerky at first, but after changing the speed nd delay it worked as we wanted!
+We then merged the motor code we had used with the previous API call code. This made the motor move everytime someone took 10 steps with the Fitbit watch on. It was slightly jerky at first, but after changing the speed and delay it worked as we wanted!
 
 Here is an image of the circuit:
 
@@ -1424,6 +1424,144 @@ Here is an image of the circuit:
 <img width="1121" height="830" alt="Screenshot 2025-11-01 at 2 21 34 PM" src="https://github.com/user-attachments/assets/176dd1da-84af-432d-92f2-fa131dcb734e" />
 
 <img width="634" height="848" alt="Screenshot 2025-11-01 at 2 23 35 PM" src="https://github.com/user-attachments/assets/4dc4cdf1-d576-4b3e-b1a1-2ebac46dabce" />
+
+Here is the final Code
+
+```C++
+//Code and circuit connections were sourced from a combination of the fitbit api guide (https://dev.fitbit.com/build/reference/web-api/developer-guide/), last minute engineers (https://lastminuteengineers.com/esp32-l298n-dc-motor-control-tutorial/) and chatgpt
+
+#include <WiFi.h>
+#include <HTTPClient.h>
+#include <ArduinoJson.h>
+#include <secrets.h>
+
+// Wi-Fi Credentials Berkeley
+const char* ssid = SECRET_SSID;
+const char* password = SECRET_PASSWORD;
+
+// Fitbit API Info
+String accessToken = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyM1RHUzkiLCJzdWIiOiI1UFhEUFIiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJyaHIgcmFjdCBycHJvIiwiZXhwIjoxNzYxODgzOTQzLCJpYXQiOjE3NjE4NTUxNDN9.NVzQlylWZje3Cy5aa6LEDsJon--OWPqYxNarFmiklRo";
+const char* fitbitEndpoint = "https://api.fitbit.com/1/user/-/activities/steps/date/today/1d.json";
+
+// Motor pin Connections
+int enA = 14;  // ENA pin
+int in1 = 27;  // IN1 pin
+int in2 = 12;  // IN2 pin
+
+// PWM Setup
+const int freq = 1000;
+const int pwmChannelA = 0;
+const int resolution = 8;
+const int dutyCycle = 200;  // Max speed PWM value (0–255)
+
+// Timing
+const int interval = 10000; // Fetch Fitbit every 10 seconds
+const int motorRunTime = 5000; // Motor runs for 5 seconds when triggered
+
+// Step tracking
+int lastThreshold = 0;
+
+void setup() {
+  Serial.begin(115200);
+
+  // Motor setup
+  pinMode(in1, OUTPUT);
+  pinMode(in2, OUTPUT);
+  ledcAttachChannel(enA, freq, resolution, pwmChannelA);
+  stopMotor();
+
+  // Wi-Fi connection
+  Serial.print("Connecting to Wi-Fi");
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println("\nConnected to Wi-Fi");
+
+  // Initial Fitbit fetch
+  getFitbitSteps();
+}
+
+void loop() {
+  getFitbitSteps();
+  delay(interval);
+}
+
+// Fetch Fitbit steps and trigger motor rotation
+void getFitbitSteps() {
+  if (WiFi.status() == WL_CONNECTED) {
+    HTTPClient http;
+    http.begin(fitbitEndpoint);
+    http.addHeader("Authorization", "Bearer " + accessToken);
+
+    int httpResponseCode = http.GET();
+
+    if (httpResponseCode == 200) {
+      String payload = http.getString();
+      StaticJsonDocument<512> doc;
+      DeserializationError error = deserializeJson(doc, payload);
+
+      if (!error) {
+        int currentSteps = doc["activities-steps"][0]["value"].as<int>();
+        Serial.print("Current steps: ");
+        Serial.println(currentSteps);
+
+        int currentThreshold = currentSteps / 10;  // Every 10 steps, the motpr is triggered once
+
+        if (currentThreshold > lastThreshold) {
+          Serial.println("🚶 New 10-step threshold reached!");
+          runMotorForDuration(motorRunTime); // Motor is tuned to run for 5 seconds
+          lastThreshold = currentThreshold;
+        }
+      } else {
+        Serial.println("Failed to parse JSON");
+      }
+    } else {
+      Serial.print("HTTP request failed, code: ");
+      Serial.println(httpResponseCode);
+    }
+
+    http.end();
+  } else {
+    Serial.println("Wi-Fi not connected!");
+  }
+}
+
+// Run motor for fixed time with smooth acceleration
+void runMotorForDuration(int durationMs) {
+  int rampSteps = 50;
+  int rampDelay = 10;
+  int rampTime = rampSteps * rampDelay;
+
+  // Ramp up
+  for (int speed = 0; speed <= dutyCycle; speed += dutyCycle / rampSteps) {
+    ledcWrite(enA, speed);
+    digitalWrite(in1, HIGH);
+    digitalWrite(in2, LOW);
+    delay(rampDelay);
+  }
+
+  // Run at full speed (minus ramp in/out time)
+  int runTime = durationMs - (2 * rampTime);
+  if (runTime > 0) delay(runTime);
+
+  // Ramp down
+  for (int speed = dutyCycle; speed >= 0; speed -= dutyCycle / rampSteps) {
+    ledcWrite(enA, speed);
+    delay(rampDelay);
+  }
+
+  stopMotor();
+}
+
+// Stop motor helper function
+void stopMotor() {
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, LOW);
+  ledcWrite(enA, 0);
+}
+```
 
 ***Reflection***: This process was made a lot easier since we had already worked with a DC motor on the last project. Troubleshooting was also fun, though I wonder why all my H-bridges fried?
 
