@@ -1568,7 +1568,7 @@ void stopMotor() {
 # Week 9 - Fabrication
 _Thursday, 10/30/2025 - Thursday, 11/6/2025_
 
-On Thursday, we had our critique. We displayed out project to the class, and received some great feedback and comments! Our Display worked as we wanted it to, and we were able to demonstrate how a user would se this device on a daily basis. It felt so rewarding, especically after all that prototypng, troubleshooting and iterations to see it come to life. I'm really proud of he work we hve put out.
+On Thursday, we had our critique. We displayed our project to the class, and received some great feedback and comments! Our display worked so well, and we were able to demonstrate how a person would use this device on a daily basis. It felt so rewarding, especically after all that prototyping, troubleshooting and iterations to see it come to life. I'm really proud of the work we have put out.
 
 Here is our Demo Video of the working model:
 
