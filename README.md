@@ -2252,6 +2252,8 @@ void loop(void) {
 
 Parallely, Skye and Alistair had created the spine prints, motor mount model and enclosure casing respectively. For the spines, after testing, we realized the the wider ones we had tested with before worked better than the newer versions. It was able to grip to the inside of the pipe better and was more reliable in locomotion. We decided to go ahead with this version for the final showcase. For the enclosure, Alistair screwed in all the pieces from the circuit into the case, attached the VGA pins and created a port for the power supply. 
 
+<img width="697" height="602" alt="Screenshot 2025-12-12 at 3 26 41 PM" src="https://github.com/user-attachments/assets/cbea044a-1b2e-4d06-a7c0-c2628e71a5ea" />
+
 And just like that the PipeBot was complete!!! We gave it a final test and then moved to creating material for our showcase display. 
 
 Here is a diagrammatic analysis of the function of the PipeBot - 
