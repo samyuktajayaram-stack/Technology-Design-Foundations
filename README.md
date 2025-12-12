@@ -1620,23 +1620,29 @@ Here is the link to the proposal:
 
 
 <img width="1327" height="623" alt="Screenshot 2025-12-11 at 6 14 52 PM" src="https://github.com/user-attachments/assets/da587958-f5a4-4174-bc5a-a29b5587809c" />
+
 _Early system architecture diagram from the project proposal_
 
 
 <img width="866" height="597" alt="Screenshot 2025-12-11 at 6 15 35 PM" src="https://github.com/user-attachments/assets/905150f3-2ff3-4e76-becb-751e35a76cb9" />
+
 _The teams proposed timeline for project experimentation and delivery_
 
 After the proposal was created, and we had a point of reference to start from, we began conducting secondary research and brainstorming ideas of how we wanted to execute each experiment. We found a few great research papers and soft robotic solutions online that we took as inspiration. Below are a few images of those explorations:
 
 <img width="906" height="903" alt="Screenshot 2025-12-11 at 6 49 57 PM" src="https://github.com/user-attachments/assets/1be14907-480c-4105-9125-e3a6b545d33c" />
+
 _One Linear Actuator Peristaltic Motion_
 
 
 <img width="485" height="457" alt="Screenshot 2025-12-11 at 6 53 40 PM" src="https://github.com/user-attachments/assets/2994e0e8-e840-44b8-b470-d05da48ae03a" />
+
 _Rotating movement with Wheels_
 
 
+<img width="607" height="609" alt="Screenshot 2025-12-11 at 6 58 46 PM" src="https://github.com/user-attachments/assets/c61df22b-ab07-48a5-b09e-f1f975e3ec86" />
 
+_Peristaltic Movement with pneumatics_
 
 
 
