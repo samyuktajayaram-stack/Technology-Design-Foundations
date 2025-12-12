@@ -2254,6 +2254,10 @@ Parallely, Skye and Alistair had created the spine prints, motor mount model and
 
 And just like that the PipeBot was complete!!! We gave it a final test and then moved to creating material for our showcase display. 
 
+Here is a diagrammatic analysis of the function of the PipeBot - 
+
+<img width="791" height="365" alt="Screenshot 2025-12-12 at 3 23 01 PM" src="https://github.com/user-attachments/assets/51ab0258-bb22-4eb5-88aa-7382be963791" />
+
 Reflection: What a whirlwind this project has been. I have come out of this feeling so much more technically capable, more so than any other project I have worked on. My teammate swere INCREDIBLE and showed me the ropes many a times during this process. I am so glad I my tub was clogged and I decided to pitch this project :)
 
 # Week 15 - Showcase
