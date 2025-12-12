@@ -2141,7 +2141,17 @@ Here's an image of the team trying to test the code for the first time. It was a
 
 https://github.com/user-attachments/assets/005058cf-7268-4b59-90b8-40034302b26f
 
-Relfection: This week was the most challenging for, but the MOST rewarding so far. I really did not think I could write the code and actually get the linear actuators to run in the sequnece we needed it to, but I'm really proud that continued to test and iterate on it till I got it perfect. Having spent so much time with that same piece of code, towards the end I was able to tell why something was not working and what I could do to fix it. The next step was to try to update the code and see if the actuators could be made to move faster.
+Once fabrication for this week was done (will talk about it in detail in the next entry), we attached it all on the pipebot and gave it a go. No only did it move through a pipe, around a steep curve and push a blockage out, but it also went up vertically!!!! This was a BREAKTHROUGH moment for us as a team. Once we had seen that it together, we knew the rest was just a matter of refinement. The most challenging part was over :)
+
+Here are some videos of this moment - 
+
+https://github.com/user-attachments/assets/5df6812b-25ef-4733-a2b9-0423053c18d3
+
+![PHOTO-2025-12-12-13-36-28](https://github.com/user-attachments/assets/cde24df1-6fd5-42d1-91d3-72b218c13caa)
+
+https://github.com/user-attachments/assets/a43fdfa7-bcd6-4f2b-848c-f37f9cad27fd
+
+Relfection: This week was the most challenging for, but the MOST rewarding so far. I really did not think I could write the code and actually get the linear actuators to run in the sequnece we needed it to, but I'm really proud that continued to test and iterate on it till I got it perfect. Having spent so much time with that same piece of code, towards the end I was able to tell why something was not working and what I could do to fix it. Also, getting to finally see an assembled bot in action with all the eletrical parts firing at the right time was so satisfying after all our work. The next step was to try to update the code and see if the actuators could be made to move faster.
 
 
 # Week 13 - Fabrication
@@ -2167,18 +2177,117 @@ In parallel, Skye was running some prints to test out the parts for the body of 
 <img width="354" height="285" alt="Screenshot 2025-12-12 at 12 19 45 PM" src="https://github.com/user-attachments/assets/c88218f6-177e-4d56-afe2-7a9a6d7c2ede" />
 
 
-Next, Alistair began designing custom hardware to mount the spines to the actuator itself. This was also a tediaous process as anytime there was a change to the spine, the mount also needed to be changed accordingly. Additionally, the first few mounts kept splipping off the actuator when it retracted. This was later fixed with a sort of clamp style design over the actuator, which was tightened using 2 bolts. This was the fianl version that the team decided to use for the final bot. 
+Next, Alistair began designing custom hardware to mount the spines to the actuator itself. This was also a tediaous process as anytime there was a change to the spine, the mount also needed to be changed accordingly. Additionally, the first few mounts kept splipping off the actuator when it retracted. This was later fixed with a sort of clamp style design over the actuator, which was tightened using 2 bolts. This was the final version that the team decided to use for the final bot. 
 
 Here is a video of the initial testing we did with this fabrication - 
 
-
-
 https://github.com/user-attachments/assets/f8f38e20-5ca9-4889-8aaf-5cedc9de06ab
 
+Reflection: Testing all the diffrent iterations for the bot body was really cool. I got to learn how to print on TPU, which was a whole new experience. I also saw how even the smallest changes to fabrication, especially in the settng of a robot like what we were building, can make a drastic difference. 
+
+# Week 14 - Electronics
+_Tuesday, 12/02/2025 - Tuesday, 12/09/2025_
+
+Entering the week, we finally had the code and wiring figured out, and the bot was moving the way we wanted it to!!! So, the next step was to solder all the VGA cable pins and start building the circuit enclosure. Alistair, who had extensive experience with this process, walked me through the workflow. I soldered the remaining wires to the cable head and used heat-shrink tubing to secure each joint. Working with the bare VGA pinouts was challenging, but the result was worth it. The bundled cable made the robot far more resilient and gave us a reliable way to retrieve it if it became stranded inside the pipe. We ended up soldering 12 of the 15 pins and sealing both ends with heat shrink. Once that was done, Alistair connected the cable wires to their respective terminals on the circuit.
+
+To keep the system flexible as we iterated on the front motor and sensor assemblies, we broke the soldered pins out into individual jumper wires. This also provided fallback options if any single line failed. The rear VGA port was mounted to a 3D-printed part that attached to the back of the rear linear actuator, giving the entire cable bundle proper strain relief so that any pulling force traveled through a reinforced structure rather than the delicate driver wires. The first mount was printed in PLA, with the final version printed in TPU for added flexibility as the robot navigated bends and corners in the pipe.
+
+This setup took a few attempts to refine. Alistair and I repeatedly tested the code, checked the sequencing, and made wiring adjustments. It was a tedious process, but ultimately well worth the effort.
+
+<img width="684" height="880" alt="Screenshot 2025-12-12 at 1 20 10 PM" src="https://github.com/user-attachments/assets/15175cf1-072e-4b3b-8c74-23642ff39e3d" />
+
+<img width="224" height="245" alt="Screenshot 2025-12-12 at 1 21 53 PM" src="https://github.com/user-attachments/assets/ccf124c2-f7f0-4c7d-b369-d148806236f3" />
+
+<img width="929" height="540" alt="Screenshot 2025-12-12 at 1 23 28 PM" src="https://github.com/user-attachments/assets/871e75a1-6be8-40de-9900-f08ae9267931" />
+
+We then assembled the bot together, and connected the cable. It worked like a charm. We just had 2 more crucial steps left to do/test. One was to switch out the existing actuators for faster ones and 2) was to increase the speed via the code. 
+
+When trying the faster actuators, something we learnt was that it moved so fast that it did not retract all the way and hence did not have the grip necessary to move in the pipe efficiently. We decided to then switch back to the older ones which were slower but ultimately more reliable. We then decided to just increase the speed on the code which worked better.
+
+Reflection: This was a week of refinement and testing. I also picked up the new skill of precision soldering which was super useful. Overall a great week, and excited to see how the bot pans out. 
+
+# Week 14 - Fabrication
+_Thursday, 12/04/2025 - Thursday, 12/11/2025_
+
+This week was the last week of fabrication and the final push before ur showcase. We had a few things to do this week - 
+
+1. 3D print another version of the spines with a different print orientation and size to see if it worked better to grip
+2. Creating the enlosure for the circuit and VGA port
+3. Reprinting the head mount with a new design. After last week's tests we wanted to push the stem of the mount inside and shell the body entirely. This would help make it smoother for the bot to traverse steeper curves.
+4. Creating a motor mount to attach the motor to the front of the bot
+5. Create a head for the FSR attachement
+
+I began 3d modelling the motor head. Skye had an idea for how it should look to help it move better, so I followed her design for it. I created the ridged cone shape and then attached the stem on the inside shelled portion of the head. I then added 2 set screws to make sure it was perfecty even when rotating. This is what the cad model looked like - 
+
+<img width="723" height="718" alt="Screenshot 2025-12-12 at 1 51 55 PM" src="https://github.com/user-attachments/assets/6b181525-1da9-4ab9-9310-82df80602c11" />
+
+I then tested this design out, and it worked really well. It also reduced the additional bulkiness of the head attachement. I then modelled the fsr head for blockage detection and had Skye print that put in TPU. I then embedded the fsr inside it, and connected the code. I had to reduce the force threshold as the fsr was picking up the pressure of it being embedded in the TPU head attachment. This worked great and it printed 'Blockage Detected' anytime it detected a blockage. 
+
+```C++
+
+//FSR testing for the blockage detection code. This code was referenced from https://www.youtube.com/watch?v=r7oWtcE6QQc and updated using Chatgpt
+ 
+int fsrAnalogPin = 0; // FSR is connected to analog 0
+int fsrReading;        // the analog reading from the FSR 
+// Adjusted this value based on the readings after the FSR was placed in the 3D printed part 
+int threshold = 500;
+
+void setup(void) {
+  Serial.begin(9600);   // debugging information via the Serial monitor
+}
+
+void loop(void) {
+  fsrReading = analogRead(fsrAnalogPin);
+  Serial.print("Analog reading = ");
+  Serial.println(fsrReading);
+
+  if (fsrReading > threshold) {
+    Serial.println("Blockage detected");
+    delay(300);  
+  }
+
+  delay(100);
+}
+```
+
+Parallely, Skye and Alistair had created the spine prints, motor mount model and enclosure casing respectively. For the spines, after testing, we realized the the wider ones we had tested with before worked better than the newer versions. It was able to grip to the inside of the pipe better and was more reliable in locomotion. We decided to go ahead with this version for the final showcase. For the enclosure, Alistair screwed in all the pieces from the circuit into the case, attached the VGA pins and created a port for the power supply. 
+
+And just like that the PipeBot was complete!!! We gave it a final test and then moved to creating material for our showcase display. 
+
+Reflection: What a whirlwind this project has been. I have come out of this feeling so much more technically capable, more so than any other project I have worked on. My teammate swere INCREDIBLE and showed me the ropes many a times during this process. I am so glad I my tub was clogged and I decided to pitch this project :)
+
+# Week 15 - Showcase
+_Tuesday, 12/09/2025_
+
+In order to highlight the depth of our prototyping process at showcase, Skye set to work to design a display for nearly every iteration of every part we had designed and tested over the course of the project. An elevated display at the front of the table would highlight the vast variety of parts, while the back half of the table would host the test track - two transparent pipe sections we had purchased from TAP Plastics, secured to acrylic stands and a table clamp with a custom press-fit pipe mount, allowing us to demonstrate both our ability to round corners and our ability to climb at a steep angle. 
+
+Due to the sheer volume of stuff on our showcase table, we assembled our entire display downstairs in the MDes studio the night before, and then wheeled it up to 310 in its entirety in the early morning. This allowed us to design an incredibly comprehensive presentation table and perform multiple robot test runs before committing to a final configuration. We used the same configuration a couple days later when filming our final video. 
+
+Additional last-day changes included the finalizing of revisions to the linear actuator mounts, in-setting the motor mount of the drill head, and the assembly of the control box. I had also assembled a short video detailing our prototyping process which played behind us at our showcase stall. Additionally we assembled a number of linear actuator anchor assemblies and invited showcase guests to hold and play with them while observing the robot in motion. 
 
 
+<img width="358" height="541" alt="Screenshot 2025-12-12 at 2 10 24 PM" src="https://github.com/user-attachments/assets/f7e1385f-8968-4faa-83cb-229c8ae214d9" />
+
+_Assembling the showcase table_
+
+<img width="1137" height="401" alt="Screenshot 2025-12-12 at 2 10 48 PM" src="https://github.com/user-attachments/assets/b0e71796-e6ec-4af6-8385-70728c84849e" />
+
+_Final assembly to demo blockage clearance in the pipe_
+
+<img width="1211" height="931" alt="Screenshot 2025-12-12 at 2 12 30 PM" src="https://github.com/user-attachments/assets/3c5a42f4-33d7-4150-ae2a-6c5be4883621" />
+
+_Final Showcase day_
+
+<img width="1217" height="879" alt="Screenshot 2025-12-12 at 2 17 17 PM" src="https://github.com/user-attachments/assets/67fce7a5-377a-4132-9b01-b7b37c967dec" />
+
+The final video we displayed:
+
+[Video Display](https://www.canva.com/design/DAG7BBk2ueE/CQLd20CrvC3zW1vyzTM1xg/edit?utm_content=DAG7BBk2ueE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) 
+
+The crit went so well! We had so many people come up and tell us they liked our project, and that they see other applications for it like earthquake releif or gas connection line inspection. It was really wonerful to see the interest in this outcome, and I'm so excited to have been a part of it!
 
 
+Reflection: I am so happy I did this project. It was the most fulfilling way to end the semester. I feel so confident with rotbotics and more technical mechanical systems. I feel like this was just a great way to end TDF!
 
 
 
