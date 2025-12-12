@@ -1854,7 +1854,7 @@ Reflection: I like how we have been testing and then incrementally finding solut
 # Week 12 - Fabrication
 _Thursday, 11/20/2025 - Thursday, 11/27/2025_
 
-For fabrication for this week, we began by brainstorming ideas for the clearance head and also the flexible, gripping body of the bot. For the clearance mechanism, we wanted something that was modular, i.e. we could hve multiple head attachements for various different blockage needs. We sketched out a few ideas, and then I decided to tackle this. I began by first creating the motor mounting bit, that would help attach it to the head of the motor. The bit was to have a set screw threaded hole so we could have a tight fit again the small motor head. After I had CAD modelled this, I sent it to print to test the fit on the motor. The first iteration was did not fit, and was too tight, so I made changes and reprinted. The second iteration fit great! Here is a photo of that - 
+For fabrication for this week, we began by brainstorming ideas for the clearance head and also the flexible, gripping body of the bot. For the clearance mechanism, we wanted something that was modular, i.e. we could hve multiple head attachements for various different blockage needs. We sketched out a few ideas, and then I decided to tackle this. I began by first creating the motor mounting bit, that would help attach it to the head of the motor. The bit was to have a set screw threaded hole so we could have a tight fit again the small motor head. After I had CAD modelled this, I sent it to print to test the fit on the motor. The first iteration did not fit, and was too tight, so I made changes and reprinted. The second iteration fit great! Here is a photo of that - 
 
 <img width="365" height="467" alt="Screenshot 2025-12-12 at 8 17 12 AM" src="https://github.com/user-attachments/assets/6bbd226f-6dbb-49cc-b0f7-c1144eae99a0" />
 
@@ -1893,16 +1893,287 @@ The curve would help to bend and expand in size to grip to the sides of the pipe
 Reflection: This week was A LOT of fabrication. With every tiny change, I learnt something new. It also made me realize how intentional I had to be with the design, because it had a ripple effect on the rest of the robotic system. It was a really delicate balance and getting the measurements, size, and weight right was crucial. 
 
 
+# Week 13 - Electronics
+_Tuesday, 11/25/2025 - Tuesday, 12/02/2025_
+
+This week I decided to tackle the code, and update it so that we were not relying on the crude delay code. After having a meeting with Sudhu, he gave us 2 options. Either to integerate our code with a blink without delay style of logic, or to use something called a 'scheduler'. We utimately decided to go ahead with the blink without delay code as it was the most reliable and could be sequneced easily. I began by first trying to understand what blink without delay was? This was a description i found online that was healpful fo rme to understand what the logic was, and why delays were not ideal in the first place; '_Sometimes you need to do two things at once. For example you might want to blink an LED (or some other time-sensitive function) while reading a button press or other input. In this case, you can't use delay(), or you'd stop everything else the program while the LED blinked. The program might miss the button press if it happens during the delay(). This sketch demonstrates how to blink the LED without using delay(). It keeps track of the last time the Arduino turned the LED on or off. Then, each time through loop(), it checks if a long enough interval has passed. If it has, it toggles the LED on or off._'
+
+After I had seen some example so fthis code online, and I had learnt about how the logic functions, I decided to give it a crack. This was tough, as i'm not someone who comes from a CS background of any kind. I connected the 3 acturators to two H-bridges. I then connected them each to pins on the arduino. After many rounds of iteraton of the code, meetings with Sudhu to understand how to structure the code, troubleshooting and figuring out what pins on the board I could use and which one's I couldn't, I was FINALLY able to make the three actuators move (though not in sequnece). This was a huge breakthrough for me, after 3 full days of struggling with it. I had made so many silly mistakes (like inputting the wrong pin numbers in my code and freaking out about it not running), but finally I was able to get it to run. For the code, I created cases for each section of the actuator retraction and expansion, and sequnecially created steps that would be followed. I used the '(currentMillis - previousMillis >= x' logic to time when each step was to be carried out, and finally wrote functions for the extension and extraction of each actuator at the end. 
+
+The next step was to sequence it in the order we needed it to be. Alistair helped me understand the sequence of the actuators they had used in the first iteration of this code (the one with delays). I then used this to update the code so that the actuators moved at certain times and in a certain order. Here is the diagrammatic setup of the sequence - 
+
+<img width="579" height="768" alt="Screenshot 2025-12-12 at 10 56 04 AM" src="https://github.com/user-attachments/assets/861a4e52-b138-4b9a-84ca-8ca1986c48ae" />
+
+![PHOTO-2025-12-12-12-27-39](https://github.com/user-attachments/assets/1638fc36-a805-4684-84ae-a539ba9fc5ad)
+
+_The team trying to figure out the sequence_
+
+I reordered the cases I had previously created, based on the above sequence. It took a few tries to get it to loop back and start the order again in the right way, but eventually after some testing, I was able to get it to run smoothly in the sequnece we needed. I tested it on the linear actuators, and could finally see the motion working how I had imagined it!! 
+
+One limiting factor that arose at this time was the number of outputs available to us on our microcontoller. Due to the need to power four motors with alternating directions and have sensor inputs, we had alread moved away from the ESP-32 back to the standard Arduino Uno for our project. However we still ran into port bandwidth issues, and elected to use the standard kit motor and gearbox to power our cutting/clearance head. (The standard motor would require two microcontroller ports, while other options like a stepper motor would require 4 or 5). Given this, I integrated the motor code into the below code snippet to test that the sequence was not getting disturbed by another action running simultaneously. This worked as I intended!!
+
+Here is the code - 
+
+```C++
+//This is the final code we ran for the PipeBot. The code was written in the 'Blink without Delay' logic, and was sequenced to have 3 linear actuators moving in a certain order. 
+
+// Actuator 1
+const int enA1 = 10;
+const int in1A1 = 11;
+const int in2A1 = 12;
+
+// Actuator 2
+const int enA2 = 5;
+const int in1A2 = 6;
+const int in2A2 = 7;
+
+// Actuator 3
+const int enA3 = 3;  
+const int in1A3 = 4;
+const int in2A3 = 9;
+
+//Motor pins
+const int in1A4 = 8;
+const int in2A4 = 13;
+
+
+// Timings for actuators
+unsigned long extendTime = 3000;   // time to fully extend (ms)
+unsigned long retractTime = 3000;  // time to fully retract (ms)
+
+unsigned long previousMillis = 0; //defining previousmillis as 0 to begin 
+
+// States
+int step = 0;  // controlling the sequence of steps
+
+
+void setup() {
+  pinMode(enA1, OUTPUT); //actuatpr 1 
+  pinMode(in1A1, OUTPUT);
+  pinMode(in2A1, OUTPUT);
+
+  pinMode(enA2, OUTPUT); // actuator 2 
+  pinMode(in1A2, OUTPUT);
+  pinMode(in2A2, OUTPUT);
+
+  pinMode(enA3, OUTPUT); //actuator 3
+  pinMode(in1A3, OUTPUT);
+  pinMode(in2A3, OUTPUT);
+
+  pinMode(in1A4, OUTPUT); //motor 1 
+  pinMode(in2A4, OUTPUT);
+
+  // Ensure nothing is moving
+  stopAll();
+}
+
+void loop() {
+
+  digitalWrite(in1A4, HIGH); //motor function
+  digitalWrite(in2A4, LOW);
+
+  unsigned long currentMillis = millis();
+
+  switch (step) {
+
+    // 0: extend 1,3 actuators to max
+    case 0:
+      extend(1);
+      extend(3);
+
+      if (currentMillis - previousMillis >= extendTime) { // has the actuator been retracting long enough
+        previousMillis = currentMillis; // previous millis being set as refernece point for next step
+        stopAll();
+        step = 1;
+      }
+      break;
+
+    // Retract actuator 2
+    case 1: //run when step=1
+      retract(2); 
+
+      if (currentMillis - previousMillis >= 900) { // time check for actuator one. when current millis - previous millis is greater than or equal to extention time of acturator
+        previousMillis = currentMillis; //set previous millis = current millis. Save current millis as the starting point for the next step
+        stop(2); //stop actuator 1
+        step = 2; // changing sequence to next step, step 2
+      }
+      break; // stops and doesn't check other cases
+
+    // retract actuator 3 
+    case 2:
+      retract(3);
+
+      if (currentMillis - previousMillis >= retractTime) {
+        previousMillis = currentMillis;
+        stop(3);
+        step = 3;
+      }
+      break;
+
+    // Extend actuator 2
+    case 3:
+      extend(2);
+
+      if (currentMillis - previousMillis >= 900) {
+        previousMillis = currentMillis;
+        stop(2);
+        step = 4;
+      }
+      break;
+
+    // Retract actuator 1
+    case 4:
+      retract(1);
+
+      if (currentMillis - previousMillis >= retractTime) {
+        previousMillis = currentMillis;
+        stop(1);
+        step = 5;
+      }
+      break;
+
+    // Extend actuator 3
+    case 5:
+      extend(3);
+
+      if (currentMillis - previousMillis >= extendTime) {
+        previousMillis = currentMillis;
+        stop(3);
+        step = 6;
+      }
+      break;
+
+    // Retract actuator 2
+    case 6:
+      retract(2);
+
+      if (currentMillis - previousMillis >= 900) {
+        previousMillis = currentMillis;
+        stop(2);
+        step = 7;   // loop again back to step 1 
+      }
+      break;
+
+       // Retract actuator 3
+    case 7:
+      retract(3);
+
+      if (currentMillis - previousMillis >= retractTime) {
+        previousMillis = currentMillis;
+        stop(3);
+        step = 8;
+      }
+      break;
+
+// etend actuator 1
+        case 8:
+      extend(1);
+
+      if (currentMillis - previousMillis >= extendTime) {
+        previousMillis = currentMillis;
+        stop(1);
+        step = 3; //loop back to step 3
+      }
+      break;
+      
+  }
+}
+
+
+// Functions
+
+void extend(int actuator) {
+  if (actuator == 1) {
+    digitalWrite(in1A1, HIGH); //extension of actuator 1
+    digitalWrite(in2A1, LOW);
+    digitalWrite(enA1, HIGH);
+  }
+
+  if (actuator == 2) {
+    digitalWrite(in1A2, HIGH);//extension of actuator 2
+    digitalWrite(in2A2, LOW);
+    digitalWrite(enA2, HIGH);
+  }
+
+  if (actuator == 3) {
+    digitalWrite(in1A3, HIGH); //extension of actuator 3
+    digitalWrite(in2A3, LOW);
+    digitalWrite(enA3, HIGH);
+  }
+}
+
+void retract(int actuator) {
+  if (actuator == 1) { //retract actuator 1 
+    digitalWrite(in1A1, LOW);
+    digitalWrite(in2A1, HIGH);
+    digitalWrite(enA1, HIGH);
+  }
+
+  if (actuator == 2) { //retract actuator 2
+    digitalWrite(in1A2, LOW);
+    digitalWrite(in2A2, HIGH);
+    digitalWrite(enA2, HIGH);
+  }
+
+  if (actuator == 3) { //retract actuator 3
+    digitalWrite(in1A3, LOW);
+    digitalWrite(in2A3, HIGH);
+    digitalWrite(enA3, HIGH);
+  }
+}
+
+void stop(int actuator) {
+  if (actuator == 1) digitalWrite(enA1, LOW);
+  if (actuator == 2) digitalWrite(enA2, LOW);
+  if (actuator == 3) digitalWrite(enA3, LOW);
+}
+
+void stopAll() {
+  digitalWrite(enA1, LOW);
+  digitalWrite(enA2, LOW);
+  digitalWrite(enA3, LOW);
+}
+
+```
+Here's an image of the team trying to test the code for the first time. It was a success!
+
+<img width="674" height="816" alt="Screenshot 2025-12-12 at 11 29 57 AM" src="https://github.com/user-attachments/assets/623a153d-0dcf-4ef5-b9b4-9bd7d6c6ed97" />
+
+https://github.com/user-attachments/assets/005058cf-7268-4b59-90b8-40034302b26f
+
+Relfection: This week was the most challenging for, but the MOST rewarding so far. I really did not think I could write the code and actually get the linear actuators to run in the sequnece we needed it to, but I'm really proud that continued to test and iterate on it till I got it perfect. Having spent so much time with that same piece of code, towards the end I was able to tell why something was not working and what I could do to fix it. The next step was to try to update the code and see if the actuators could be made to move faster.
+
+
+# Week 13 - Fabrication
+_Thursday, 11/27/2025 - Thursday, 12/04/2025_
+
+For fabrication this week, I worked on trying to fix the off balance issue on the motor head. I reduced the size of the motor mount and reprinted that. Unfortunately, the edges of the mount still interfered with the notch at the bottom of the motor gearbox. Instead, for the next iteration, I just curved out the outer edges. I also added a second screw hole on the other side for a second set screw. This was to help it remain balanced, rather than tilting to one side. I printed this model, and it worked great! Here are a few images below - 
+
+![PHOTO-2025-12-12-11-57-50](https://github.com/user-attachments/assets/2330a0e4-3308-41e3-ae99-4596dccd01e8)
+
+_This was the earlier mount. The stem was less curved and hence would get caught in the gearbox notch. It also only had one set screw, which cause balance issues_
+
+
+![PHOTO-2025-12-12-11-57-50](https://github.com/user-attachments/assets/3990447d-ea97-4d26-9b65-26bbb0ea94bd)
+
+_This was the latest version with a circular stem and 2 set screws. This version worked much better_
+
+In parallel, Skye was running some prints to test out the parts for the body of the linear actuator bot. She worked on creating the flexible accordian style connector pieces between each actuatos and the flexible spines that would help grip within the pipe. She went through multiple iterations, changing the grip style, curvature of the bend, width of the pieces and the rigidity it provided. We all tested every part to make sure they did not hinder with the bot in any way. For example, the accordian style connectors needed to be ridgid enough to hold the motor and 3 linear actuators wihtout sagging, but also needed to be flexible enough traverse a curve. This was a delicate fabrication process, and took serval iterations to get just right. Skye's experience with printing TPU and similar materials - and access to a Bambu Labs printer outside of Jacobs which we could use for this project - proved invaluable, as we went through multiple revisions of various parts in the soft plastic over the course of the project. 
+
+<img width="659" height="361" alt="Screenshot 2025-12-12 at 12 19 12 PM" src="https://github.com/user-attachments/assets/fdbe7258-4388-4164-9b72-a25dcb302f25" />
+
+<img width="548" height="550" alt="Screenshot 2025-12-12 at 12 19 27 PM" src="https://github.com/user-attachments/assets/f7687bbe-48ca-469e-8686-feb839b5fab9" />
+
+<img width="354" height="285" alt="Screenshot 2025-12-12 at 12 19 45 PM" src="https://github.com/user-attachments/assets/c88218f6-177e-4d56-afe2-7a9a6d7c2ede" />
+
+
+Next, Alistair began designing custom hardware to mount the spines to the actuator itself. This was also a tediaous process as anytime there was a change to the spine, the mount also needed to be changed accordingly. Additionally, the first few mounts kept splipping off the actuator when it retracted. This was later fixed with a sort of clamp style design over the actuator, which was tightened using 2 bolts. This was the fianl version that the team decided to use for the final bot. 
+
+Here is a video of the initial testing we did with this fabrication - 
 
 
 
-
-
-
-
-
-
-
+https://github.com/user-attachments/assets/f8f38e20-5ca9-4889-8aaf-5cedc9de06ab
 
 
 
