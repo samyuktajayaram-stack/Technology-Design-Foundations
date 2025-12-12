@@ -38,6 +38,27 @@ A repository of my explorations as part of the 'Technology Design Foundations' c
 
 [Week 9 - Fabrication](#week-9---fabrication)
 
+[Week 10 - Electronics](#week-10---electronics)
+
+[Week 10 - Fabrication](#week-10---fabrication)
+
+[Week 11 - Electronics](#week-11---electronics)
+
+[Week 11 - Fabrication](#week-11---fabrication)
+
+[Week 12 - Electronics](#week-12---electronics)
+
+[Week 12 - Fabrication](#week-12---fabrication)
+
+[Week 13 - Electronics](#week-13---electronics)
+
+[Week 13 - Fabrication](#week-13---fabrication)
+
+[Week 14 - Electronics](#week-14---electronics)
+
+[Week 14 - Fabrication](#week-14---fabrication)
+
+
 # Week 1 - Electronics 
 _Tuesday, 09/02/2025 - Tuesday, 09/09/2025_
 
@@ -1577,6 +1598,49 @@ https://github.com/user-attachments/assets/69eb9847-ac53-41a3-af83-669bbd30987f
 Here is a systems map of how this system is to be used by a user and how it works:
 
 <img width="1678" height="617" alt="Screenshot 2025-11-01 at 2 41 06 PM" src="https://github.com/user-attachments/assets/46e27b83-c99e-4583-a169-93cbd1465e3d" />
+
+
+# Week 10 - Electronics
+_Tuesday, 11/04/2025 - Tuesday, 11/11/2025_
+
+After the success that was everyon's ambient display projects, it was time for us all to begin thinking about what we wanted to do for our final TDF projects of the semester. The teaching team had asked us all to bring poster proposals of the projects we wanted to work on in the last 5 weeks, pin them up to share with the class. We were asked to read up about other projects, and find people to collaborate with. 
+
+I had two proposal ideas. The first one was a computer vision trained tennis instructor. As someone who enjoys playing tennis, I always find it challenging to figure out my mistakes/where I could improve without a coach on standby. And more often than not, minute incorrect changes such as how a player grips a racket or how they set up for an incoming ball can be the cause for future sports injuries. I wanted to create a product that was able to predict and provide real-time information and feedback to a player based on their game. The second project proposal I had, was to design and build a robot prototype Pipebot with the goal of creating a novel solution to clear blocked pipes and sewers lines. The project was a last minute addition to my proposal, after I had faced a clogged bathtub situation earlier athat morning. So, in true design spirit, I decided to put two and two together. 
+
+After displaying my proposals, Skye, Alistair and I decided to form a team and tackle the PipeBot project. After forming project teams, we had a meeting where we built out a project planning board on theliminal.design, a public version of which can be found [here](https://theliminal.design/board/public/d224c769-b92d-49c0-9ea0-173eaa4d703c). In this first meeting we discussed a variety of early ideas for locomotion within a pipe, blockage detection and clearnace. As can be seen in the liminal design board, we also had preliminary discussions of biomicicry and soft robotics, and the different technologies we may need to acquire and integerate based on the chosen design (For example, if we were to investigate some kind of pneumatic bladder system, we would need to acquire and test with solenoids and pneumatics and integrate them into our microcontroller). 
+
+<img width="1348" height="934" alt="Screenshot 2025-12-11 at 5 58 55 PM" src="https://github.com/user-attachments/assets/9814cd49-1a06-4874-827a-c4ebcfe17eae" />
+_Screenshot of the Liminal Board we made_
+
+After this first meeting, we made our project proposal and fleshed out the more granular details of our project including our timeline, the types of experiemnets we were going to do and what we expeceted to achieve by the end of the project. 
+
+Here is the link to the proposal:
+
+[project Proposal](https://docs.google.com/document/d/1nQPd7dcVCOMeYm6GPB019YwkTV47S4BaPJA_fgNv3n4/edit?usp=sharing)
+
+
+<img width="1327" height="623" alt="Screenshot 2025-12-11 at 6 14 52 PM" src="https://github.com/user-attachments/assets/da587958-f5a4-4174-bc5a-a29b5587809c" />
+_Early system architecture diagram from the project proposal_
+
+
+<img width="866" height="597" alt="Screenshot 2025-12-11 at 6 15 35 PM" src="https://github.com/user-attachments/assets/905150f3-2ff3-4e76-becb-751e35a76cb9" />
+_The teams proposed timeline for project experimentation and delivery_
+
+After the proposal was created, and we had a point of reference to start from, we began conducting secondary research and brainstorming ideas of how we wanted to execute each experiment. We found a few great research papers and soft robotic solutions online that we took as inspiration. Below are a few images of those explorations:
+
+<img width="906" height="903" alt="Screenshot 2025-12-11 at 6 49 57 PM" src="https://github.com/user-attachments/assets/1be14907-480c-4105-9125-e3a6b545d33c" />
+_One Linear Actuator Peristaltic Motion_
+
+
+<img width="485" height="457" alt="Screenshot 2025-12-11 at 6 53 40 PM" src="https://github.com/user-attachments/assets/2994e0e8-e840-44b8-b470-d05da48ae03a" />
+_Rotating movement with Wheels_
+
+
+
+
+
+
+
 
 
 
