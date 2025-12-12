@@ -58,6 +58,8 @@ A repository of my explorations as part of the 'Technology Design Foundations' c
 
 [Week 14 - Fabrication](#week-14---fabrication)
 
+[Week 15 - Showcase Day](#week-15---jacobsshowcase)
+
 
 # Week 1 - Electronics 
 _Tuesday, 09/02/2025 - Tuesday, 09/09/2025_
@@ -1612,11 +1614,12 @@ After displaying my proposals, Skye, Alistair and I decided to form a team and t
 <img width="1348" height="934" alt="Screenshot 2025-12-11 at 5 58 55 PM" src="https://github.com/user-attachments/assets/9814cd49-1a06-4874-827a-c4ebcfe17eae" />
 _Screenshot of the Liminal Board we made_
 
+
 After this first meeting, we made our project proposal and fleshed out the more granular details of our project including our timeline, the types of experiemnets we were going to do and what we expeceted to achieve by the end of the project. 
 
 Here is the link to the proposal:
 
-[project Proposal](https://docs.google.com/document/d/1nQPd7dcVCOMeYm6GPB019YwkTV47S4BaPJA_fgNv3n4/edit?usp=sharing)
+[Project Proposal](https://docs.google.com/document/d/1nQPd7dcVCOMeYm6GPB019YwkTV47S4BaPJA_fgNv3n4/edit?usp=sharing)
 
 
 <img width="1327" height="623" alt="Screenshot 2025-12-11 at 6 14 52 PM" src="https://github.com/user-attachments/assets/da587958-f5a4-4174-bc5a-a29b5587809c" />
@@ -1643,6 +1646,21 @@ _Rotating movement with Wheels_
 <img width="607" height="609" alt="Screenshot 2025-12-11 at 6 58 46 PM" src="https://github.com/user-attachments/assets/c61df22b-ab07-48a5-b09e-f1f975e3ec86" />
 
 _Peristaltic Movement with pneumatics_
+
+Reflection: This week was a great start! Through our initial research, I feel like we have gotten a really good idea of the kind of soft robotics technologies out there. I'm really looking forward to how this project plays out. 
+
+
+# Week 10 - Electronics
+_Thursday, 11/06/2025 - Thursday, 11/13/2025_
+
+After we had figured out our research, we began experimenting and exploring with some types of locomotion. The first one was using a linear actuator. We wanted to test how the expansion and retraction of such a prototype would work. This would help us understand hwo to create a bot that can grip to the sides of a pipe efficiently. 
+
+Alistair and Skye 3D printed a simple mechanism that could be fixed on a linear actuator to create this model. This was then connected to an arduino and run by 2 buttons. One button controlled expansion and the other retraction. This was a really great way for us to understand how far the actuator could move and how that affected the grip and adaption to the pipe diameter. 
+
+
+
+
+
 
 
 
