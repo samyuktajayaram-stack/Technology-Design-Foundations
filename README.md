@@ -40,11 +40,11 @@ A repository of my explorations as part of the 'Technology Design Foundations' c
 
 [Week 10 - Electronics](#week-10---electronics)
 
-[Week 10 - Fabrication](#week-10---fabrication)
+[Week 10 - Electronics](#week-10---electronics)
 
 [Week 11 - Electronics](#week-11---electronics)
 
-[Week 11 - Fabrication](#week-11---fabrication)
+[Week 11 - Electronics](#week-11---electronics)
 
 [Week 12 - Electronics](#week-12---electronics)
 
@@ -1655,13 +1655,110 @@ _Thursday, 11/06/2025 - Thursday, 11/13/2025_
 
 After we had figured out our research, we began experimenting and exploring with some types of locomotion. The first one was using a linear actuator. We wanted to test how the expansion and retraction of such a prototype would work. This would help us understand hwo to create a bot that can grip to the sides of a pipe efficiently. 
 
-Alistair and Skye 3D printed a simple mechanism that could be fixed on a linear actuator to create this model. This was then connected to an arduino and run by 2 buttons. One button controlled expansion and the other retraction. This was a really great way for us to understand how far the actuator could move and how that affected the grip and adaption to the pipe diameter. 
+Alistair and Skye 3D printed a mechanism that could be fixed on a linear actuator to create this model. This was then connected to an arduino and run by 2 buttons. One button controlled expansion and the other retraction. This was a really great way for us to understand how far the actuator could move and how that affected the grip and adaption to the pipe diameter. This prototype, informed a lot of the later work we created. 
+
+<img width="458" height="533" alt="Screenshot 2025-12-12 at 12 21 13 AM" src="https://github.com/user-attachments/assets/e5c076d0-c1fd-41b4-a000-b8b6c153464c" />
+
+<img width="459" height="492" alt="Screenshot 2025-12-12 at 12 21 21 AM" src="https://github.com/user-attachments/assets/cfb0876a-6b7e-414c-b2bf-c90c5fd4b9e2" />
+
+The next thing we wanted to test was if servo motors could be used to acheive an inching locomotion mechanism. For this experiment, I decided to use 4 servo motors connected to an arduino and mounted on a simple rectangular piece of cardboard. I referenced a tutorial online, and used the code they had provided. This experiment did not work for a few reasons - 
+
+1. The servos were not running in sequence, and therefore the motion was slow and buggy
+2. The placement of the servo horns also made a huge difference to the motion itself, which made it unreliable
+3. It was unable to grip, especially in comparison to the first prototype.
+
+Here is a video of the prototype:
+
+https://github.com/user-attachments/assets/c2d55454-1430-4151-ba53-70cdf998ba0f
+
+For these reasons, we decided to not go ahead with this type of motion. As a next step, we started to brainstorm some more ideas for locomotion. We wanted to look into 1) Corkscrew mechanism, 2) Nut and Bolt mechansim and 3) Peristaltic motion with 3 actuators. Parallely, we were also looking at using just a single linear actuator to create the inch worm motion. 
+
+<img width="1084" height="1075" alt="Screenshot 2025-12-12 at 12 19 27 AM" src="https://github.com/user-attachments/assets/f78fa9bf-0d04-4b2a-a3dd-75d804d545ed" />
+
+<img width="746" height="938" alt="Screenshot 2025-12-12 at 12 20 18 AM" src="https://github.com/user-attachments/assets/55edd281-98f1-45b9-b4cf-4aadd2b48532" />
+
+<img width="1265" height="903" alt="Screenshot 2025-12-12 at 12 20 40 AM" src="https://github.com/user-attachments/assets/f08f1b1e-7233-419c-b315-b6530bc46df2" />
+
+_Images of our brainstorming process_
+
+Reflection: This week, we tackled and learnt alot. I started to get a sense of how to make a rapid robotic prototypes and test its functionality. I also got to see how to work with a linear actuator which was new! We have a lot of work left, but I am excited. 
 
 
+# Week 11 - Electronics
+_Tuesday, 11/11/2025 - Tuesday, 11/18/2025_
+
+This week, we all decided to tackle separate experiments for our mid point crit. For my experimenetation, I decided to look into how we were planning to detect a possible blockage that was in a sewer pipe. This would help inform when the clearance mechanism would start so as to not have it running at all times. I used an FSR, an led and an arduino to create the circuit. This was the code used: 
+
+```c++
+const int fsrPin = A0;     // FSR connected to analog pin A0
+const int threshold = 600; // Adjust based on your readings
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(fsrPin, INPUT);
+}
+
+void loop() {
+  int fsrValue = analogRead(fsrPin);
+
+  if (fsrValue > threshold) {
+    Serial.println("Blockage detected");
+    delay(300);   // simple debounce so it doesn't spam
+  }
+
+  delay(50);
+}
+```
+
+This worked great, and the fsr was able to light up the led when it sensed any pressure. Here is a video of that. 
+
+https://github.com/user-attachments/assets/0f28cc2f-bf3d-4032-85ba-f4a8c3f5dd55
+
+I then embedded the fsr in sollicone to simulate how it would work in the casing we were considering to use for the final prototype. This too worked really well, and the fsr remained sensitive enough to pick up on any pressure change. Here is a video of that - 
+
+https://github.com/user-attachments/assets/19c2dcf0-4569-4a3d-9a1b-4db6f2f9fc8b
+
+One concern the team and I had with this was that it would not be able to detect the difference between a bloackge and a pipe curve. This could unintentionally cause wear to the pipes. For this reason, Alistair suggested I try using an accelerometer in conjuction with the fsr. This way, when the accelerometer detects motion (in a pipe curve, the fsr will not trigger the clearance mechanism. But if it senses no motion, i.e. a bloackage that has caused the bot to come to a full stop then the fsr will detect the blockage and trigger the clearance mechanism. 
 
 
+In parallel, Alistair and Skye were also conducting a few experiments. One of Alistair’s individual experiments involved creating a nut-and-bolt–style screw linear actuator as an alternative to the off-the-shelf actuators we had sourced. The goal was to maximize clamping force using readily available parts, as the team initially had only two linear actuators while most early concepts required at least three. It was also to help see if this could be a viable locomotion method. 
+
+They designed and assembled several CAD components in Fusion 360, building around the course kit motor and motor mount to produce a screw-driven actuator compatible with the previous prototype’s linkage assembly. Although the experiment worked in principle, it did not outperform the off-the-shelf actuator due to reliability and consistency issues in the screw mechanism. They concluded that pursuing this option further would require machined components, alternative materials, and proper bearings—efforts that would ultimately make the off-the-shelf actuator the simpler and more practical solution.
+
+<img width="456" height="342" alt="Screenshot 2025-12-12 at 2 14 24 AM" src="https://github.com/user-attachments/assets/e863b309-92fd-441a-bc12-eb6e8fe2e731" />
+
+<img width="455" height="343" alt="Screenshot 2025-12-12 at 2 14 37 AM" src="https://github.com/user-attachments/assets/fb3d9589-4deb-4e86-9c1c-936a06d8510b" />
+
+At this stage, Skye was also exploring an alternative anchoring mechanism inside the pipe using a soft corkscrew concept. The idea was that rotating the element clockwise would allow it to grip the pipe wall, while rotating it counterclockwise would let it spin freely. Although this worked in manual tests, the team was unable to secure the motor driving the corkscrew relative to the pipe, and the idea was ultimately set aside.
+
+This experiment, however, marked the beginning of our deeper investigation into soft materials, which became an area that went on to influence nearly all aspects of our final prototype.
+
+<img width="456" height="360" alt="Screenshot 2025-12-12 at 2 15 58 AM" src="https://github.com/user-attachments/assets/32848ba4-67ba-4661-bf42-6a229b55bde5" />
+
+<img width="456" height="357" alt="Screenshot 2025-12-12 at 2 16 05 AM" src="https://github.com/user-attachments/assets/a160e736-93a9-491d-b59f-17d3a0c809c6" />
+
+Reflection: we had a lot of experiments this week, which helped inform a lot of our design decisions going forward. Overall, really productive!
 
 
+# Week 11 - Electronics
+_Thursday, 11/13/2025 - Thursday, 11/20/2025_
+
+After my last FSR experiment, the next experiment I tried was to create a clearance head similar to a boring tunnel machine. I 3D modelled and printed the part out. For the motor, Alistair had removed the gearbox from a motor to make it less bulky. I used this stripped motor to attach the clearance head on. While the head attachment worked, the motor did not have enough torque. So any time it came into contact with something, it would stop moving. We realized that gearbox could not removed when we implemented it in the final bot. 
+
+Here is a video of the clearance mechanism - 
+
+https://github.com/user-attachments/assets/ec82cbf3-4c26-4de6-b2b3-f1282bec60b6
+
+During the mid point crit, the team presented and all got really great feedback. Sudhu, who mediated my session said he was hapy to see all the interation and how our testing was influencing our design decisions. He said that going foward we should decide on ne type of motion and clearance head and go ahead to refining it. 
+
+Reflection:
+The crit went really well, and we got some valuable feedback from our instructors and peers. We feel really confident about where this project is headed. Our next step is to choose a final motion and begin refining it well for the final showcase. 
+
+
+# Week 12 - Electronics
+_Tuesday, 11/18/2025 - Tuesday, 11/25/2025_
+
+The
 
 
 
