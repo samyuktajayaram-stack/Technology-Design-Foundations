@@ -1758,7 +1758,139 @@ The crit went really well, and we got some valuable feedback from our instructor
 # Week 12 - Electronics
 _Tuesday, 11/18/2025 - Tuesday, 11/25/2025_
 
-The
+After we had concluded some of our earlier prototypes, we revisited Alistair’s original linkage mechanism and built a new version using a third linear actuator. This design returned to the core concept of peristaltic motion; two radial anchors connected by a linkage that allowed the robot to push and pull itself through the pipe in an inchworm-like sequence. The three actuators were connected in series with pipe cleaners, and the original plastic linkages were reused to assemble a quick proof of concept that successfully moved through our benchmark pipe.
+
+The control code for this iteration was a delay-based sequence that was sufficient for early testing, but needed to be fixed in future iterations. To help with troubleshooting, Alistair used the onboard NeoPixel on the ESP32, assigning different colors to each step of the motion cycle (e.g., blue for startup calibration, red for expansion, yellow for contraction). A video of this working prototype is shown below.
+
+https://github.com/user-attachments/assets/732f067e-3303-43d0-b433-f7894d164226
+
+We decided as a team, that we would go ahead with this locomotion method a it was the most realiable of the one's we had. 
+
+After this, I also took my FSR prototype and continued to interate on it. This time, i used an accelerometer to guage movement of the bot so as to accurately differntiate between a pipe curve and a blockage. I had never used an accelometer before, so it took some research to figure out how to wire it up to my existing fsr circuit. Once I had sucessfully done that, I intergerated the code and did some troubleshooting on chatgpt. 
+
+Here is the code below - 
+
+```C++
+#include <Wire.h>
+
+// FSR Setup
+int fsrAnalogPin = A0; 
+int LEDpin = 11;       
+int fsrReading;        
+int LEDbrightness;
+
+// MPU6050 Setup
+const int MPU = 0x68;   // I2C address of the MPU-6050
+int16_t AcX, AcY, AcZ;
+int16_t prevAcX, prevAcY, prevAcZ;
+
+// Motion threshold (tune this value)
+int motionThreshold = 300;  
+
+void setup() {
+  Serial.begin(9600);
+
+  pinMode(LEDpin, OUTPUT);
+
+  Wire.begin();
+  Wire.beginTransmission(MPU);
+  Wire.write(0x6B);   // power management register
+  Wire.write(0);      // wake up the MPU-6050
+  Wire.endTransmission(true);
+
+  delay(100);
+}
+
+void loop() {
+  //Read FSR
+  fsrReading = analogRead(fsrAnalogPin);
+  LEDbrightness = map(fsrReading, 0, 1023, 0, 255);
+
+  //Read Accelerometer
+  Wire.beginTransmission(MPU);
+  Wire.write(0x3B);  // starting register for Accel Readings
+  Wire.endTransmission(false);
+  Wire.requestFrom(MPU, 6, true);
+
+  prevAcX = AcX;
+  prevAcY = AcY;
+  prevAcZ = AcZ;
+
+  AcX = Wire.read()<<8 | Wire.read();
+  AcY = Wire.read()<<8 | Wire.read();
+  AcZ = Wire.read()<<8 | Wire.read();
+
+  // Detect Motion
+  int diff = abs(AcX - prevAcX) + abs(AcY - prevAcY) + abs(AcZ - prevAcZ);
+
+  bool isMoving = diff > motionThreshold;
+
+  // Debug prints
+  Serial.print("FSR = "); Serial.print(fsrReading);
+  Serial.print(" | Motion diff = "); Serial.print(diff);
+  Serial.print(" | Moving? "); Serial.println(isMoving);
+
+  //LED Logic
+  if (!isMoving && fsrReading > 50) {  
+    // Only glow when stationary AND FSR pressed
+    analogWrite(LEDpin, LEDbrightness);
+  } else {
+    // LED off if moving OR FSR not pressed
+    analogWrite(LEDpin, 0);
+  }
+
+  delay(50);
+}
+```
+
+Below is a video of the working prototype - 
+
+https://github.com/user-attachments/assets/b62c61c4-9677-4e7a-9006-946d1cb743a1
+
+This experiment was a sucess! we decided to think about using this mechanism for blockage detection. This way the clearance head won't turn on all the time, and create wear for the pipes. 
+
+Reflection: I like how we have been testing and then incrementally finding solutions to make each prototype better. It will make the both a lot more refined, and in better working condition. Although everuything is in pieces right now, I do think that once we have figured oiur each individual component it will be easy to complete the integeration. But this step of refinement and testing is so crucial, especially in robotics. 
+
+# Week 12 - Fabrication
+_Thursday, 11/20/2025 - Thursday, 11/27/2025_
+
+For fabrication for this week, we began by brainstorming ideas for the clearance head and also the flexible, gripping body of the bot. For the clearance mechanism, we wanted something that was modular, i.e. we could hve multiple head attachements for various different blockage needs. We sketched out a few ideas, and then I decided to tackle this. I began by first creating the motor mounting bit, that would help attach it to the head of the motor. The bit was to have a set screw threaded hole so we could have a tight fit again the small motor head. After I had CAD modelled this, I sent it to print to test the fit on the motor. The first iteration was did not fit, and was too tight, so I made changes and reprinted. The second iteration fit great! Here is a photo of that - 
+
+<img width="365" height="467" alt="Screenshot 2025-12-12 at 8 17 12 AM" src="https://github.com/user-attachments/assets/6bbd226f-6dbb-49cc-b0f7-c1144eae99a0" />
+
+
+After this, I began by creating the actual attachment. The first one was similar to a conical auger shaped head. This took me a while to figure our in CAD, because i wasn't aware of how to make the conical pattern. But finally I figured out a way to do it using the revolve option and it worked great. I sent it in to print, and after 5 hours (which should have been my first clue), a huge model twice the size of what I was expecting was ready. 
+
+<img width="470" height="463" alt="Screenshot 2025-12-12 at 8 25 31 AM" src="https://github.com/user-attachments/assets/a719e4dc-2382-41dc-8270-b7c58db4f97e" />
+
+I think, when clicking the cad file on the Prusa. I may have unintentionally made some changes. So I went back, sized down my model and resliced it. I double checked the infill, since that was high last time too (which contributed to the weight of the model), and resent it to print. This print was much, much better, but still needed to be tweaked to be slightly wider. It was also pretty heavy which worried me since I didn't want the head of the bot to sag or be pulled down by too much weight. This would also hinder with movement which was definetly not something we wanted to do.
+
+
+Here is a picture of that head - 
+
+<img width="323" height="349" alt="Screenshot 2025-12-12 at 8 28 39 AM" src="https://github.com/user-attachments/assets/31514f45-1f3d-4e98-95e6-31f21fdf9f00" />
+
+so I went back to fusion, and shelled the inside of the model to make it lighter. This worked like magic, because the printed model was much bigger but was still really light weight! I attached it to the head of the motor, and tested it out. The set screw was tight enough to hold it in place, but it was slight off center. After some examination, I realized I had not accounted for a small notch on the bottom of the motor that was hinder movement. This slightly raised surface, was making the head attachment tilt to one side. As a next step for me, I want to redesign the head to accomodate this notch and make sure it spins smoothly. 
+
+https://github.com/user-attachments/assets/df5dc780-9a8f-4330-83d6-62b01611a04b
+
+The next head design I tried was inspired from a hole saw. I wanted something that could break down a blockage, or crush it down. I created the model on CAD by creating a bowl like shape and then drawing vertical triangles on it's edges. I then used the circular pattern tool to duplicate this shape all around the circular edge. This would great, so I decided to send it to print. While the general shape of the print turned out fine, the teeth on the hole saw were far too thin. They broke off almost immediately, and would not hold up agaisnt an actual blockage. I went back to CAD, changed the thickness of the teeth and that really helped. The resulting print was exactly what we needed. Here is a pictre of the first and second iteration - 
+
+<img width="377" height="395" alt="Screenshot 2025-12-12 at 8 55 07 AM" src="https://github.com/user-attachments/assets/85534208-9e63-451a-9607-835da8eff324" />
+
+_iteration 1, thin, fragile teeth_
+
+![PHOTO-2025-12-12-09-02-35](https://github.com/user-attachments/assets/2338d3ae-b2ef-47d8-8767-2f7955f8a7bc)
+
+_Iteration 2, much sturdier_
+
+During that week we also discussed ideas for the body of the bot and how we wanted to incorporate grip inside the pipe without having to use harder, PLA printed parts like we did with the last actuator prototype. Skye, who has her own 3D printer and has worked with softer materials like TPU suggested we try testing with that. After some brainstorming we decided to create appendages that would have a grippy face and a bend in its form to conform to the pipe size when the actuator was retracted. Here is an image of out board - 
+
+![PHOTO-2025-12-12-08-40-56](https://github.com/user-attachments/assets/324f76e2-994d-430a-8549-86d2c0968ce4)
+
+The curve would help to bend and expand in size to grip to the sides of the pipe. Skye decided to take up this part of the bot, since she had previous experience with TPU. 
+
+Reflection: This week was A LOT of fabrication. With every tiny change, I learnt something new. It also made me realize how intentional I had to be with the design, because it had a ripple effect on the rest of the robotic system. It was a really delicate balance and getting the measurements, size, and weight right was crucial. 
 
 
 
