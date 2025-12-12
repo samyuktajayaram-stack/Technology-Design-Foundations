@@ -38,13 +38,13 @@ A repository of my explorations as part of the 'Technology Design Foundations' c
 
 [Week 9 - Fabrication](#week-9---fabrication)
 
-[Week 10 - Electronics](#week-10---electronics)
+[Week 10.1 - Electronics](#week-10.1---electronics)
 
-[Week 10 - Electronics](#week-10---electronics)
+[Week 10.2 - Electronics](#week-10.2---electronics)
 
-[Week 11 - Electronics](#week-11---electronics)
+[Week 11.1 - Electronics](#week-11.1---electronics)
 
-[Week 11 - Electronics](#week-11---electronics)
+[Week 11.2 - Electronics](#week-11.2---electronics)
 
 [Week 12 - Electronics](#week-12---electronics)
 
@@ -1602,7 +1602,7 @@ Here is a systems map of how this system is to be used by a user and how it work
 <img width="1678" height="617" alt="Screenshot 2025-11-01 at 2 41 06 PM" src="https://github.com/user-attachments/assets/46e27b83-c99e-4583-a169-93cbd1465e3d" />
 
 
-# Week 10 - Electronics
+# Week 10.1 - Electronics
 _Tuesday, 11/04/2025 - Tuesday, 11/11/2025_
 
 After the success that was everyon's ambient display projects, it was time for us all to begin thinking about what we wanted to do for our final TDF projects of the semester. The teaching team had asked us all to bring poster proposals of the projects we wanted to work on in the last 5 weeks, pin them up to share with the class. We were asked to read up about other projects, and find people to collaborate with. 
@@ -1650,7 +1650,7 @@ _Peristaltic Movement with pneumatics_
 Reflection: This week was a great start! Through our initial research, I feel like we have gotten a really good idea of the kind of soft robotics technologies out there. I'm really looking forward to how this project plays out. 
 
 
-# Week 10 - Electronics
+# Week 10.2 - Electronics
 _Thursday, 11/06/2025 - Thursday, 11/13/2025_
 
 After we had figured out our research, we began experimenting and exploring with some types of locomotion. The first one was using a linear actuator. We wanted to test how the expansion and retraction of such a prototype would work. This would help us understand hwo to create a bot that can grip to the sides of a pipe efficiently. 
@@ -1684,7 +1684,7 @@ _Images of our brainstorming process_
 Reflection: This week, we tackled and learnt alot. I started to get a sense of how to make a rapid robotic prototypes and test its functionality. I also got to see how to work with a linear actuator which was new! We have a lot of work left, but I am excited. 
 
 
-# Week 11 - Electronics
+# Week 11.1 - Electronics
 _Tuesday, 11/11/2025 - Tuesday, 11/18/2025_
 
 This week, we all decided to tackle separate experiments for our mid point crit. For my experimenetation, I decided to look into how we were planning to detect a possible blockage that was in a sewer pipe. This would help inform when the clearance mechanism would start so as to not have it running at all times. I used an FSR, an led and an arduino to create the circuit. This was the code used: 
@@ -1740,7 +1740,7 @@ This experiment, however, marked the beginning of our deeper investigation into 
 Reflection: we had a lot of experiments this week, which helped inform a lot of our design decisions going forward. Overall, really productive!
 
 
-# Week 11 - Electronics
+# Week 11.2 - Electronics
 _Thursday, 11/13/2025 - Thursday, 11/20/2025_
 
 After my last FSR experiment, the next experiment I tried was to create a clearance head similar to a boring tunnel machine. I 3D modelled and printed the part out. For the motor, Alistair had removed the gearbox from a motor to make it less bulky. I used this stripped motor to attach the clearance head on. While the head attachment worked, the motor did not have enough torque. So any time it came into contact with something, it would stop moving. We realized that gearbox could not removed when we implemented it in the final bot. 
@@ -2277,8 +2277,6 @@ _Final assembly to demo blockage clearance in the pipe_
 <img width="1211" height="931" alt="Screenshot 2025-12-12 at 2 12 30 PM" src="https://github.com/user-attachments/assets/3c5a42f4-33d7-4150-ae2a-6c5be4883621" />
 
 _Final Showcase day_
-
-<img width="1217" height="879" alt="Screenshot 2025-12-12 at 2 17 17 PM" src="https://github.com/user-attachments/assets/67fce7a5-377a-4132-9b01-b7b37c967dec" />
 
 The final video we displayed:
 
